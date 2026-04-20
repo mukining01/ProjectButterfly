@@ -8,8 +8,12 @@ public class CreatureSprite : MonoBehaviour
 
     GameObject currently_active_creature;
 
+    Animator animator;
+
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+
         Get_All_Creature_Images();
         Set_Creature_Sprite();
     }
@@ -26,9 +30,23 @@ public class CreatureSprite : MonoBehaviour
     List<int> stored_evolutions = new List<int> { 0, 0, 0};
     int current_evolution_stage;
 
-    public void Set_Evolution(int evolution_type)
+    int store_evolution_type_for_evolution = 0;
+
+    public void Set_Creature_Moving(bool moving)
     {
-        stored_evolutions[current_evolution_stage] = evolution_type;
+        animator.SetBool("Moving", moving);
+    }
+
+    public void Set_Creature_Evolving(int evolution_type)
+    {
+        store_evolution_type_for_evolution = evolution_type;
+
+        animator.SetTrigger("Evolve");
+    }
+
+    public void Set_Evolution()
+    {
+        stored_evolutions[current_evolution_stage] = store_evolution_type_for_evolution;
         current_evolution_stage++;
 
         Set_Creature_Sprite();
@@ -70,6 +88,11 @@ public class CreatureSprite : MonoBehaviour
         current_evolution_stage = 0;
 
         Set_Creature_Sprite();
+    }
+
+    public void Post_Evolution_Animation()
+    {
+        EvolutionManager.Post_Creature_Evolution();
     }
 }
 

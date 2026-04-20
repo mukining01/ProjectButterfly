@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 
@@ -7,7 +8,7 @@ public class PlayerInput : MonoBehaviour
 
     public delegate void PInput(Touch touch);
 
-    public static PInput input;
+    public static PInput input = null;
 
     public Transform player_input_transform;
     public Animator player_input_animator;
@@ -15,6 +16,7 @@ public class PlayerInput : MonoBehaviour
     private void Awake()
     {
         //input = null;
+
 
         player_input_transform = transform.GetChild(0).transform;
         player_input_animator = player_input_transform.gameObject.GetComponent<Animator>();
@@ -46,15 +48,19 @@ public class PlayerInput : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
+            print(touch);
+
             input(touch);
         }
     }
+
+
 
     public void Place_Input_Marker(Touch touch)
     {
         if (touch.phase == TouchPhase.Began)
         {
-            player_input_transform.position = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 5));
+            player_input_transform.position = CameraManager.Get_Base_Camera().ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 5));
 
             player_input_animator.SetTrigger("Touch");
         }

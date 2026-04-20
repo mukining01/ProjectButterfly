@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,8 +8,6 @@ public class MinigameOneManager : MinigameManager
     public List<GameObject> global_elements = new List<GameObject>();
     public List<EatenBarElement> eaten_food_ui_component = new List<EatenBarElement>();
     int current_amount_of_food_eaten = 0;
-
-    
 
     public void On_Meat_Eaten()
     {
@@ -33,7 +32,7 @@ public class MinigameOneManager : MinigameManager
 
         if (current_amount_of_food_eaten >= eaten_food_ui_component.Count)
         {
-            End_MiniGame();
+            StartCoroutine(End_Minigame_Delay());
         }
     }
 

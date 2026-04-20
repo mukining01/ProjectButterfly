@@ -25,10 +25,14 @@ public class MainMenu : MonoBehaviour
 
         if (touch.phase == TouchPhase.Began)
         {
+            print("main menu 1");
             animator.SetTrigger("clicked");
+            print("main menu 2");
             PlayerInput.Remove_From_Player_Input(MainMenuInput);
+            print("main menu 3");
 
             ExtinctionManager.Display_Extinction_Information();
+            print("main menu 4");
         }
     }
 

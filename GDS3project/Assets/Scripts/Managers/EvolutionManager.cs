@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class EvolutionManager : MonoBehaviour
 {
+    public GameObject Evolution_UI_p;
+    static GameObject Evolution_UI;
+
     static CreatureAI creatureAI;
     static CreatureSprite creatureimage;
 
@@ -9,22 +12,35 @@ public class EvolutionManager : MonoBehaviour
     {
         creatureimage = FindObjectOfType<CreatureSprite>().GetComponent<CreatureSprite>();
         creatureAI = FindObjectOfType<CreatureAI>().GetComponent<CreatureAI>();
+
+        Evolution_UI = Evolution_UI_p;
+        Evolution_UI.SetActive(false);
     }
 
     public static void Post_Minigame_Evolution(int evolution_type)
     {
-        creatureimage.Set_Evolution(evolution_type);
+        CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_0);
 
-        creatureAI.Set_Static_For_Extinction_Manager();
+        creatureimage.Set_Creature_Evolving(evolution_type);
+        creatureAI.Setting_Static();
 
-        PlayerInput.Add_To_Player_Input(Continue_After_Evolution_Manager);
+        //PlayerInput.Add_To_Player_Input(Continue_After_Evolution_Manager);
     }
 
-    public static void Continue_After_Evolution_Manager(Touch touch)
+    public static void Post_Creature_Evolution()
     {
-        if (touch.phase != TouchPhase.Began) return;
+        CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_1);
 
-        PlayerInput.Remove_From_Player_Input(Continue_After_Evolution_Manager);
+        Evolution_UI.SetActive(true);
+    }
+
+    public static void Continue_After_Evolution_Manager()
+    {
+       // PlayerInput.Remove_From_Player_Input(Continue_After_Evolution_Manager);
+
+        CameraManager.Switch_Camera(Camera_Types.MainCamera);
+
+        Evolution_UI.SetActive(false);
 
         if (GlobalMinigameManager.Last_Minigame()) ExtinctionManager.Display_Final_Extinction_Information(creatureAI);
         else GlobalMinigameManager.Start_MiniGame();

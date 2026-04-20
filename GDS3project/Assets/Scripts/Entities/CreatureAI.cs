@@ -13,6 +13,7 @@ public class CreatureAI : MonoBehaviour
 
     [Header("Other Creature Values")]
     public Transform target;
+    public CreatureSprite creature_sprite;
     float update_path_delay = 0.5f;
 
     Path path;
@@ -46,14 +47,20 @@ public class CreatureAI : MonoBehaviour
 
     void Update()
     {
-        if (is_static) return;
+        creature_sprite.Set_Creature_Moving(Moving());
+    }
+
+    public bool Moving()
+    {
+        if (is_static) return false;
         if (path == null)
-            return;
+            return false;
 
         if (currentWayPoint >= path.vectorPath.Count)
         {
+            creature_sprite.Set_Creature_Moving(false);
             reachedEndOfPath = true;
-            return;
+            return false;
         }
         else
         {
@@ -62,10 +69,24 @@ public class CreatureAI : MonoBehaviour
 
         float distane_to_target = Vector2.Distance(rb.position, target.position);
 
-        if (distane_to_target < distance_until_stop) return;
+        if (distane_to_target < distance_until_stop) return false; 
+
+        creature_sprite.Set_Creature_Moving(true);
+
+        float _movement_speed = movement_speed;
+        if (setting_static)
+        {
+            current_time_taken_until_stop -= Time.deltaTime;
+            if (current_time_taken_until_stop <= 0)
+            {
+                Set_Static_For_Extinction_Manager();
+                return false;
+            }
+            _movement_speed *= (current_time_taken_until_stop / time_taken_until_stop);
+        }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
-        Vector2 force = direction * movement_speed * Time.deltaTime;
+        Vector2 force = direction * _movement_speed * Time.deltaTime;
 
         // rb.AddForce(force);
         //transform.position = Vector3.Lerp(transform.position, path.vectorPath[currentWayPoint], (movement_speed / distane) * Time.deltaTime);
@@ -89,15 +110,22 @@ public class CreatureAI : MonoBehaviour
         //{
         //    enemyGFX.localScale = new Vector3(1f, 1f, 1f);
         //}
+
+        return true;
     }
 
     public void Update_Path_On_Input(Touch touch)
     {
+        print("years ago 1");
+
         if (touch.phase == TouchPhase.Began)
         {
-            target.position = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 5));
+            print("years ago 2");
 
+            target.position = CameraManager.Get_Base_Camera().ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 5));
+            print("years ago 3");
             UpdatePath();
+            print("years ago 4");
         }
     }
 
@@ -114,13 +142,26 @@ public class CreatureAI : MonoBehaviour
     bool is_static = false;
     Vector2 original_transform;
     Vector2 original_scale;
+
+    bool setting_static = false;
+    float time_taken_until_stop = 0.5f;
+    float current_time_taken_until_stop;
+
+    public void Setting_Static()
+    {
+        setting_static = true;
+        current_time_taken_until_stop = time_taken_until_stop;
+    }
+
     public void Set_Static_For_Extinction_Manager()
     {
-        original_transform = transform.position;
-        original_scale = transform.localScale;
+        setting_static = false;
 
-        transform.position = Vector3.zero;
-        transform.localScale = Vector3.one;
+        //original_transform = transform.position;
+        //original_scale = transform.localScale;
+
+        //transform.position = Vector3.zero;
+       // transform.localScale = Vector3.one;
 
         PlayerInput.Remove_From_Player_Input(Update_Path_On_Input);
 
@@ -129,8 +170,11 @@ public class CreatureAI : MonoBehaviour
 
     public void Renable_For_MiniGames()
     {
-        transform.position = original_transform;
-        transform.localScale = original_scale;
+        current_time_taken_until_stop = time_taken_until_stop;
+        setting_static = false;
+
+        //transform.position = original_transform;
+        //transform.localScale = original_scale;
 
         PlayerInput.Add_To_Player_Input(Update_Path_On_Input);
 
