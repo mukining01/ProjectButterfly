@@ -32,7 +32,7 @@ public class ExtinctionManager : MonoBehaviour
     {
         print("display 5");
         print("display 5.5: " + touch.phase);
-        if (touch.phase != TouchPhase.Ended)
+        if (touch.phase == TouchPhase.Began)
         {
             print("display 6");
 

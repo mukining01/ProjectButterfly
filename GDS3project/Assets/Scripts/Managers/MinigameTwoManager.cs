@@ -9,12 +9,14 @@ public class MinigameTwoManager : MinigameManager
 
     private void Awake()
     {
-        Interactable_points.SetActive(true);
+        Map.SetActive(false);
+        Interactable_points.SetActive(false);
     }
 
     public override void Start_MiniGame()
     {
-        base.Start_MiniGame();
+        creature_ai.Set_Transform_Zero();
+        creature_ai.Add_To_Player_Input(false);
 
         evolution_Type = 0;
 
@@ -29,9 +31,10 @@ public class MinigameTwoManager : MinigameManager
 
     IEnumerator Delay_Before_LargeMap()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         CameraManager.Switch_Camera(Camera_Types.LargeMap);
+        base.Start_MiniGame();
     }
 
     public void Set_Evolution_Type(int evolution_type)

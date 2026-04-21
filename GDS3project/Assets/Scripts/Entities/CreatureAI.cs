@@ -15,6 +15,7 @@ public class CreatureAI : MonoBehaviour
     public Transform target;
     public CreatureSprite creature_sprite;
     float update_path_delay = 0.5f;
+    public bool added_to_input = false;
 
     Path path;
     int currentWayPoint;
@@ -129,14 +130,17 @@ public class CreatureAI : MonoBehaviour
         }
     }
 
-    public void OnEnable()
+    public void Add_To_Player_Input(bool _input_player)
     {
-        PlayerInput.Add_To_Player_Input(Update_Path_On_Input);
+        if(_input_player) PlayerInput.Add_To_Player_Input(Update_Path_On_Input);
+        else PlayerInput.Remove_From_Player_Input(Update_Path_On_Input);
+
+        added_to_input = _input_player;
     }
 
-    public void OnDisable()
+    public void Set_Transform_Zero()
     {
-        PlayerInput.Remove_From_Player_Input(Update_Path_On_Input);
+        transform.position = Vector3.zero;
     }
 
     bool is_static = false;
@@ -179,5 +183,6 @@ public class CreatureAI : MonoBehaviour
         PlayerInput.Add_To_Player_Input(Update_Path_On_Input);
 
         is_static = false;
+        target.position = Vector3.zero;
     }
 }
