@@ -10,6 +10,7 @@ public class MinigameManager : MonoBehaviour
 
     public virtual void Start_MiniGame()
     {
+        creature_ai.Idle_Activation(false);
         creature_ai.Set_Transform_Zero();
         creature_ai.Add_To_Player_Input(true);
         creature_ai.Renable_For_MiniGames();

@@ -5,12 +5,13 @@ public class ExtinctionManager : MonoBehaviour
 {
     static int extinction_range = 4;
     static Animator animator;
+    public GameObject canvas_child_p;
     static GameObject canvas_child;
 
     public void Awake()
     {
         animator = GetComponent<Animator>();
-        canvas_child = transform.GetChild(0).gameObject;
+        canvas_child = canvas_child_p;
         canvas_child.SetActive(false);
     }
 
@@ -56,6 +57,11 @@ public class ExtinctionManager : MonoBehaviour
     {
         if (touch.phase != TouchPhase.Began) return;
 
+        Restart_Game();
+    }
+
+    public static void Restart_Game()
+    {
         PlayerInput.Reset_Input();
         SceneManager.UnloadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

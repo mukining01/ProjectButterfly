@@ -1,4 +1,5 @@
 using Pathfinding;
+using System.Collections;
 using UnityEngine;
 
 public class CreatureAI : MonoBehaviour
@@ -16,12 +17,15 @@ public class CreatureAI : MonoBehaviour
     public CreatureSprite creature_sprite;
     float update_path_delay = 0.5f;
     public bool added_to_input = false;
+    public BoxCollider2D starting_movement_bounds;
 
     Path path;
     int currentWayPoint;
     bool reachedEndOfPath;
 
     Seeker seeker;
+
+    bool idling = false;
 
     void Awake()
     {
@@ -30,6 +34,9 @@ public class CreatureAI : MonoBehaviour
 
         //Start_Update_Path();
         //InvokeRepeating("UpdatePath", 0f, 0.5f);
+
+        Idle_Activation(true);
+
     }
 
     public void UpdatePath()
@@ -121,13 +128,16 @@ public class CreatureAI : MonoBehaviour
 
         if (touch.phase == TouchPhase.Began)
         {
-            print("years ago 2");
-
-            target.position = CameraManager.Get_Base_Camera().ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 5));
-            print("years ago 3");
-            UpdatePath();
-            print("years ago 4");
+            Vector2 _start_pos = CameraManager.Get_Base_Camera().ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 5));
+            Set_Target_Position(_start_pos);
         }
+    }
+
+    public void Set_Target_Position(Vector2 target_position)
+    {
+        target.position = target_position;
+
+        UpdatePath();
     }
 
     public void Add_To_Player_Input(bool _input_player)
@@ -136,6 +146,25 @@ public class CreatureAI : MonoBehaviour
         else PlayerInput.Remove_From_Player_Input(Update_Path_On_Input);
 
         added_to_input = _input_player;
+    }
+
+    Coroutine idle_moving = null;
+
+    public void Idle_Activation(bool _set_idle)
+    {
+        idling = _set_idle;
+
+        if(idling)
+        {
+            idle_moving = StartCoroutine(Idle_Moving());
+        } else
+        {
+            if(idle_moving != null)
+            {
+                StopCoroutine(idle_moving);
+                Set_Target_Position(transform.position);
+            }
+        }
     }
 
     public void Set_Transform_Zero()
@@ -183,6 +212,28 @@ public class CreatureAI : MonoBehaviour
         PlayerInput.Add_To_Player_Input(Update_Path_On_Input);
 
         is_static = false;
-        target.position = Vector3.zero;
+        Set_Target_Position(Vector3.zero);
+    }
+
+    //
+
+    public IEnumerator Idle_Moving()
+    {
+        Vector2 _starting_position = StartingMovementInBounds(starting_movement_bounds.bounds);
+        Set_Target_Position(_starting_position);
+
+        float _random_time = Random.Range(4, 6);
+
+        yield return new WaitForSeconds(_random_time);
+
+        idle_moving = StartCoroutine(Idle_Moving());
+    }
+
+    public static Vector2 StartingMovementInBounds(Bounds bounds)
+    {
+        return new Vector2(
+            Random.Range(bounds.min.x, bounds.max.x),
+            Random.Range(bounds.min.y, bounds.max.y)
+        );
     }
 }
