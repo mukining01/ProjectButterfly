@@ -31,8 +31,12 @@ public class MainMenu : MonoBehaviour
             PlayerInput.Remove_From_Player_Input(MainMenuInput);
             print("main menu 3");
 
+            RestartManager.Decreasing_Restart_time();
+
             ExtinctionManager.Display_Extinction_Information();
             print("main menu 4");
+
+            
         }
     }
 

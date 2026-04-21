@@ -43,7 +43,6 @@ public class EvolutionManager : MonoBehaviour
 
         Evolution_UI.SetActive(false);
 
-        if (GlobalMinigameManager.Last_Minigame()) ExtinctionManager.Display_Final_Extinction_Information(creatureAI);
-        else ExtinctionManager.Display_Extinction_Information();
+        ExtinctionManager.Display_Extinction_Information();
     }
 }

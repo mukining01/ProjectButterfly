@@ -47,29 +47,32 @@ public class ExtinctionManager : MonoBehaviour
         print("display 3");
         animator.SetInteger("ExtinctionManager", random_extinction);
         print("display 4");
-        PlayerInput.Add_To_Player_Input(MainMenu_StartFirstMiniGame);
+        PlayerInput.Add_To_Player_Input(Extinction_Inpute);
 
         Show_Text_animator.SetBool("Show", true);
     }
 
-    public static void MainMenu_StartFirstMiniGame(Touch touch)
+    public static void Extinction_Inpute(Touch touch)
     {
         if (touch.phase == TouchPhase.Began)
         {
-            print("display 6");
-
-            GlobalMinigameManager.Start_MiniGame();
-
-            animator.SetInteger("ExtinctionManager", 0);
-            extinction_image.SetActive(false);
-
-            PlayerInput.Remove_From_Player_Input(MainMenu_StartFirstMiniGame);
-
-            Show_Text_animator.SetBool("Show", false);
+            if (GlobalMinigameManager.Last_Minigame()) Display_Final_Extinction_Information();
+            else Continue_Minigame();
         }
     }
 
-    public static void Display_Final_Extinction_Information(CreatureAI current_creature_data)
+    public static void Continue_Minigame()
+    {
+        GlobalMinigameManager.Start_MiniGame();
+
+        extinction_image.SetActive(false);
+
+        Show_Text_animator.SetBool("Show", false);
+
+        PlayerInput.Remove_From_Player_Input(Extinction_Inpute); 
+    }
+
+    public static void Display_Final_Extinction_Information()
     {
         animator.SetInteger("ExtinctionManager", random_extinction);
 
