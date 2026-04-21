@@ -30,8 +30,8 @@ public class GlobalMinigameManager : MonoBehaviour
         return false;
     }
 
-    public static int Current_Minigame()
+    public static int Get_Minigame_Amount()
     {
-        return current_minigame;
+        return MiniGames.Length;
     }
 }

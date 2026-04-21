@@ -20,6 +20,7 @@ public class EvolutionManager : MonoBehaviour
     public static void Post_Minigame_Evolution(int evolution_type)
     {
         CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_0);
+        ExtinctionManager.Set_New_Extinction_Time();
 
         creatureimage.Set_Creature_Evolving(evolution_type);
         creatureAI.Setting_Static();
@@ -43,6 +44,6 @@ public class EvolutionManager : MonoBehaviour
         Evolution_UI.SetActive(false);
 
         if (GlobalMinigameManager.Last_Minigame()) ExtinctionManager.Display_Final_Extinction_Information(creatureAI);
-        else GlobalMinigameManager.Start_MiniGame();
+        else ExtinctionManager.Display_Extinction_Information();
     }
 }

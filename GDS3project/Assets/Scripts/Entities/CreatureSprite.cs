@@ -42,6 +42,8 @@ public class CreatureSprite : MonoBehaviour
         store_evolution_type_for_evolution = evolution_type;
 
         animator.SetTrigger("Evolve");
+
+        
     }
 
     public void Set_Evolution()
