@@ -24,8 +24,6 @@ public class EvolutionManager : MonoBehaviour
 
         creatureimage.Set_Creature_Evolving(evolution_type);
         creatureAI.Setting_Static();
-
-        //PlayerInput.Add_To_Player_Input(Continue_After_Evolution_Manager);
     }
 
     public static void Post_Creature_Evolution()
@@ -37,8 +35,6 @@ public class EvolutionManager : MonoBehaviour
 
     public static void Continue_After_Evolution_Manager()
     {
-       // PlayerInput.Remove_From_Player_Input(Continue_After_Evolution_Manager);
-
         CameraManager.Switch_Camera(Camera_Types.MainCamera);
 
         Evolution_UI.SetActive(false);
