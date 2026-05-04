@@ -52,6 +52,14 @@ public class PlayerInput : MonoBehaviour
 
             input(touch);
         }
+
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Touch touch = new Touch();
+        //    touch.position = Input.mousePosition;
+
+        //    input(touch);
+        //}
     }
 
 
