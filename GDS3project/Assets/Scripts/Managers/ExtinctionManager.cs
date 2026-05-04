@@ -47,12 +47,12 @@ public class ExtinctionManager : MonoBehaviour
         print("display 3");
         animator.SetInteger("ExtinctionManager", random_extinction);
         print("display 4");
-        PlayerInput.Add_To_Player_Input(Extinction_Inpute);
+        PlayerInput.Add_To_Player_Input(Extinction_Input);
 
         Show_Text_animator.SetBool("Show", true);
     }
 
-    public static void Extinction_Inpute(Touch touch)
+    public static void Extinction_Input(Touch touch)
     {
         if (touch.phase == TouchPhase.Began)
         {
@@ -69,7 +69,7 @@ public class ExtinctionManager : MonoBehaviour
 
         Show_Text_animator.SetBool("Show", false);
 
-        PlayerInput.Remove_From_Player_Input(Extinction_Inpute); 
+        PlayerInput.Remove_From_Player_Input(Extinction_Input); 
     }
 
     public static void Display_Final_Extinction_Information()
