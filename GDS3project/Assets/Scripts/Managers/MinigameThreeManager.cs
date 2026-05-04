@@ -4,7 +4,8 @@ using UnityEngine;
 public class MinigameThreeManager : MinigameManager
 {
     [Header("TextChoices")]
-    public List<GameObject> text_choices = new List<GameObject>();
+    public List<TwoChoiceText> text_choices = new List<TwoChoiceText>();
+    public ChoicesContinueButton continueButton;
 
     public override void Start_MiniGame()
     {
@@ -14,11 +15,16 @@ public class MinigameThreeManager : MinigameManager
 
         for (int i = 0; i < text_choices.Count; i++)
         {
-            text_choices[i].SetActive(true);
+            text_choices[i].gameObject.SetActive(true);
         }
+
+        continueButton.gameObject.SetActive(true);
 
         creature_ai.Set_Transform_Zero();
         creature_ai.Add_To_Player_Input(false);
+        creature_ai.Setting_Static();
+
+        CameraManager.Switch_Camera(Camera_Types.SmallMap);
     }
 
     public override void End_MiniGame()
@@ -27,8 +33,10 @@ public class MinigameThreeManager : MinigameManager
 
         for (int i = 0; i < text_choices.Count; i++)
         {
-            text_choices[i].SetActive(false);
+            text_choices[i].gameObject.SetActive(false);
         }
+
+        continueButton.gameObject.SetActive(false);
 
         base.End_MiniGame();
     }

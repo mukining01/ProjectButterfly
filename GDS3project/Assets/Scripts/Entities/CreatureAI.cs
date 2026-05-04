@@ -60,6 +60,7 @@ public class CreatureAI : MonoBehaviour
 
     public bool Moving()
     {
+        if (!added_to_input) return false;
         if (is_static) return false;
         if (path == null)
             return false;

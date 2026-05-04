@@ -11,6 +11,11 @@ public class TwoChoiceText : MonoBehaviour
     public Evolution2 choice_1;
     public Evolution2 choice_2;
 
+    public void Start()
+    {
+        //input
+    }
+
     public void OnEnable()
     {
         PlayerInput.Add_To_Player_Input(OnTextClick);
@@ -23,20 +28,35 @@ public class TwoChoiceText : MonoBehaviour
 
     public void OnTextClick(Touch touch)
     {
-        Bounds bounds = boxcolliderBounds.bounds;
-
-        int _increment = 1;
-
-        if(bounds.Contains(touch.position))
+        if (touch.phase == TouchPhase.Began)
         {
-            if (touch.position.y < bounds.center.y) _increment = -1;
+            Vector2 touch_pos = CameraManager.Get_Base_Camera().ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 5));
+
+            Bounds bounds = boxcolliderBounds.bounds;
+
+            int _increment = 1;
+
+            print("touch position: " + touch_pos + ", center of bounds: " + bounds.center);
+
+            if (bounds.Contains(touch_pos))
+            {
+                if (touch_pos.y < bounds.center.y) _increment = -1;
+            }
+            else return;
+
+            increment += _increment;
+            increment = Mathf.Clamp(increment, -1, 1);
+            Input_Screen.SetInteger("Increment", increment);
+
+            if (increment == 1) current_choice = choice_1;
+            else if (increment == -1) current_choice = choice_2;
+            else current_choice = Evolution2.Null;
         }
+            
+    }
 
-        increment += _increment;
-        Input_Screen.SetInteger("Increment", increment);
-
-        if (increment == 1) current_choice = choice_1;
-        else if (increment == -1) current_choice = choice_2;
-        else current_choice = Evolution2.Null;
+    public Evolution2 Get_Current_Choice()
+    {
+        return current_choice;
     }
 }
