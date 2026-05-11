@@ -21,7 +21,9 @@ public class MinigameManager : MonoBehaviour
         creature_ai.Add_To_Player_Input(false);
 
         GlobalMinigameManager.End_MiniGame();
-        EvolutionManager.Post_Minigame_Evolution(evolution_Type);
+
+        if (!GlobalMinigameManager.Last_Minigame()) EvolutionManager.Post_Minigame_Evolution(evolution_Type);
+        else ExtinctionManager.Display_Final_Extinction_Information();
     }
 
     protected IEnumerator End_Minigame_Delay()

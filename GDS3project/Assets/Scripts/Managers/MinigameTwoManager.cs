@@ -48,6 +48,8 @@ public class MinigameTwoManager : MinigameManager
     {
         print("end minigame");
 
+        EvolutionManager.Set_Evolution(3, evolution_Type);
+
         Interactable_points.SetActive(false);
         base.End_MiniGame();
     }

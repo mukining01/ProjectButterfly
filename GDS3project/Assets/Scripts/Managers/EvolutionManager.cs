@@ -1,70 +1,79 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class EvolutionManager : MonoBehaviour
 {
-    public GameObject Evolution_UI_p;
-    static GameObject Evolution_UI;
-
     static CreatureAI creatureAI;
     static CreatureSprite creatureimage;
 
     public Animator EvolutionMangagerAnimator_p;
     static Animator EvolutionMangagerAnimator;
 
+    static List<Evolution> Current_Evolutions = new List<Evolution>();
+
     public void Awake()
     {
         creatureimage = FindObjectOfType<CreatureSprite>().GetComponent<CreatureSprite>();
         creatureAI = FindObjectOfType<CreatureAI>().GetComponent<CreatureAI>();
 
-        Evolution_UI = Evolution_UI_p;
-        Evolution_UI.SetActive(false);
+        EvolutionMangagerAnimator = EvolutionMangagerAnimator_p;
     }
 
     public static void Post_Minigame_Evolution(int evolution_type)
     {
-        CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_1);
+        CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_0);
         ExtinctionManager.Set_New_Extinction_Time();
 
         creatureimage.Set_Creature_Evolving(evolution_type);
         creatureAI.Setting_Static();
+
+        //EvolutionMangagerAnimator.SetInteger("Active", 1);
     }
 
     public static void Post_Creature_Evolution()
     {
-        //CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_1);
+        CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_1);
 
-        Evolution_UI.SetActive(true);
+        EvolutionMangagerAnimator.SetInteger("Active", 2);
     }
 
     public static void Continue_After_Evolution_Manager()
     {
-        CameraManager.Switch_Camera(Camera_Types.MainCamera);
-
-        Evolution_UI.SetActive(false);
+        EvolutionMangagerAnimator.SetInteger("Active", 0);
 
         ExtinctionManager.Display_Extinction_Information();
+    }
+
+    public static void Set_Evolution(int evolutionType, int evolution)
+    {
+        int _evolution = evolutionType + (evolutionType * 10) - 10;
+        Current_Evolutions.Add((Evolution)_evolution);
+    }
+
+    public static List<Evolution> Get_Evolutions()
+    {
+        return Current_Evolutions;
     }
 }
 
 [System.Serializable]
 public class Creature_Sprites
 {
-    public Evolution1 evolution_one;
-    public Evolution1 evolution_two;
-    public Evolution1 evolution_three;
+    public Evolution evolution_one;
+    public Evolution evolution_two;
+    public Evolution evolution_three;
 }
 
-public enum Evolution1
+public enum Evolution
 {
-    Null, Omnivore, Carnivore
+    Null,
+    Omnivore = 01, Carnivore = 02,
+
+    Hump = 11, Fur = 12, Wings = 13,
+    Hooves = 14, Paws = 15, Fins = 16,
+    Big = 17, Small = 18,
+
+    Mountains = 21, Dessert = 22, Forest = 23, Sea = 24
 }
 
-public enum Evolution2
-{
-    Null, Choice_1, Choice_2, Choice_3, Choice_4, Choice_5, Choice_6
-}
-
-public enum Evolution3
-{
-    Null, Mountains, Dessert, Forest, Sea
-}

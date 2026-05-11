@@ -34,9 +34,9 @@ public class ChoicesContinueButton : MonoBehaviour
 
             for(var i = 0; i < minigame_3.text_choices.Count; i++)
             {
-                Evolution2 _choice = minigame_3.text_choices[i].Get_Current_Choice();
+                Evolution _choice = minigame_3.text_choices[i].Get_Current_Choice();
 
-                if(_choice == Evolution2.Null) return;
+                if(_choice == Evolution.Null) return;
             }
 
             minigame_3.End_MiniGame();

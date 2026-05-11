@@ -21,7 +21,7 @@ public class MinigameOneManager : MinigameManager
     public List<InteractableObject> other_foods = new List<InteractableObject>();
     public List<BoxCollider2D> other_foods_bounds = new List<BoxCollider2D>();
 
-
+    bool end_minigame = false;
 
     public void On_Meat_Eaten()
     {
@@ -39,12 +39,18 @@ public class MinigameOneManager : MinigameManager
 
     public void Set_UI(int eaten_type)
     {
+        if (end_minigame) return;
+
         eaten_food_ui_component[current_amount_of_food_eaten].Set_EatenType(eaten_type);
         current_amount_of_food_eaten++;
 
         if (current_amount_of_food_eaten >= eaten_food_ui_component.Count)
         {
+            end_minigame = true;
             StartCoroutine(End_Minigame_Delay());
+
+            StopCoroutine(Spawn_Crab_Timer());
+            StopCoroutine(Spawn_Berry_Timer());
         }
     }
 
@@ -81,12 +87,12 @@ public class MinigameOneManager : MinigameManager
                 global_elements[i].SetActive(false);
             }
 
+        EvolutionManager.Set_Evolution(1, evolution_Type);
+
         base.End_MiniGame();
 
         //
 
-        StopCoroutine(Spawn_Crab_Timer());
-        StopCoroutine(Spawn_Berry_Timer());
 
         for (int i = 0; i < crab_object.Count; i++)
         {

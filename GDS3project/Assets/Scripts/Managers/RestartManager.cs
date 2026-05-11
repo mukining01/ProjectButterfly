@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class RestartManager : MonoBehaviour
 {
-    static float max_restart_time = 15;
+    static float max_restart_time = 30;
     static float current_restart_time = 0;
 
     static bool decrease_restart_time = false;

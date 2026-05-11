@@ -7,9 +7,9 @@ public class TwoChoiceText : MonoBehaviour
     public Animator Input_Screen;
     int increment = 0;
 
-    public Evolution2 current_choice = Evolution2.Null;
-    public Evolution2 choice_1;
-    public Evolution2 choice_2;
+    public Evolution current_choice = Evolution.Null;
+    public Evolution choice_1;
+    public Evolution choice_2;
 
     public void Start()
     {
@@ -50,12 +50,12 @@ public class TwoChoiceText : MonoBehaviour
 
             if (increment == 1) current_choice = choice_1;
             else if (increment == -1) current_choice = choice_2;
-            else current_choice = Evolution2.Null;
+            else current_choice = Evolution.Null;
         }
             
     }
 
-    public Evolution2 Get_Current_Choice()
+    public Evolution Get_Current_Choice()
     {
         return current_choice;
     }
