@@ -8,6 +8,9 @@ public class EvolutionManager : MonoBehaviour
     static CreatureAI creatureAI;
     static CreatureSprite creatureimage;
 
+    public Animator EvolutionMangagerAnimator_p;
+    static Animator EvolutionMangagerAnimator;
+
     public void Awake()
     {
         creatureimage = FindObjectOfType<CreatureSprite>().GetComponent<CreatureSprite>();
@@ -19,7 +22,7 @@ public class EvolutionManager : MonoBehaviour
 
     public static void Post_Minigame_Evolution(int evolution_type)
     {
-        CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_0);
+        CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_1);
         ExtinctionManager.Set_New_Extinction_Time();
 
         creatureimage.Set_Creature_Evolving(evolution_type);
@@ -28,7 +31,7 @@ public class EvolutionManager : MonoBehaviour
 
     public static void Post_Creature_Evolution()
     {
-        CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_1);
+        //CameraManager.Switch_Camera(Camera_Types.Evolution_Camera_1);
 
         Evolution_UI.SetActive(true);
     }
