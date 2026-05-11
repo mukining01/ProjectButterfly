@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     public static void Start_MainMenu()
     {
        // animator.SetTrigger("active");
-        PlayerInput.Add_To_Player_Input(MainMenuInput);
+        //PlayerInput.Add_To_Player_Input(MainMenuInput);
     }
 
     public static void MainMenuInput(Touch touch)
@@ -25,20 +25,24 @@ public class MainMenu : MonoBehaviour
 
         if (touch.phase == TouchPhase.Began)
         {
-            print("main menu 1");
-            animator.SetTrigger("clicked");
-            print("main menu 2");
-            PlayerInput.Remove_From_Player_Input(MainMenuInput);
-            print("main menu 3");
 
-            RestartManager.Decreasing_Restart_time();
-
-            ExtinctionManager.Display_Extinction_Information();
-            print("main menu 4");
-
-            
+            MainMenu_Input();
         }
     }
 
+    public static void MainMenu_Input()
+    {
+        //print("main menu 1");
+        animator.SetTrigger("clicked");
+        //print("main menu 2");
+        PlayerInput.Remove_From_Player_Input(MainMenuInput);
+       // print("main menu 3");
+
+        RestartManager.Decreasing_Restart_time();
+
+        ExtinctionManager.Display_First_Extinction_Information();
+        print("main menu 4");
+
+    }
 
 }

@@ -1,13 +1,11 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ExtinctionManager : MonoBehaviour
 {
-    static int extinction_range = 4;
-    static Animator animator;
-    public GameObject extinction_image_p;
-    static GameObject extinction_image;
+    static int extinction_range = 2;
 
     static float ExtinctionMultiplier = 100000;
     static float new_ExtinctionTime = 0;
@@ -17,39 +15,74 @@ public class ExtinctionManager : MonoBehaviour
     static float extinction_time_increase_lerp_max_time = 2;
     static float extinction_time_increase_lerp_current_time = 0;
 
-    public string[] Extinction_Types;
-    public TMP_Text extinction_type;
-    public TMP_Text extinction_time;
-    public Animator Show_Text_animator_p;
-    static Animator Show_Text_animator;
+    public Animator anim_extinction_info_p;
+    public Animator anim_extinction_text_p;
+    public Animator anim_extinction_image_p;
+    public Animator anim_transition_arrow_p;
+
+    static Animator anim_extinction_info;
+    static Animator anim_extinction_text;
+    static Animator anim_extinction_image;
+    static Animator anim_transition_arrow;
 
     public void Awake()
     {
-        animator = GetComponent<Animator>();
-        extinction_image = extinction_image_p;
-        extinction_image.SetActive(false);
-
-        Show_Text_animator = Show_Text_animator_p;
-
+        anim_extinction_text = anim_extinction_text_p;
+        anim_extinction_image = anim_extinction_image_p;
+        anim_transition_arrow = anim_transition_arrow_p;
+        anim_extinction_info = anim_extinction_info_p;
     }
 
     private void Start()
     {
-
         Set_Extinction_Time();
     }
 
     static int random_extinction = 0;
 
+    public static void Display_First_Extinction_Information()
+    {
+        random_extinction = Random.RandomRange(0, extinction_range);
+        anim_extinction_text.SetInteger("Extinction", random_extinction);
+        anim_extinction_image.SetInteger("Extinction", random_extinction);
+
+        CameraManager.Switch_Camera(Camera_Types.ExtinctionCamera);
+
+        timer_count = true;
+    }
+
     public static void Display_Extinction_Information()
     {
-        extinction_image.SetActive(true);
-        print("display 3");
-        animator.SetInteger("ExtinctionManager", random_extinction);
-        print("display 4");
-        PlayerInput.Add_To_Player_Input(Extinction_Input);
+        timer_count = true;
+        current_arrow_pointer++;
+        anim_extinction_info.SetBool("Active", true);
+        //PlayerInput.Add_To_Player_Input(Extinction_Input);
+    }
 
-        Show_Text_animator.SetBool("Show", true);
+    static bool timer_count = false;
+    static int current_arrow_pointer = 0;
+    float max_time = 7;
+    float current_time = 0;
+    bool first_timer = false;
+
+    public void Update()
+    {
+        if (!timer_count) return;
+
+        current_time += Time.deltaTime;
+
+        if(current_time >= max_time)
+        {
+            timer_count = false;
+            first_timer = true;
+            CameraManager.Switch_Camera(Camera_Types.MainCamera);
+            Continue_Minigame();
+
+            anim_extinction_info.SetBool("Active", false);
+        } else if (current_time >= max_time / 2 && first_timer)
+        {
+            anim_transition_arrow.SetInteger("Arrow", current_arrow_pointer);
+        }
     }
 
     public static void Extinction_Input(Touch touch)
@@ -65,17 +98,11 @@ public class ExtinctionManager : MonoBehaviour
     {
         GlobalMinigameManager.Start_MiniGame();
 
-        extinction_image.SetActive(false);
-
-        Show_Text_animator.SetBool("Show", false);
-
         PlayerInput.Remove_From_Player_Input(Extinction_Input); 
     }
 
     public static void Display_Final_Extinction_Information()
     {
-        animator.SetInteger("ExtinctionManager", random_extinction);
-
         PlayerInput.Add_To_Player_Input(Reset_Game_After_Final_Extinction);
     }
 
@@ -90,7 +117,6 @@ public class ExtinctionManager : MonoBehaviour
     {
         random_extinction = Random.Range(1, extinction_range);
 
-        extinction_type.text = Extinction_Types[random_extinction -  1];
         current_ExtinctionTime = ExtinctionMultiplier * GlobalMinigameManager.Get_Minigame_Amount();
         new_ExtinctionTime = current_ExtinctionTime;
     }
@@ -105,9 +131,6 @@ public class ExtinctionManager : MonoBehaviour
 
     public void FixedUpdate()
     {
-
-        print("time time: ");
-        extinction_time.text = current_ExtinctionTime.ToString() + " years";
         Lerp_Extinction_Time();
     }
 
@@ -131,4 +154,10 @@ public class ExtinctionManager : MonoBehaviour
     {
 
     }
+}
+
+public enum Extinction_Events
+{
+    Ice_Age,
+    Drought
 }

@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: cc4fad185d905094a813a7b1ab99f355
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5993635198459689747
+    second: '''Pathway Progress''_0'
+  - first:
+      213: 5074849880079682263
+    second: '''Pathway Progress''_1'
+  - first:
+      213: -8859684872872915416
+    second: '''Pathway Progress''_2'
+  - first:
+      213: -8213241113728029220
+    second: '''Pathway Progress''_3'
+  - first:
+      213: -3447038433956944958
+    second: '''Pathway Progress''_4'
+  - first:
+      213: -8336796663227570928
+    second: '''Pathway Progress''_5'
+  - first:
+      213: -8579904317803470565
+    second: '''Pathway Progress''_6'
+  - first:
+      213: 2365216568307407189
+    second: '''Pathway Progress''_7'
+  - first:
+      213: -5039501604747510350
+    second: '''Pathway Progress''_8'
+  - first:
+      213: 2499018004217001991
+    second: '''Pathway Progress''_9'
+  - first:
+      213: 1051968779109287889
+    second: '''Pathway Progress''_10'
+  - first:
+      213: 1256063579175414509
+    second: '''Pathway Progress''_11'
+  - first:
+      213: 6589108652491261004
+    second: '''Pathway Progress''_12'
+  - first:
+      213: -3585331918575619627
+    second: '''Pathway Progress''_13'
+  - first:
+      213: 6278135697226881582
+    second: '''Pathway Progress''_14'
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: '''Pathway Progress''_0'
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 230
+        width: 117
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31bb775157bad2350800000000000000
+      internalID: 5993635198459689747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_1'
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 209
+        width: 116
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da4596041d7d6640800000000000000
+      internalID: 5074849880079682263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_2'
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 200
+        width: 103
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e028a7c831c0580800000000000000
+      internalID: -8859684872872915416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_3'
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 181
+        width: 116
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd6b9109b4b40e80800000000000000
+      internalID: -8213241113728029220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_4'
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 167
+        width: 116
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3a0e8bec8a920d0800000000000000
+      internalID: -3447038433956944958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_5'
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 153
+        width: 116
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 015a8a3ea9fbd4c80800000000000000
+      internalID: -8336796663227570928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_6'
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 143
+        width: 107
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b11eb723b7e0ee880800000000000000
+      internalID: -8579904317803470565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_7'
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 125
+        width: 117
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559d4daffefe2d020800000000000000
+      internalID: 2365216568307407189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_8'
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 108
+        width: 116
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd730cadf7101ab0800000000000000
+      internalID: -5039501604747510350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_9'
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 90
+        width: 115
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708f8ac62ab4ea220800000000000000
+      internalID: 2499018004217001991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_10'
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 83
+        width: 116
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d74c91f708599e00800000000000000
+      internalID: 1051968779109287889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_11'
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 65
+        width: 116
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea6e0c9b2f6e6110800000000000000
+      internalID: 1256063579175414509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_12'
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 51
+        width: 115
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44c13aa867317b50800000000000000
+      internalID: 6589108652491261004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_13'
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 37
+        width: 117
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d13e6fad975e3ec0800000000000000
+      internalID: -3585331918575619627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '''Pathway Progress''_14'
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 23
+        width: 117
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a58e4572b602750800000000000000
+      internalID: 6278135697226881582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      '''Pathway Progress''_0': 5993635198459689747
+      '''Pathway Progress''_1': 5074849880079682263
+      '''Pathway Progress''_10': 1051968779109287889
+      '''Pathway Progress''_11': 1256063579175414509
+      '''Pathway Progress''_12': 6589108652491261004
+      '''Pathway Progress''_13': -3585331918575619627
+      '''Pathway Progress''_14': 6278135697226881582
+      '''Pathway Progress''_2': -8859684872872915416
+      '''Pathway Progress''_3': -8213241113728029220
+      '''Pathway Progress''_4': -3447038433956944958
+      '''Pathway Progress''_5': -8336796663227570928
+      '''Pathway Progress''_6': -8579904317803470565
+      '''Pathway Progress''_7': 2365216568307407189
+      '''Pathway Progress''_8': -5039501604747510350
+      '''Pathway Progress''_9': 2499018004217001991
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

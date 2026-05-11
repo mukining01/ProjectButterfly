@@ -66,13 +66,15 @@ public class CreatureSprite : MonoBehaviour
 
             currently_active_creature = all_creature_images[i];
             currently_active_creature.SetActive(true);
-            break;
-        }
 
-        for (var i = 0; i < all_creature_images.Count; i++)
-        {
-            if (currently_active_creature == all_creature_images[i]) continue;
-            all_creature_images[i].SetActive(false);
+            for (var j = 0; j < all_creature_images.Count; j++)
+            {
+                if (currently_active_creature == all_creature_images[j]) continue;
+                all_creature_images[j].SetActive(false);
+
+            }
+
+            return;
         }
 
         Debug.LogError("No evolution found");
@@ -96,26 +98,5 @@ public class CreatureSprite : MonoBehaviour
     }
 }
 
-[System.Serializable]
-public class Creature_Sprites
-{
-    public Evolution1 evolution_one;
-    public Evolution1 evolution_two;
-    public Evolution1 evolution_three;
-}
 
-public enum Evolution1
-{
-    Null, Choice_1, Choice_2, Choice_3
-}
-
-public enum Evolution2
-{
-    Null, Choice_1, Choice_2, Choice_3
-}
-
-public enum Evolution3
-{
-    Null, Choice_1, Choice_2, Choice_3
-}
 

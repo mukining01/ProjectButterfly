@@ -21,20 +21,20 @@ public class MinigameOneManager : MinigameManager
     public List<InteractableObject> other_foods = new List<InteractableObject>();
     public List<BoxCollider2D> other_foods_bounds = new List<BoxCollider2D>();
 
+
+
     public void On_Meat_Eaten()
     {
         Set_UI(1);
 
-        if (evolution_Type == 2 || evolution_Type == 3) evolution_Type = 3;
-        else evolution_Type = 1;
+        evolution_Type--;
     }
 
     public void On_Greens_Eaten()
     {
        Set_UI(2);
 
-        if (evolution_Type == 1 || evolution_Type == 3) evolution_Type = 3;
-        else evolution_Type = 2;
+        evolution_Type++;
     }
 
     public void Set_UI(int eaten_type)
@@ -73,10 +73,13 @@ public class MinigameOneManager : MinigameManager
     {
         print("end minigame");
 
-        for (int i = 0; i < global_elements.Count; i++)
-        {
-            global_elements[i].SetActive(false);
-        }
+        if (evolution_Type < 0) evolution_Type = 1;
+        else evolution_Type = 2;
+
+            for (int i = 0; i < global_elements.Count; i++)
+            {
+                global_elements[i].SetActive(false);
+            }
 
         base.End_MiniGame();
 

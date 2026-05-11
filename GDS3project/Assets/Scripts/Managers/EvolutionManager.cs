@@ -42,3 +42,26 @@ public class EvolutionManager : MonoBehaviour
         ExtinctionManager.Display_Extinction_Information();
     }
 }
+
+[System.Serializable]
+public class Creature_Sprites
+{
+    public Evolution1 evolution_one;
+    public Evolution1 evolution_two;
+    public Evolution1 evolution_three;
+}
+
+public enum Evolution1
+{
+    Null, Omnivore, Carnivore
+}
+
+public enum Evolution2
+{
+    Null, Choice_1, Choice_2, Choice_3, Choice_4, Choice_5, Choice_6
+}
+
+public enum Evolution3
+{
+    Null, Mountains, Dessert, Forest, Sea
+}

@@ -37,6 +37,8 @@ public class CreatureAI : MonoBehaviour
 
         Idle_Activation(true);
 
+
+        Add_To_Player_Input(true);
     }
 
     public void UpdatePath()

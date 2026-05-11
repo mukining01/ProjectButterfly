@@ -79,5 +79,6 @@ public enum Camera_Types
     Evolution_Camera_0,
     Evolution_Camera_1,
     SmallMap,
-    LargeMap
+    LargeMap,
+    ExtinctionCamera
 }
