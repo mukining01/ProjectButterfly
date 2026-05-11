@@ -87,11 +87,6 @@ public class MinigameOneManager : MinigameManager
                 global_elements[i].SetActive(false);
             }
 
-        EvolutionManager.Set_Evolution(1, evolution_Type);
-
-        base.End_MiniGame();
-
-        //
 
 
         for (int i = 0; i < crab_object.Count; i++)
@@ -103,6 +98,13 @@ public class MinigameOneManager : MinigameManager
         {
             berry_object[i].gameObject.SetActive(false);
         }
+
+        EvolutionManager.Set_Evolution(1, evolution_Type);
+
+        base.End_MiniGame();
+
+        //
+
     }
 
     int crab_count = 0;

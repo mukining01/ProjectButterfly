@@ -23,7 +23,7 @@ public class MinigameManager : MonoBehaviour
         GlobalMinigameManager.End_MiniGame();
 
         if (!GlobalMinigameManager.Last_Minigame()) EvolutionManager.Post_Minigame_Evolution(evolution_Type);
-        else ExtinctionManager.Display_Final_Extinction_Information();
+        else ExtinctionManager.Display_Extinction_Information();
     }
 
     protected IEnumerator End_Minigame_Delay()

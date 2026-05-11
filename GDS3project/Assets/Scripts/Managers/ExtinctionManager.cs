@@ -63,9 +63,12 @@ public class ExtinctionManager : MonoBehaviour
 
     public static void Display_Extinction_Information()
     {
+        if (timer_count) return;
+
         timer_count = true;
         current_arrow_pointer++;
         anim_extinction_info.SetBool("Active", true);
+        anim_extinction_text.SetInteger("ExtinctionText", random_extinction);
         //PlayerInput.Add_To_Player_Input(Extinction_Input);
 
         max_time = 4;
@@ -88,6 +91,12 @@ public class ExtinctionManager : MonoBehaviour
             timer_count = false;
             first_timer = true;
             anim_extinction_info.SetBool("Active", false);
+
+            if (GlobalMinigameManager.Last_Minigame())
+            {
+                Display_Final_Extinction_Information();
+                return;
+            } 
 
             CameraManager.Switch_Camera(Camera_Types.MainCamera);
             Continue_Minigame();
@@ -117,6 +126,8 @@ public class ExtinctionManager : MonoBehaviour
 
     public static void Display_Final_Extinction_Information()
     {
+        print("DisplayInput");
+
         Generate_Text();
 
         CameraManager.Switch_Camera(Camera_Types.ExtinctionCamera);
@@ -138,7 +149,7 @@ public class ExtinctionManager : MonoBehaviour
         _extinction_text = _extinction_text.Replace("_", " ");
         extinction_text.text = _extinction_text;
 
-        anim_extinction_text.SetInteger("Extinction", random_extinction);
+        anim_extinction_text.SetInteger("ExtinctionText", random_extinction);
         anim_extinction_image.SetInteger("Extinction", random_extinction);
 
         current_ExtinctionTime = ExtinctionMultiplier * GlobalMinigameManager.Get_Minigame_Amount();
