@@ -20,11 +20,13 @@ public class ExtinctionManager : MonoBehaviour
     public Animator anim_extinction_text_p;
     public Animator anim_extinction_image_p;
     public Animator anim_transition_arrow_p;
+    public Animator anim_extinction_icon_p;
 
     static Animator anim_extinction_info;
     static Animator anim_extinction_text;
     static Animator anim_extinction_image;
     static Animator anim_transition_arrow;
+    static Animator anim_extinction_icon;
 
     [Header("ExtinctionTextInformation")]
     public List<Extinction_Ending_Information> Extinction_Text_Info_p = new List<Extinction_Ending_Information>();
@@ -40,6 +42,7 @@ public class ExtinctionManager : MonoBehaviour
         anim_extinction_image = anim_extinction_image_p;
         anim_transition_arrow = anim_transition_arrow_p;
         anim_extinction_info = anim_extinction_info_p;
+        anim_extinction_icon = anim_extinction_icon_p;
 
         Extinction_Text_Info = Extinction_Text_Info_p;
         extinction_text = extinction_text_p;
@@ -102,9 +105,10 @@ public class ExtinctionManager : MonoBehaviour
             Continue_Minigame();
 
             current_time = 0;
-        } else if (current_time >= max_time / 2 && first_timer)
+        } else if (current_time >= max_time / 2)
         {
-            anim_transition_arrow.SetInteger("Arrow", current_arrow_pointer);
+            if(first_timer) anim_transition_arrow.SetInteger("Arrow", current_arrow_pointer);
+            else anim_extinction_icon.SetInteger("ExtinctionType", random_extinction + 1);
         }
     }
 
