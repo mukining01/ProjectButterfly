@@ -37,6 +37,9 @@ public class MinigameOneManager : MinigameManager
         evolution_Type++;
     }
 
+    Coroutine Crabs;
+    Coroutine Berrys;
+
     public void Set_UI(int eaten_type)
     {
         if (end_minigame) return;
@@ -49,8 +52,17 @@ public class MinigameOneManager : MinigameManager
             end_minigame = true;
             StartCoroutine(End_Minigame_Delay());
 
-            StopCoroutine(Spawn_Crab_Timer());
-            StopCoroutine(Spawn_Berry_Timer());
+            if(Crabs != null)
+            {
+                StopCoroutine(Crabs);
+                Crabs = null;
+            }
+
+            if (Berrys != null)
+            {
+                StopCoroutine(Berrys);
+                Berrys = null;
+            }
         }
     }
 
@@ -70,8 +82,8 @@ public class MinigameOneManager : MinigameManager
             eaten_food_ui_component[i].Set_EatenType(0);
         }
 
-        StartCoroutine(Spawn_Crab_Timer());
-        StartCoroutine(Spawn_Berry_Timer());
+        Crabs = StartCoroutine(Spawn_Crab_Timer());
+        Berrys = StartCoroutine(Spawn_Berry_Timer());
         Set_All_Starting_Interactable_Bounds();
     }
 
@@ -131,7 +143,8 @@ public class MinigameOneManager : MinigameManager
         crab_count++;
         if (crab_count >= crab_object.Count) return;
 
-        StartCoroutine(Spawn_Crab_Timer());
+        if(Crabs != null) StopCoroutine(Crabs);
+        Crabs = StartCoroutine(Spawn_Crab_Timer());
     }
 
     int berry_count = 0;
@@ -154,7 +167,8 @@ public class MinigameOneManager : MinigameManager
         berry_count++;
         if (berry_count >= berry_object.Count) return;
 
-        StartCoroutine(Spawn_Berry_Timer());
+        if (Berrys != null) StopCoroutine(Berrys);
+        Berrys = StartCoroutine(Spawn_Berry_Timer());
     }
 
     public void Set_All_Starting_Interactable_Bounds()
