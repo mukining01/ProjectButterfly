@@ -621,12 +621,7 @@ MonoBehaviour:
   anim_extinction_image_p: {fileID: 893910869}
   anim_transition_arrow_p: {fileID: 1374360521}
   anim_extinction_icon_p: {fileID: 63674182}
-  Extinction_Text_Info_p:
-  - evolution_parameter: 0
-    GlobalWarmingParameters:
-      individual_information: []
-    IceAgeParameters:
-      individual_information: []
+  Extinction_Text_Info_p: []
   extinction_text_p: {fileID: 852435026}
 --- !u!1 &52331247
 GameObject:
@@ -732,7 +727,7 @@ RectTransform:
   m_GameObject: {fileID: 63674178}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.088, y: 0.088, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2107061420}
@@ -740,7 +735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -252, y: -307}
+  m_AnchoredPosition: {x: -218, y: -266}
   m_SizeDelta: {x: 1826, y: 1770}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63674180
@@ -2546,6 +2541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b853fda317f4c41a5984809538aa58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
+  pause_animator_p: {fileID: 1874436521}
+  global_restart_animator_p: {fileID: 754415005}
 --- !u!4 &317300204
 Transform:
   m_ObjectHideFlags: 0
@@ -4472,6 +4469,7 @@ GameObject:
   - component: {fileID: 754415003}
   - component: {fileID: 754415002}
   - component: {fileID: 754415001}
+  - component: {fileID: 754415005}
   m_Layer: 5
   m_Name: Global_RestartButton
   m_TagString: Untagged
@@ -4488,14 +4486,14 @@ RectTransform:
   m_GameObject: {fileID: 754414999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.088, y: 0.088, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1969735544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 89.6, y: 84.8}
+  m_AnchoredPosition: {x: 49, y: 49}
   m_SizeDelta: {x: 1826, y: 1770}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754415001
@@ -4604,6 +4602,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754414999}
   m_CullTransparentMesh: 1
+--- !u!95 &754415005
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754414999}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa4f8149c400c9849918e4445f7eb9a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &790462131
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,8 +5209,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: In 500 million year a great drought will come. Will your species live?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
+  m_sharedMaterial: {fileID: 844716210759336683, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5824,7 +5844,7 @@ RectTransform:
   m_GameObject: {fileID: 1030711826}
   m_LocalRotation: {x: -0, y: -0, z: -0.0626716, w: 0.99803424}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08947994, y: 0.08947994, z: 0}
+  m_LocalScale: {x: 0.04947994, y: 0.04947994, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 52331248}
@@ -5832,7 +5852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.186}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 163, y: -151}
+  m_AnchoredPosition: {x: 82.5, y: -90.1}
   m_SizeDelta: {x: 2048, y: 1136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1030711828
@@ -6057,7 +6077,7 @@ RectTransform:
   m_GameObject: {fileID: 1063054366}
   m_LocalRotation: {x: -0, y: -0, z: 0.012539937, w: 0.99992144}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.23232248, y: 0.23232248, z: 9.258888}
+  m_LocalScale: {x: 0.1323225, y: 0.1323225, z: 9.258888}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 804790302}
@@ -6065,7 +6085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.437}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -80, y: 59}
+  m_AnchoredPosition: {x: -45, y: 34}
   m_SizeDelta: {x: 2048, y: 1049}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063054368
@@ -6321,14 +6341,14 @@ RectTransform:
   m_GameObject: {fileID: 1102972006}
   m_LocalRotation: {x: -0, y: -0, z: -0.0626716, w: 0.99803424}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.17708902, y: 0.17708902, z: 0}
+  m_LocalScale: {x: 0.088, y: 0.088, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1969735544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 535, y: 195}
+  m_AnchoredPosition: {x: 294, y: 86}
   m_SizeDelta: {x: 1826, y: 1770}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102972008
@@ -9007,7 +9027,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -17
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3249685079845757895, guid: d89c97fb17fe2274f8150491266172f3, type: 3}
+  m_Sprite: {fileID: 9048742505950476750, guid: 570e6d692897df0418d4b169d4839f14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10165,14 +10185,14 @@ RectTransform:
   m_GameObject: {fileID: 1874436519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 0}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1969735544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -642, y: 466}
+  m_AnchoredPosition: {x: -367, y: 262}
   m_SizeDelta: {x: 1826, y: 1770}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1874436521
@@ -10241,9 +10261,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RestartManager, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 317300203}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: Paused
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10772,7 +10792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -10804,7 +10824,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 183
+  m_SortingOrder: 1249
   m_TargetDisplay: 0
 --- !u!1001 &2024663904
 PrefabInstance:

@@ -1,3 +1,4 @@
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class MainMenu : MonoBehaviour
@@ -6,11 +7,20 @@ public class MainMenu : MonoBehaviour
 
     static bool main_menu_on;
 
+    public Animator pause_animator_p;
+    static Animator pause_animator;
+
+    public Animator global_restart_animator_p;
+    static Animator global_restart_animator;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
 
         Start_MainMenu();
+
+        pause_animator = pause_animator_p;
+        global_restart_animator = global_restart_animator_p;
     }
 
     public static void Start_MainMenu()
@@ -33,7 +43,18 @@ public class MainMenu : MonoBehaviour
     public static void MainMenu_Input()
     {
         //print("main menu 1");
+
+        Time.timeScale = 1;
+
         animator.SetTrigger("clicked");
+
+        pause_animator.SetBool("Idle", true);
+        global_restart_animator.SetBool("Idle", true);
+
+
+
+        if (paused) return;
+
         //print("main menu 2");
         PlayerInput.Remove_From_Player_Input(MainMenuInput);
        // print("main menu 3");
@@ -43,6 +64,19 @@ public class MainMenu : MonoBehaviour
         ExtinctionManager.Display_First_Extinction_Information();
         print("main menu 4");
 
+    }
+
+    static bool paused = false;
+
+    public static void Paused()
+    {
+        paused = true;
+
+        Time.timeScale = 0;
+
+        animator.SetTrigger("paused");
+        pause_animator.SetBool("Idle", false);
+        global_restart_animator.SetBool("Idle", false);
     }
 
 }
