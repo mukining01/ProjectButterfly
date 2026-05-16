@@ -3,9 +3,9 @@ using UnityEngine;
 public class Crab : InteractableObject
 {
     float direction = 1;
-    float walk_distance = 20;
+    float walk_distance = 21;
     float overall_position_change = 0;
-    float position_change = 0.02f;
+    float position_change = 0.01f;
 
     public void Update()
     {

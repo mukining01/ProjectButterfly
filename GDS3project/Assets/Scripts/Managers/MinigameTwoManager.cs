@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class MinigameTwoManager : MinigameManager
 {
-    public GameObject Map = null;
     public GameObject Interactable_points = null;
 
     private void Awake()
     {
-        Map.SetActive(false);
         Interactable_points.SetActive(false);
     }
 
@@ -22,7 +20,7 @@ public class MinigameTwoManager : MinigameManager
 
         Interactable_points.SetActive(true);
 
-        Map.SetActive(true);
+        BackgroundManager.Increase_Background_Type();
 
         CameraManager.Switch_Camera(Camera_Types.SmallMap);
 

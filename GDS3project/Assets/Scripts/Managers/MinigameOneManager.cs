@@ -70,6 +70,8 @@ public class MinigameOneManager : MinigameManager
     {
         base.Start_MiniGame();
 
+        BackgroundManager.Increase_Background_Type();
+
         evolution_Type = 0;
 
         for (int i = 0; i < global_elements.Count; i++)

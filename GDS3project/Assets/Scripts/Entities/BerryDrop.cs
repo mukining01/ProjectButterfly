@@ -5,7 +5,7 @@ public class BerryDrop : InteractableObject
     float direction = 1;
     float fall_distance = 0;
     float overall_position_change = 0;
-    float position_change = 0.1f;
+    float position_change = 0.05f;
 
     bool stop_drop = false;
 
@@ -24,11 +24,13 @@ public class BerryDrop : InteractableObject
         if (overall_position_change >= fall_distance)
         {
             stop_drop = true;
+            Set_Can_Interact(true);
         }
     }
 
     public void Change_Start_Fall()
     {
+        Set_Can_Interact(false);
         fall_distance = Random.Range(8, 15);
     }
 

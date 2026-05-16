@@ -149,7 +149,7 @@ public class ExtinctionManager : MonoBehaviour
         random_extinction = Random.RandomRange(0, extinction_range);
         extinction_event = (Extinction_Event)random_extinction;
 
-        string _extinction_text = "In 500 million years, a great " + extinction_event.ToString() + " will come. \n Will your species survive?";
+        string _extinction_text = "In 500 million years, a great " + extinction_event.ToString() + " will come. \n \n Will your species survive?";
         _extinction_text = _extinction_text.Replace("_", " ");
         extinction_text.text = _extinction_text;
 

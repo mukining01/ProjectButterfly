@@ -49,7 +49,7 @@ public class MainMenu : MonoBehaviour
         animator.SetTrigger("clicked");
 
         pause_animator.SetBool("Idle", true);
-        global_restart_animator.SetBool("Idle", true);
+        global_restart_animator.SetBool("Restart", false);
 
 
 
@@ -76,7 +76,7 @@ public class MainMenu : MonoBehaviour
 
         animator.SetTrigger("paused");
         pause_animator.SetBool("Idle", false);
-        global_restart_animator.SetBool("Idle", false);
+        global_restart_animator.SetBool("Restart", true);
     }
 
 }
