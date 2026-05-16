@@ -45,5 +45,7 @@ public class InteractableObject : MonoBehaviour
         myEvent.Invoke();
 
         animator.SetTrigger("Collected");
+
+        FindObjectOfType<CreatureSprite>().Proto_Creature_Eat();
     }
 }

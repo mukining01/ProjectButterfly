@@ -10,6 +10,8 @@ public class CreatureSprite : MonoBehaviour
 
     Animator animator;
 
+    public Animator proto_creature_mouth_anim;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -95,6 +97,11 @@ public class CreatureSprite : MonoBehaviour
     public void Post_Evolution_Animation()
     {
         EvolutionManager.Post_Creature_Evolution();
+    }
+
+    public void Proto_Creature_Eat()
+    {
+        proto_creature_mouth_anim.SetTrigger("Eating");
     }
 }
 

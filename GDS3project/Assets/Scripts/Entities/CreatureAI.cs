@@ -15,6 +15,7 @@ public class CreatureAI : MonoBehaviour
     [Header("Other Creature Values")]
     public Transform target;
     public CreatureSprite creature_sprite;
+    public Transform creature_sprite_transform;
     float update_path_delay = 0.5f;
     public bool added_to_input = false;
     public BoxCollider2D starting_movement_bounds;
@@ -103,6 +104,9 @@ public class CreatureAI : MonoBehaviour
         //transform.position = Vector3.Lerp(transform.position, path.vectorPath[currentWayPoint], (movement_speed / distane) * Time.deltaTime);
 
         transform.position = new Vector3(transform.position.x + force.x, transform.position.y + force.y, 0);
+
+        if (force.x > 0) creature_sprite_transform.localScale = new Vector3(-1f, 1f, 1f);
+        else if (force.x < 0) creature_sprite_transform.localScale = new Vector3(1f, 1f, 1f);
 
         float distane = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
 

@@ -31,8 +31,8 @@ public class ExtinctionManager : MonoBehaviour
     [Header("ExtinctionTextInformation")]
     public List<Extinction_Ending_Information> Extinction_Text_Info_p = new List<Extinction_Ending_Information>();
     static List<Extinction_Ending_Information> Extinction_Text_Info = new List<Extinction_Ending_Information>();
-    public TMP_Text extinction_text_p;
-    static TMP_Text extinction_text;
+    public TMP_Text[] extinction_text_p;
+    static TMP_Text[] extinction_text;
     static Extinction_Event extinction_event;
 
 
@@ -149,9 +149,9 @@ public class ExtinctionManager : MonoBehaviour
         random_extinction = Random.RandomRange(0, extinction_range);
         extinction_event = (Extinction_Event)random_extinction;
 
-        string _extinction_text = "In 500 million years, a great " + extinction_event.ToString() + " will come. \n \n Will your species survive?";
+        string _extinction_text = "In 500 million years, a great " + extinction_event.ToString() + " will come. Will your species survive?";
         _extinction_text = _extinction_text.Replace("_", " ");
-        extinction_text.text = _extinction_text;
+        for(var i = 0; i < extinction_text.Length; i++) extinction_text[i].text = _extinction_text;
 
         anim_extinction_text.SetInteger("ExtinctionText", random_extinction);
         anim_extinction_image.SetInteger("Extinction", random_extinction);
@@ -278,11 +278,12 @@ public class ExtinctionManager : MonoBehaviour
 
         string _text = _score_text + "\n" + "\n" + _desc_text + "\n" + "\n" + _overall_text;
         _text = _text.Replace("_", " ");
-        extinction_text.text = _text;
-        extinction_text.fontSize = 6;
+        for (var i = 0; i < extinction_text.Length; i++)
+        {
+            extinction_text[i].text = _text;
+            extinction_text[i].fontSize = 6;
+        }
     }
-
-
 }
 
 public enum Extinction_Event
