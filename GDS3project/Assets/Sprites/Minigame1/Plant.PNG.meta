@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c3b383893aa28c4487be02bbb1729a6
+guid: a720e3d7707d0354aa6f25cbdcea515b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6957034825661722205
-    second: Carnivore_Stage3_0
+      213: 906388131340123023
+    second: Plant_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Carnivore_Stage3_0
+      name: Plant_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 110
-        width: 869
-        height: 738
+        x: 29
+        y: 18
+        width: 651
+        height: 677
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a1596e9fa5a37f90800000000000000
-      internalID: -6957034825661722205
+      spriteID: f8b78250433249c00800000000000000
+      internalID: 906388131340123023
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Carnivore_Stage3_0: -6957034825661722205
+      Plant_0: 906388131340123023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
