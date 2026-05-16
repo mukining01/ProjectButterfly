@@ -46,7 +46,7 @@ public class TwoChoiceText : MonoBehaviour
 
             increment += _increment;
             increment = Mathf.Clamp(increment, -1, 1);
-            Input_Screen.SetInteger("Increment", increment);
+            Input_Screen.SetInteger("Choice", increment);
 
             if (increment == 1) current_choice = choice_1;
             else if (increment == -1) current_choice = choice_2;
