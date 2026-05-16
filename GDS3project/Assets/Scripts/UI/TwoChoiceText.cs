@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TwoChoiceText : MonoBehaviour
 {
-    public BoxCollider2D boxcolliderBounds;
+    public Collider2D boxcolliderBounds;
 
     public Animator Input_Screen;
     int increment = 0;
@@ -10,6 +10,11 @@ public class TwoChoiceText : MonoBehaviour
     public Evolution current_choice = Evolution.Null;
     public Evolution choice_1;
     public Evolution choice_2;
+
+    public CreatureSpriteAdaptions sprite_adapations;
+    public int choice = 0;
+    public ChoicesContinueButton choiceContinueButton;
+
 
     public void Start()
     {
@@ -44,13 +49,22 @@ public class TwoChoiceText : MonoBehaviour
             }
             else return;
 
-            increment += _increment;
+            increment = _increment;
             increment = Mathf.Clamp(increment, -1, 1);
             Input_Screen.SetInteger("Choice", increment);
 
+            bool clear = false;
+
             if (increment == 1) current_choice = choice_1;
             else if (increment == -1) current_choice = choice_2;
-            else current_choice = Evolution.Null;
+            else clear = true;
+
+            bool _carnivore = !FindAnyObjectByType<CreatureSprite>().Get_Is_Carnivore();
+
+            sprite_adapations.Set_Evolution_Active(current_choice, clear, _carnivore, 0);
+
+            if (clear) choiceContinueButton.Set_Int(choice, 0);
+            else choiceContinueButton.Set_Int(choice, 1);
         }
             
     }

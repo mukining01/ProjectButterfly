@@ -22,14 +22,14 @@ public class CreatureSprite : MonoBehaviour
 
     public void Get_All_Creature_Images()
     {
-        for(var i = 0; i < transform.childCount; i++)
+        for(var i = 0; i < transform.childCount - 1; i++)
         {
             GameObject _sprite = transform.GetChild(i).gameObject;
             all_creature_images.Add(_sprite);
         }
     }
 
-    List<int> stored_evolutions = new List<int> { 0, 0, 0};
+    public List<int> stored_evolutions = new List<int> { 0, 0, 0};
     int current_evolution_stage;
 
     int store_evolution_type_for_evolution = 0;
@@ -92,6 +92,12 @@ public class CreatureSprite : MonoBehaviour
         current_evolution_stage = 0;
 
         Set_Creature_Sprite();
+    }
+
+    public bool Get_Is_Carnivore()
+    {
+        if (stored_evolutions[0] == 1) return true;
+        return false;
     }
 
     public void Post_Evolution_Animation()

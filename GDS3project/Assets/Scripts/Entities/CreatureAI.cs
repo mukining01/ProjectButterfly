@@ -177,6 +177,7 @@ public class CreatureAI : MonoBehaviour
     public void Set_Transform_Zero()
     {
         transform.position = Vector3.zero;
+        creature_sprite_transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
     bool is_static = false;

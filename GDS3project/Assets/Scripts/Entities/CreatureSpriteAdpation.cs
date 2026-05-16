@@ -4,6 +4,7 @@ public class CreatureSpriteAdpation : MonoBehaviour
 {
     [Header("Evolution")]
     public Evolution[] evolutions;
+    public CreatureSpriteAdpation alternate_adaption;
 
     [Header("Sprite Parts")]
     public GameObject Herbivore_Part_1;
@@ -27,7 +28,9 @@ public class CreatureSpriteAdpation : MonoBehaviour
             return;
         }
 
-        if(Carnivore)
+        alternate_adaption.Set_Part_Active(true);
+
+        if (Carnivore)
         {
             if (Part == 0) Carnivore_Part_1.SetActive(true);
             else Carnivore_Part_2.SetActive(true);

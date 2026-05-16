@@ -4,8 +4,12 @@ using UnityEngine;
 public class MinigameThreeManager : MinigameManager
 {
     [Header("TextChoices")]
+    public List<GameObject> active_objects = new List<GameObject>();
     public List<TwoChoiceText> text_choices = new List<TwoChoiceText>();
     public ChoicesContinueButton continueButton;
+
+    public Animator Choice_2;
+    public Animator Choice_3;
 
     public override void Start_MiniGame()
     {
@@ -13,10 +17,23 @@ public class MinigameThreeManager : MinigameManager
 
         evolution_Type = 0;
 
+
         for (int i = 0; i < text_choices.Count; i++)
         {
             text_choices[i].gameObject.SetActive(true);
         }
+
+        for (int i = 0; i < text_choices.Count; i++)
+        {
+            active_objects[i].SetActive(true);
+        }
+
+        if (!creature_ai.creature_sprite.Get_Is_Carnivore())
+        {
+            Choice_2.SetBool("OtherChoice", true);
+            Choice_3.SetBool("OtherChoice", true);
+        }
+
 
         continueButton.gameObject.SetActive(true);
 
@@ -34,6 +51,11 @@ public class MinigameThreeManager : MinigameManager
         for (int i = 0; i < text_choices.Count; i++)
         {
             text_choices[i].gameObject.SetActive(false);
+        }
+
+        for (int i = 0; i < text_choices.Count; i++)
+        {
+            active_objects[i].SetActive(false);
         }
 
         continueButton.gameObject.SetActive(false);

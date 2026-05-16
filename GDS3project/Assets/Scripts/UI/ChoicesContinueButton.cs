@@ -5,9 +5,13 @@ public class ChoicesContinueButton : MonoBehaviour
     public MinigameThreeManager minigame_3;
     public BoxCollider2D boxcolliderBounds;
 
+    Animator animator;
+
     public void Start()
     {
         //input
+
+        animator = GetComponent<Animator>();
     }
 
     public void OnEnable()
@@ -41,5 +45,15 @@ public class ChoicesContinueButton : MonoBehaviour
 
             minigame_3.End_MiniGame();
         }
+    }
+
+    int[] choices = new int[3];
+
+    public void Set_Int(int _value, int _set)
+    {
+        choices[_value] = _set;
+
+        if (choices[0] == 1 && choices[1] == 1 && choices[2] == 1) animator.SetBool("Appear", true);
+        else animator.SetBool("Appear", false);
     }
 }

@@ -682,7 +682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &40440044
 Transform:
   m_ObjectHideFlags: 0
@@ -752,7 +752,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 254279390}
-  - {fileID: 1324401089}
   m_Father: {fileID: 1795225873}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &52331247
@@ -1388,11 +1387,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinigameThreeManager
   creature_ai: {fileID: 1795225871}
   evolution_Type: 0
+  active_objects:
+  - {fileID: 319223302}
+  - {fileID: 674207036}
+  - {fileID: 1237037630}
   text_choices:
-  - {fileID: 235323346}
-  - {fileID: 235323346}
-  - {fileID: 235323346}
+  - {fileID: 2115842625}
+  - {fileID: 702055898}
+  - {fileID: 2079461127}
   continueButton: {fileID: 1237037633}
+  Choice_2: {fileID: 1273751879}
+  Choice_3: {fileID: 2083773523}
 --- !u!1 &97780726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,7 +2066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &138719766
 Transform:
   m_ObjectHideFlags: 0
@@ -3953,6 +3958,9 @@ MonoBehaviour:
   current_choice: 0
   choice_1: 0
   choice_2: 0
+  sprite_adapations: {fileID: 0}
+  choice: 0
+  choiceContinueButton: {fileID: 0}
 --- !u!1 &243625275
 GameObject:
   m_ObjectHideFlags: 0
@@ -4516,7 +4524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &317300202
 Animator:
   serializedVersion: 7
@@ -4585,7 +4593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &319223303
 Transform:
   m_ObjectHideFlags: 0
@@ -6055,6 +6063,7 @@ Transform:
   - {fileID: 1176628646}
   - {fileID: 1087330163}
   - {fileID: 698725414}
+  - {fileID: 1324401089}
   m_Father: {fileID: 254279390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &451300108
@@ -6070,6 +6079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreatureSprite
   proto_creature_mouth_anim: {fileID: 1117879627}
+  stored_evolutions: 000000000000000000000000
 --- !u!95 &451300109
 Animator:
   serializedVersion: 7
@@ -6884,6 +6894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreatureSpriteAdpation
   evolutions: 0c000000
+  alternate_adaption: {fileID: 1250369867}
   Herbivore_Part_1: {fileID: 1157316211}
   Herbivore_Part_2: {fileID: 923126963}
   Carnivore_Part_1: {fileID: 636400892}
@@ -6934,7 +6945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
     Enabled: 1
-    m_Value: 1
+    m_Value: 0
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -8461,7 +8472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &674207037
 Transform:
   m_ObjectHideFlags: 0
@@ -8849,14 +8860,14 @@ GameObject:
   - component: {fileID: 702055895}
   - component: {fileID: 702055896}
   - component: {fileID: 702055898}
-  - component: {fileID: 702055897}
+  - component: {fileID: 702055899}
   m_Layer: 0
   m_Name: Choice_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &702055894
 Transform:
   m_ObjectHideFlags: 0
@@ -8955,8 +8966,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &702055897
-BoxCollider2D:
+--- !u!114 &702055898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702055893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8076ca6027e60064791c3c3ebf988f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TwoChoiceText
+  boxcolliderBounds: {fileID: 702055899}
+  Input_Screen: {fileID: 702055896}
+  current_choice: 0
+  choice_1: 15
+  choice_2: 16
+  sprite_adapations: {fileID: 1324401090}
+  choice: 1
+  choiceContinueButton: {fileID: 1237037633}
+--- !u!58 &702055899
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8989,35 +9020,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 10.298656, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 40.937717, y: 18.37}
-    newSize: {x: 29.29, y: 34.219006}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 20.3404, y: 18.37}
-  m_EdgeRadius: 0
---- !u!114 &702055898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702055893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8076ca6027e60064791c3c3ebf988f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TwoChoiceText
-  boxcolliderBounds: {fileID: 702055897}
-  Input_Screen: {fileID: 702055896}
-  current_choice: 0
-  choice_1: 15
-  choice_2: 16
+  m_Offset: {x: 9.679628, y: -0.0057099713}
+  m_Radius: 8.5372095
 --- !u!1 &704414872
 GameObject:
   m_ObjectHideFlags: 0
@@ -16567,13 +16571,14 @@ GameObject:
   - component: {fileID: 1237037631}
   - component: {fileID: 1237037633}
   - component: {fileID: 1237037632}
+  - component: {fileID: 1237037634}
   m_Layer: 0
   m_Name: ContinueText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1237037631
 Transform:
   m_ObjectHideFlags: 0
@@ -16650,6 +16655,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChoicesContinueButton
   minigame_3: {fileID: 91948346}
   boxcolliderBounds: {fileID: 1237037632}
+--- !u!95 &1237037634
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237037630}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28a6d1872d91cde4191f6579ca7f9faa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1242590638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16882,7 +16909,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac7720b5bb677b48b37947fb23b7255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreatureSpriteAdpation
-  evolutions: 0c000000
+  evolutions: 0b0000000d000000
+  alternate_adaption: {fileID: 510255015}
   Herbivore_Part_1: {fileID: 127053159}
   Herbivore_Part_2: {fileID: 197784712}
   Carnivore_Part_1: {fileID: 1656302163}
@@ -18203,7 +18231,7 @@ Transform:
   - {fileID: 1250369866}
   - {fileID: 1995392794}
   - {fileID: 1496889459}
-  m_Father: {fileID: 42009568}
+  m_Father: {fileID: 451300107}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1324401090
 MonoBehaviour:
@@ -21204,7 +21232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac7720b5bb677b48b37947fb23b7255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreatureSpriteAdpation
-  evolutions: 0c000000
+  evolutions: 10000000
+  alternate_adaption: {fileID: 1995392795}
   Herbivore_Part_1: {fileID: 1875715377}
   Herbivore_Part_2: {fileID: 1596782879}
   Carnivore_Part_1: {fileID: 1727881815}
@@ -22179,7 +22208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
     Enabled: 1
-    m_Value: 22
+    m_Value: 0
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -26508,7 +26537,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac7720b5bb677b48b37947fb23b7255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreatureSpriteAdpation
-  evolutions: 0c000000
+  evolutions: 0f0000000e000000
+  alternate_adaption: {fileID: 1496889460}
   Herbivore_Part_1: {fileID: 1988358983}
   Herbivore_Part_2: {fileID: 1784950097}
   Carnivore_Part_1: {fileID: 1812363597}
@@ -26922,7 +26952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2079461124
 Transform:
   m_ObjectHideFlags: 0
@@ -27062,6 +27092,9 @@ MonoBehaviour:
   current_choice: 0
   choice_1: 13
   choice_2: 12
+  sprite_adapations: {fileID: 1324401090}
+  choice: 2
+  choiceContinueButton: {fileID: 1237037633}
 --- !u!95 &2079461128
 Animator:
   serializedVersion: 7
@@ -27883,7 +27916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2115842622
 Transform:
   m_ObjectHideFlags: 0
@@ -28023,6 +28056,9 @@ MonoBehaviour:
   current_choice: 0
   choice_1: 17
   choice_2: 18
+  sprite_adapations: {fileID: 1324401090}
+  choice: 0
+  choiceContinueButton: {fileID: 1237037633}
 --- !u!95 &2115842626
 Animator:
   serializedVersion: 7
