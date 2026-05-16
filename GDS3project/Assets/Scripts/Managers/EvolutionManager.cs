@@ -72,7 +72,7 @@ public enum Evolution
 
     Hump = 11, Fur = 12, Wings = 13,
     Hooves = 14, Paws = 15, Fins = 16,
-    Big = 17, Small = 18,
+    Grow = 17, Shrink = 18,
 
     Mountains = 21, Dessert = 22, Forest = 23, Sea = 24
 }

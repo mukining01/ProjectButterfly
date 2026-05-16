@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2625ed36c4eaba54eb758b412de51cb6
+guid: d9f8abfbe8246db4d8b3feb928a3fa38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8438403750399507755
-    second: Herbivore_Stage3_0
+      213: 5553176264760765410
+    second: T. HERBIVORE TAG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Herbivore_Stage3_0
+      name: T. HERBIVORE TAG_0
       rect:
         serializedVersion: 2
-        x: 133
-        y: 292
-        width: 2480
-        height: 1597
+        x: 0
+        y: 0
+        width: 972
+        height: 369
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d20d126f74c4ea80800000000000000
-      internalID: -8438403750399507755
+      spriteID: 2eb223c0468d01d40800000000000000
+      internalID: 5553176264760765410
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Herbivore_Stage3_0: -8438403750399507755
+      T. HERBIVORE TAG_0: 5553176264760765410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
