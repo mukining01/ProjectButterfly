@@ -13,6 +13,8 @@ public class MainMenu : MonoBehaviour
     public Animator global_restart_animator_p;
     static Animator global_restart_animator;
 
+    static bool started = false;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -55,6 +57,8 @@ public class MainMenu : MonoBehaviour
 
         if (paused) return;
 
+        started = true;
+
         //print("main menu 2");
         PlayerInput.Remove_From_Player_Input(MainMenuInput);
        // print("main menu 3");
@@ -77,6 +81,16 @@ public class MainMenu : MonoBehaviour
         animator.SetTrigger("paused");
         pause_animator.SetBool("Idle", false);
         global_restart_animator.SetBool("Restart", true);
+    }
+
+    public static bool Is_Paused()
+    {
+        return paused;
+    }
+
+    public static bool Game_Has_Started()
+    {
+        return started;
     }
 
 }

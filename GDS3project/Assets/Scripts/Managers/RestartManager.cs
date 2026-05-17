@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class RestartManager : MonoBehaviour
 {
-    static float max_restart_time = 4500;
+    static float max_restart_time = 60;
     static float current_restart_time = 0;
 
     static bool decrease_restart_time = false;
@@ -38,8 +38,10 @@ public class RestartManager : MonoBehaviour
         Set_Restart_Time();
     }
 
-    public static void Restart()
+    public static void Restart(bool _ignore_pause = false)
     {
+        if (!MainMenu.Is_Paused() && !_ignore_pause) return;
+
         PlayerInput.Reset_Input();
         SceneManager.UnloadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -47,8 +49,17 @@ public class RestartManager : MonoBehaviour
 
     public void Update()
     {
+
+
+        if (!MainMenu.Game_Has_Started()) return;
+
         current_restart_time -= Time.deltaTime;
 
-        if (current_restart_time <= 0) Restart();
+        if (current_restart_time <= 0) Restart(true);
+    }
+
+    public static void Force_Restart()
+    {
+        Restart(true);
     }
 }

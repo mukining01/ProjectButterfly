@@ -1,4 +1,5 @@
 using Unity.Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,15 +11,18 @@ public class PlayerInput : MonoBehaviour
     public delegate void PInput(Touch touch);
 
     public static PInput input = null;
+    public static PInput restart = null;
 
     public Transform player_input_transform;
     public Animator player_input_animator;
 
     PlayerInput p_input;
+    //PlayerInput p_input;
 
-    private void Awake()
+    private void OnEnable()
     {
         input += Place_Input_Marker;
+        //restart += RestartManager.Force_Restart();
 
         p_input = GetComponent<PlayerInput>();
 

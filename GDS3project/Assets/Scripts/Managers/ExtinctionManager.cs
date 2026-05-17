@@ -21,12 +21,15 @@ public class ExtinctionManager : MonoBehaviour
     public Animator anim_extinction_image_p;
     public Animator anim_transition_arrow_p;
     public Animator anim_extinction_icon_p;
+    public GameObject Continue_Button_p;
+
 
     static Animator anim_extinction_info;
     static Animator anim_extinction_text;
     static Animator anim_extinction_image;
     static Animator anim_transition_arrow;
     static Animator anim_extinction_icon;
+    static GameObject Continue_Button;
 
     [Header("ExtinctionTextInformation")]
     public List<Extinction_Ending_Information> Extinction_Text_Info_p = new List<Extinction_Ending_Information>();
@@ -46,6 +49,11 @@ public class ExtinctionManager : MonoBehaviour
 
         Extinction_Text_Info = Extinction_Text_Info_p;
         extinction_text = extinction_text_p;
+
+        Continue_Button = Continue_Button_p;
+
+        example_text = example_text_p;
+        example_extinction_text = example_extinction_text_p;
     }
 
     private void Start()
@@ -93,24 +101,40 @@ public class ExtinctionManager : MonoBehaviour
         if(current_time >= max_time)
         {
             timer_count = false;
-            first_timer = true;
             anim_extinction_info.SetBool("Active", false);
 
             if (GlobalMinigameManager.Last_Minigame())
             {
                 Display_Final_Extinction_Information();
                 return;
-            } 
+            }
 
-            CameraManager.Switch_Camera(Camera_Types.MainCamera);
-            Continue_Minigame();
+            if (!first_timer)
+            {
+                first_timer = true;
+                Continue_Button.SetActive(true);
+                Continue_Button.GetComponent<Animator>().SetBool("Active", true);
+                return;
+            }
+            else Continue_Button.SetActive(false);
 
-            current_time = 0;
+                Continue();
         } else if (current_time >= max_time / 2)
         {
             if(first_timer) anim_transition_arrow.SetInteger("Arrow", current_arrow_pointer);
-            else anim_extinction_icon.SetInteger("ExtinctionType", random_extinction + 1);
         }
+    }
+
+    public void Continue()
+    {
+        anim_extinction_icon.SetInteger("ExtinctionType", random_extinction + 1);
+
+        Continue_Button.GetComponent<Animator>().SetBool("Active", false);
+
+        CameraManager.Switch_Camera(Camera_Types.MainCamera);
+        Continue_Minigame();
+
+        current_time = 0;
     }
 
     //public static void Extinction_Input(Touch touch)
@@ -153,6 +177,7 @@ public class ExtinctionManager : MonoBehaviour
         string _extinction_text = "In 500 million years, a great " + extinction_event.ToString() + " will come. Will your species survive?";
         _extinction_text = _extinction_text.Replace("_", " ");
         for(var i = 0; i < extinction_text.Length; i++) extinction_text[i].text = _extinction_text;
+        for (var i = 0; i < example_extinction_text.Length; i++) example_extinction_text[i].text = string.Empty;
 
         anim_extinction_text.SetInteger("ExtinctionText", random_extinction);
         anim_extinction_image.SetInteger("Extinction", random_extinction);
@@ -284,7 +309,27 @@ public class ExtinctionManager : MonoBehaviour
             extinction_text[i].text = _text;
             extinction_text[i].fontSize = 6;
         }
+
+        // Just for milestone build
+
+        for (var i = 0; i < extinction_text.Length; i++)
+        {
+            extinction_text[i].text = string.Empty;
+        }
+
+        for (var i = 0; i < example_extinction_text.Length; i++)
+        {
+            example_extinction_text[i].text = example_text;
+            //extinction_text[i].fontSize = 6;
+        }
     }
+
+    [Header("Example Text")]
+    public TMP_Text[] example_extinction_text_p;
+    static TMP_Text[] example_extinction_text;
+    [TextArea(5, 5)]
+    public string example_text_p;
+    static string example_text;
 }
 
 public enum Extinction_Event
