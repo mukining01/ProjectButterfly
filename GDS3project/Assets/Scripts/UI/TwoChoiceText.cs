@@ -59,9 +59,9 @@ public class TwoChoiceText : MonoBehaviour
             else if (increment == -1) current_choice = choice_2;
             else clear = true;
 
-            bool _carnivore = !FindAnyObjectByType<CreatureSprite>().Get_Is_Carnivore();
+            bool _carnivore = FindAnyObjectByType<CreatureSprite>().Get_Is_Carnivore();
 
-            sprite_adapations.Set_Evolution_Active(current_choice, clear, _carnivore, 0);
+            sprite_adapations.Set_Evolution_Active(current_choice, choice, _carnivore);
 
             if (clear) choiceContinueButton.Set_Int(choice, 0);
             else choiceContinueButton.Set_Int(choice, 1);

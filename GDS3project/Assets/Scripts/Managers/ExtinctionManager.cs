@@ -72,6 +72,7 @@ public class ExtinctionManager : MonoBehaviour
         current_arrow_pointer++;
         anim_extinction_info.SetBool("Active", true);
         anim_extinction_text.SetInteger("ExtinctionText", random_extinction);
+        TimeAnimator.Increase_Time();
         //PlayerInput.Add_To_Player_Input(Extinction_Input);
 
         max_time = 4;

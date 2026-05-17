@@ -28,7 +28,7 @@ public class MinigameThreeManager : MinigameManager
             active_objects[i].SetActive(true);
         }
 
-        if (!creature_ai.creature_sprite.Get_Is_Carnivore())
+        if (creature_ai.creature_sprite.Get_Is_Carnivore())
         {
             Choice_2.SetBool("OtherChoice", true);
             Choice_3.SetBool("OtherChoice", true);
@@ -47,6 +47,8 @@ public class MinigameThreeManager : MinigameManager
     public override void End_MiniGame()
     {
         print("end minigame");
+
+        EvolutionManager.Set_Evolution(2, evolution_Type);
 
         for (int i = 0; i < text_choices.Count; i++)
         {

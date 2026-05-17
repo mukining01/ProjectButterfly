@@ -96,8 +96,8 @@ public class CreatureSprite : MonoBehaviour
 
     public bool Get_Is_Carnivore()
     {
-        if (stored_evolutions[0] == 1) return true;
-        return false;
+        if (stored_evolutions[0] == 1) return false;
+        return true;
     }
 
     public void Post_Evolution_Animation()

@@ -30,13 +30,14 @@ public class BerryDrop : InteractableObject
 
     public void Change_Start_Fall()
     {
-        Set_Can_Interact(false);
+       // Set_Can_Interact(false);
         fall_distance = Random.Range(8, 15);
     }
 
     public void Set_Pos(Vector2 pos)
     {
         transform.position = pos;
+        Set_Can_Interact(false);
         gameObject.SetActive(true);
     }
 }

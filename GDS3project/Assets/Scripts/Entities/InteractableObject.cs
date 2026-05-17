@@ -10,7 +10,7 @@ public class InteractableObject : MonoBehaviour
 
     bool hit = false;
 
-    bool can_interact = false;
+    bool can_interact = true;
     bool interacting = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,6 +22,8 @@ public class InteractableObject : MonoBehaviour
         if (!collision.GetComponent<CreatureAI>()) return;
 
         if (hit) return;
+
+        if (!can_interact) return;
 
         Collect();
     }
