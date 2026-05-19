@@ -115,6 +115,6 @@ public enum Evolution
     Hooves = 14, Paws = 15, Fins = 16,
     Grow = 17, Shrink = 18,
 
-    Mountains = 21, Dessert = 22, Forest = 23, Sea = 24
+    Mountains = 21, Desert = 22, Forest = 23, Sea = 24, Cold = 25
 }
 
