@@ -12,8 +12,8 @@ public class TimeAnimator : MonoBehaviour
     static float current_delay_between_time = 0;
     public float time_it_takes_to_reach_new_time = 1;
     static float current_time_it_takes_to_reach_new_time = 0;
-    static int[] time_intervals = new int[] { 541, 407, 250 };
-    static float current_time = 999;
+    static int[] time_intervals = new int[] {407, 250, 1};
+    static float current_time = 541;
     static float new_time = 0;
     static float old_time = 0;
     static int increment = 0;
