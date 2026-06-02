@@ -19,8 +19,14 @@ public class PlayerInput : MonoBehaviour
     PlayerInput p_input;
     //PlayerInput p_input;
 
+    private void Awake()
+    {
+        input = null;
+    }
+
     private void OnEnable()
     {
+        input = null;
         input += Place_Input_Marker;
         //restart += RestartManager.Force_Restart();
 
