@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cab986038dd15e7489d555b91ccbd871
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369380
+  packageName: "CADET Lite \u2013 Background Build System for Unity"
+  packageVersion: 1.0.8
+  assetPath: Assets/Covyne/Cadet/Editor/Lite/Services/WorkspaceManager.cs
+  uploadId: 916582

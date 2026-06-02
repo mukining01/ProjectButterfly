@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 917c60dd97be98044b9584988ce6e8d1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369380
+  packageName: "CADET Lite \u2013 Background Build System for Unity"
+  packageVersion: 1.0.8
+  assetPath: Assets/Covyne/Cadet/Editor/Services/BuildOperationCancellationService.cs
+  uploadId: 916582

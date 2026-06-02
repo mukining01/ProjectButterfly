@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6399f94b241a0424388032ea43565b8e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369380
+  packageName: "CADET Lite \u2013 Background Build System for Unity"
+  packageVersion: 1.0.8
+  assetPath: Assets/Covyne/Cadet/Editor/Lite/Services/BuildQueueInteropService.cs
+  uploadId: 916582

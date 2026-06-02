@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5396fe1bb627ec448864eed7f62e1949, type: 3}
+  m_Name: BuildingTest
+  m_EditorClassIdentifier: Covyne.CADET.Editor::Covyne.CADET.Editor.Models.BuildProfileAsset
+  profile:
+    profileName: BuildingTest
+    platform: none
+    os: windows
+    bundleId: com.DefaultCompany.GDS3project
+    macSign: 0
+    useGit: 0
+    installGitLfsIfMissing: 0
+    gitRepository: 
+    gitBranch: 
+    gitBashPath: C:/Program Files/Git/bin/git.exe
+    unity:
+      editorPath: C:/Program Files/Unity/Hub/Editor/6000.3.8f1/Editor/Unity.exe
+      projectPath: C:/Users/harry/Documents/BuildingTest
+      buildOutputPath: C:/Users/harry/Documents/BuildingTest/Bin
+      projectName: BuildingTest
+    steam:
+      appId: 
+      steamcmdExe: 
+      steamcmdSh: 
+      useSentryFile: 0
+      description: 
+      setLive: 
+      contentRoot: C:/Users/harry/Documents/BuildingTest/Bin
+      buildOutput: C:/Users/harry/Documents/BuildingTest/Bin/build
+      depots: []
+    epic:
+      productId: 
+      organizationId: 
+      artifactId: 
+      sandboxId: 
+      buildPatchToolPath: 
+      buildVersion: 
+      useGitTagForVersion: 0
+      label: dev
+    macos:
+      enableSigning: 0
+      entitlementsPath: 

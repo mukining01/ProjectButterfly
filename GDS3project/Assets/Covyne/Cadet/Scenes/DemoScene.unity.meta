@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4d6f8d7e0c824f81a9e234b6c7d8e1f2
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369380
+  packageName: "CADET Lite \u2013 Background Build System for Unity"
+  packageVersion: 1.0.8
+  assetPath: Assets/Covyne/Cadet/Scenes/DemoScene.unity
+  uploadId: 916582

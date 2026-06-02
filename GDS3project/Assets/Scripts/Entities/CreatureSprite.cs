@@ -12,6 +12,9 @@ public class CreatureSprite : MonoBehaviour
 
     public Animator proto_creature_mouth_anim;
 
+    public CreatureSpriteAdaptions sprite_adapations;
+    public SpriteRenderer[] all_creature_sprites;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -48,8 +51,24 @@ public class CreatureSprite : MonoBehaviour
 
     public void Set_Evolution()
     {
+        if(current_evolution_stage == 1)
+        {
+            Final_Evolution();
+
+            return;
+        }
+
         stored_evolutions[current_evolution_stage] = store_evolution_type_for_evolution;
         current_evolution_stage++;
+
+        Set_Creature_Sprite();
+    }
+
+    public void Final_Evolution()
+    {
+        stored_evolutions[1] = stored_evolutions[0];
+
+        sprite_adapations.Evolve_All_Parts();
 
         Set_Creature_Sprite();
     }
@@ -73,7 +92,6 @@ public class CreatureSprite : MonoBehaviour
             {
                 if (currently_active_creature == all_creature_images[j]) continue;
                 all_creature_images[j].SetActive(false);
-
             }
 
             return;

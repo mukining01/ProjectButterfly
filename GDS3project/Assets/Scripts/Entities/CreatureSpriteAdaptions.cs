@@ -52,7 +52,7 @@ public class CreatureSpriteAdaptions : MonoBehaviour
     {
         for (var i = 0; i < SpriteAdaptions.Length; i++)
         {
-            SpriteAdaptions[i].Set_Part_Active(false, carnivore, 0);
+            SpriteAdaptions[i].Set_Part_Active(true, carnivore, 0);
 
             Evolution[] _evolutions = SpriteAdaptions[i].Get_Evolution();
 
@@ -60,7 +60,7 @@ public class CreatureSpriteAdaptions : MonoBehaviour
             {
                 if (current_adaptions.Contains(_evolutions[j]))
                 {
-                    SpriteAdaptions[i].Set_Part_Active(true, carnivore, 1);
+                    SpriteAdaptions[i].Set_Part_Active(false, carnivore, 1);
                     break;
                 }
             }

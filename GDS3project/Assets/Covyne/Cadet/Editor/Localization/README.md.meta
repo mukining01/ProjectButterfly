@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e5d0dc1fc07273148a70f26fa64c784a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369380
+  packageName: "CADET Lite \u2013 Background Build System for Unity"
+  packageVersion: 1.0.8
+  assetPath: Assets/Covyne/Cadet/Editor/Localization/README.md
+  uploadId: 916582
