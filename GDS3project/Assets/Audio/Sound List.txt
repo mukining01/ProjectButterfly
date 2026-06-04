@@ -1,0 +1,137 @@
+Start Screen
+============
+{}Audio Adjustment Settings, 0%, 50%, 100% volume toggle (IMPLEMENT)
+
+[]'Ambient Shallow Waters' BGM, looping
+
+TV-DX Remaster by Lamp_ -- https://freesound.org/s/730332/ -- License: Attribution NonCommercial 4.0
+
+[]Start Button Tap SFX, once
+
+African Drum5.WAV by eyenorth -- https://freesound.org/s/460090/ -- License: Attribution 4.0
+
+[]'Bubble' Move-Tap (protocreature in menu) SFX, repeatable
+
+bubbles (2).wav by Glaneur de sons -- https://freesound.org/s/104950/ -- License: Attribution 4.0
+
+[]'Digging through Ground' transition SFX, once
+
+Jet_Whoosh.WAV by Benboncan -- https://freesound.org/s/167563/ 	-- License: Attribution 4.0
+
+[]'Global Warming Indicator' SFX, once
+
+water evaporating on hot surface by brianbaltar -- 	https://freesound.org/s/524495/ -- License: Attribution 4.0
+
+Fire Burst.wav by SilverIllusionist -- 	https://freesound.org/s/472688/ -- License: Attribution 4.0
+
+Desert binaural Wind.WAV by Benbojangles -- https://freesound.org/s/457159/ -- License: Creative Commons 0
+
+[]'Ice Age Indicator' SFX, once
+
+Fast  freezing (ice). by urupin -- https://freesound.org/s/192415/ -- License: Attribution NonCommercial 4.0
+ 
+Freeze sound effect FX by antonsoederberg --https://freesound.org/s/685253/ -- License: Creative Commons 0
+
+Polar Wind (synthetic) by sonically_sound -- 		https://freesound.org/s/607839/ -- License: Creative Commons 0
+
+[]Continue Button SFX, once
+
+Shaman's drum by meisterjaan -- https://freesound.org/s/321132/ 	-- License: Attribution NonCommercial 3.0
+
+Minigame 1
+========== 
+[]Level Start SFX, once                                                                                                                 
+Tropical Musical sound 3 by Soughtaftersounds -- https://freesound.org/s/145464/ -- License: Attribution 3.0
+ 
+[]'Curious Explorations' BGM, looping
+
+Island tune - short loop by Ustym_Petrovych -- https://freesound.org/s/670057/ -- License: Attribution 4.0
+
+[]'Sandy Beach' Move-Tap SFX, repeatable
+
+Self sourced from previous project.
+
+[]Eat 'Vegetable' SFX, repeatable
+
+Eating a carrot.wav by Reenen007 -- https://freesound.org/s/538682/ -- License: Attribution 4.0
+
+[]Eat 'Meat' SFX, repeatable
+
+Eating Flesh (Loop) by julius_galla -- https://freesound.org/s/322296/ -- License: Attribution 4.0
+
+Creature Short Growl 1_1 by Joao_Janz -- https://freesound.org/s/483712/ -- License: Creative Commons 0
+
+[]'Spin and Evolve' SFX, once
+
+Victory Fanfare (8-Bit Thunder) 4 by SilverIllusionist -- https://freesound.org/s/843046/ -- License: Attribution 4.0
+
+[]Stage 1 Carnivore Growl SFX, once
+
+Creature Growl 6.wav by Elpatiño -- https://freesound.org/s/706487/ -- License: Attribution 4.0
+
+[]Stage 1 Herbivore Grunt SFX, once
+
+Elk 2.wav by Hyperionn -- https://freesound.org/s/250189/ -- License: Attribution 4.0
+
+Evolution Screen
+=================
+{}Vine Roots Growing SFX, # of vine animation frames  
+
+[]Cartoon Trail SFX, once
+
+Typewriter Ding.wav by NHumphrey -- https://freesound.org/s/204466/ -- License: Creative Commons 0
+
+[]Pinning a Sign SFX, X amount of signs placed
+
+Dropping, Wood, L.wav by InspectorJ -- https://freesound.org/s/352175/ -- License: Attribution 4.0
+
+[]Continue Button SFX, once per
+
+Shaman's drum by meisterjaan -- https://freesound.org/s/321132/ -- License: Attribution NonCommercial 3.0
+
+Transition Screen
+=================
+[]'Cosmic Scale' BGM, looping
+Ambient Portal Hum - Once Upon a Time in the 1970s by shiversmedia -- https://freesound.org/s/254131/ -- License: Attribution 4.0
+
+
+[]Time Ticking Down SFX, once per
+
+Ticking Timer 10 Sec.wav by LilMati -- https://freesound.org/s/487724/ -- License: Creative Commons 0
+
+Rightward Movement SFX, once per 
+
+Old Camera Wind up and Click by rhubbardstockfootage -- https://freesound.org/s/714951/ -- License: Creative Commons 0
+
+Minigame 2
+==========
+[]'Evolving and Change' BGM, looping
+
+Theme for a Triangle by SterlingRay -- https://freesound.org/s/718489/ -- License: Creative Commons 0
+
+[]Choose Adaptation SFX, repeatable
+
+UI Alert - Menu - Modern Interface - Deny Large by RescopicSound -- https://freesound.org/s/750429/ -- License: Attribution NonCommercial 4.0
+
+[]Continue Button SFX, once
+
+Shaman's drum by meisterjaan -- https://freesound.org/s/321132/ -- License: Attribution NonCommercial 3.0
+
+
+Minigame 3
+==========
+
+[]'Vast Landmass Travel' BGM, looping
+
+Exploration.WAV by Lionhart151 -- https://freesound.org/s/324923/ -- License: Creative Commons 0
+
+[]Move-Tap SFX
+
+Big Monster Stomp by Yoyamen1212 -- https://freesound.org/s/812538/ -- License: Creative Commons 0
+
+End Screen
+========== 
+'Conclusion...' Ice Age Variant BGM 
+'Conclusion...' Global Warming Variant BGM
+
+ 
