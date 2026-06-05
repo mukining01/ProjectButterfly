@@ -23,7 +23,7 @@ public class RestartManager : MonoBehaviour
         Set_Restart_Time();
     }
 
-    public void OnEnable()
+    public void Start()
     {
         PlayerInput.Add_To_Player_Input(InputDetected);
     }

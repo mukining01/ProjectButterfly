@@ -140,6 +140,11 @@ public class CreatureAI : MonoBehaviour
         }
     }
 
+    public void Reset_Seeking_Position()
+    {
+        Set_Target_Position(transform.position);
+    }
+
     public void Set_Target_Position(Vector2 target_position)
     {
         target.position = target_position;
@@ -169,7 +174,7 @@ public class CreatureAI : MonoBehaviour
             if(idle_moving != null)
             {
                 StopCoroutine(idle_moving);
-                Set_Target_Position(transform.position);
+                Reset_Seeking_Position();
             }
         }
     }

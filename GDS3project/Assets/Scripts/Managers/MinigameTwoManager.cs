@@ -35,9 +35,28 @@ public class MinigameTwoManager : MinigameManager
         base.Start_MiniGame();
     }
 
+    public void Freeze_Player()
+    {
+        creature_ai.Add_To_Player_Input(false);
+    }
+
+    public void Reset_Player()
+    {
+        creature_ai.Add_To_Player_Input(true);
+        creature_ai.Set_Transform_Zero();
+        creature_ai.Reset_Seeking_Position();
+    }
+
     public void Set_Evolution_Type(int evolution_type)
     {
         evolution_Type = evolution_type;
+
+        StartCoroutine(Delay_Before_Delay_Wow());
+    }
+
+    IEnumerator Delay_Before_Delay_Wow()
+    {
+        yield return new WaitForSeconds(0.5f);
 
         StartCoroutine(End_Minigame_Delay());
     }
