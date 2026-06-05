@@ -24,6 +24,8 @@ public class MinigameTwoManager : MinigameManager
 
         CameraManager.Switch_Camera(Camera_Types.SmallMap);
 
+        AudioManager.Play_SFX(SFX.M3_BackgroundMusic);
+
         StartCoroutine(Delay_Before_LargeMap());
     }
 
@@ -56,7 +58,7 @@ public class MinigameTwoManager : MinigameManager
 
     IEnumerator Delay_Before_Delay_Wow()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
 
         StartCoroutine(End_Minigame_Delay());
     }
@@ -64,6 +66,9 @@ public class MinigameTwoManager : MinigameManager
     public override void End_MiniGame()
     {
         print("end minigame");
+
+
+        AudioManager.Play_SFX(SFX.M3_BackgroundMusic, false);
 
         EvolutionManager.Set_Evolution(3, evolution_Type);
 

@@ -74,6 +74,8 @@ public class EvolutionManager : MonoBehaviour
 
     public static void Continue_After_Evolution_Manager()
     {
+        AudioManager.Play_SFX(SFX.ES_ContinueButton);
+
         EvolutionMangagerAnimator.SetInteger("Active", 0);
         evolute = false;
 

@@ -78,6 +78,9 @@ public class ExtinctionManager : MonoBehaviour
 
         timer_count = true;
         current_arrow_pointer++;
+        AudioManager.Play_SFX(SFX.EX_CosmicScale);
+        AudioManager.Play_SFX(SFX.EX_TickTock);
+
         anim_extinction_info.SetBool("Active", true);
         anim_extinction_text.SetInteger("ExtinctionText", random_extinction);
         TimeAnimator.Increase_Time();
@@ -91,6 +94,9 @@ public class ExtinctionManager : MonoBehaviour
     static float max_time = 5;
     float current_time = 0;
     bool first_timer = false;
+    bool played_sfx = false;
+
+    bool arrow_sfx = false;
 
     public void Update()
     {
@@ -116,17 +122,43 @@ public class ExtinctionManager : MonoBehaviour
                 Continue_Button.GetComponent<Animator>().SetBool("Active", true);
                 return;
             }
-            else Continue_Button.SetActive(false);
+            else 
+            {
+                arrow_sfx = false;
+                Continue_Button.SetActive(false); 
+            }
 
                 Continue();
         } else if (current_time >= max_time / 2)
         {
-            if(first_timer) anim_transition_arrow.SetInteger("Arrow", current_arrow_pointer);
+            if (first_timer)
+            {
+                anim_transition_arrow.SetInteger("Arrow", current_arrow_pointer);
+                if(!arrow_sfx)
+                {
+                    arrow_sfx = true;
+                    AudioManager.Play_SFX(SFX.EX_ArrowLtoR);
+                }
+            }
+
+        }
+
+        else if (!played_sfx)
+        {
+            if (extinction_event == Extinction_Event.Ice_Age) AudioManager.Play_SFX(SFX.SS_IceAge);
+            else AudioManager.Play_SFX(SFX.SS_GlobalWarming);
+
+            played_sfx = true;
         }
     }
 
     public void Continue()
     {
+        AudioManager.Play_SFX(SFX.SS_ContinueButton);
+
+        if (extinction_event == Extinction_Event.Ice_Age) AudioManager.Play_SFX(SFX.SS_IceAge, false);
+        else AudioManager.Play_SFX(SFX.SS_GlobalWarming, false);
+
         anim_extinction_icon.SetInteger("ExtinctionType", random_extinction + 1);
 
         Continue_Button.GetComponent<Animator>().SetBool("Active", false);

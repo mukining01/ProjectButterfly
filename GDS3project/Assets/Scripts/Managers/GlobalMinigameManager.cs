@@ -30,6 +30,12 @@ public class GlobalMinigameManager : MonoBehaviour
         return false;
     }
 
+    public static bool Final_Minigame()
+    {
+        if (current_minigame >= MiniGames.Length - 1) return true;
+        return false;
+    }
+
     public static int Get_Minigame_Amount()
     {
         return MiniGames.Length;

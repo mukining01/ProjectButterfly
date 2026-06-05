@@ -65,6 +65,8 @@ public class TwoChoiceText : MonoBehaviour
 
             if (clear) choiceContinueButton.Set_Int(choice, 0);
             else choiceContinueButton.Set_Int(choice, 1);
+
+            AudioManager.Play_SFX(SFX.M2_ChoiceSelection);
         }
             
     }

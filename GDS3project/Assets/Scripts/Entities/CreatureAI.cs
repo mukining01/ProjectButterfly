@@ -58,8 +58,25 @@ public class CreatureAI : MonoBehaviour
 
     void Update()
     {
-        creature_sprite.Set_Creature_Moving(Moving());
+        bool _moving = Moving();
+
+        creature_sprite.Set_Creature_Moving(_moving);
+
+        if(sfx_playing && !_moving)
+        {
+            AudioManager.Play_SFX(SFX.W_SandWalking, false);
+            AudioManager.Play_SFX(SFX.W_BigWalking, false);
+            sfx_playing = false;
+        }
+        else if (!sfx_playing && _moving)
+        {
+            if(!GlobalMinigameManager.Final_Minigame()) AudioManager.Play_SFX(SFX.W_SandWalking);
+            else AudioManager.Play_SFX(SFX.W_BigWalking);
+            sfx_playing = true;
+        }
     }
+
+    bool sfx_playing = false;
 
     public bool Moving()
     {
@@ -114,6 +131,8 @@ public class CreatureAI : MonoBehaviour
         {
             currentWayPoint++;
         }
+
+
 
         ////Disregard below if you dont want the sprite to flip to look at the player.
         ////You can change 'force' to 'rb.velocity' if you want the sprite to flip depending on the velocity and not the direction it is travelling toward the player.

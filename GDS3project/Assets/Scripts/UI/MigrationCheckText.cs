@@ -16,12 +16,17 @@ public class MigrationCheckText : MonoBehaviour
         migration_type.SetInteger("Type", type);
 
         MinigameTwoManager.Freeze_Player();
+
+        AudioManager.Play_SFX(SFX.M3_Interact);
     }
 
     public void Yes_Input()
     {
         MinigameTwoManager.Set_Evolution_Type(type);
         End();
+
+
+        AudioManager.Play_SFX(SFX.M3_Interact);
     }
 
     public void No_Input()
@@ -29,11 +34,14 @@ public class MigrationCheckText : MonoBehaviour
         MinigameTwoManager.Reset_Player();
         type = 0;
         End();
+
+
+        AudioManager.Play_SFX(SFX.M3_Interact);
     }
 
     public void End()
     {
         text_appear.SetBool("Appear", false);
-        migration_type.SetInteger("Type", type);
+        //migration_type.SetInteger("Type", type);
     }
 }

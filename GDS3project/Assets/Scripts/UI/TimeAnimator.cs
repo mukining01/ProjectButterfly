@@ -17,6 +17,7 @@ public class TimeAnimator : MonoBehaviour
     static float new_time = 0;
     static float old_time = 0;
     static int increment = 0;
+    static bool played_sfx;
 
     private void Start()
     {
@@ -32,6 +33,8 @@ public class TimeAnimator : MonoBehaviour
         old_time = current_time;
         new_time = time_intervals[increment];
         increment++;
+
+        played_sfx = false;
     }
 
     public void Update()

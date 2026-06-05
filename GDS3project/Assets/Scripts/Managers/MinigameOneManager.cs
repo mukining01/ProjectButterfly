@@ -28,6 +28,8 @@ public class MinigameOneManager : MinigameManager
         Set_UI(1);
 
         evolution_Type--;
+
+        AudioManager.Play_SFX(SFX.M1_EatMeat);
     }
 
     public void On_Greens_Eaten()
@@ -35,6 +37,8 @@ public class MinigameOneManager : MinigameManager
        Set_UI(2);
 
         evolution_Type++;
+
+        AudioManager.Play_SFX(SFX.M1_EatVegetables);
     }
 
     Coroutine Crabs;
@@ -71,6 +75,8 @@ public class MinigameOneManager : MinigameManager
         base.Start_MiniGame();
 
         BackgroundManager.Increase_Background_Type();
+
+        AudioManager.Play_SFX(SFX.M1_BackgroundMusic);
 
         evolution_Type = 0;
 
@@ -114,6 +120,10 @@ public class MinigameOneManager : MinigameManager
         }
 
         EvolutionManager.Set_Evolution(1, evolution_Type);
+
+
+        AudioManager.Play_SFX(SFX.M1_BackgroundMusic, false);
+
 
         base.End_MiniGame();
 

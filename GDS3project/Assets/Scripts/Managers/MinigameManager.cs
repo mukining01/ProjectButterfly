@@ -10,6 +10,8 @@ public class MinigameManager : MonoBehaviour
 
     public virtual void Start_MiniGame()
     {
+        AudioManager.Play_SFX(SFX.M1_LevelStart);
+
         creature_ai.Idle_Activation(false);
         creature_ai.Set_Transform_Zero();
         creature_ai.Add_To_Player_Input(true);
@@ -18,6 +20,8 @@ public class MinigameManager : MonoBehaviour
 
     public virtual void End_MiniGame()
     {
+        AudioManager.Play_SFX(SFX.M1_LevelComplete);
+
         creature_ai.Add_To_Player_Input(false);
 
         GlobalMinigameManager.End_MiniGame();

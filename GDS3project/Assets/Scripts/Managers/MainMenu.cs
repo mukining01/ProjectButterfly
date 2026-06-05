@@ -25,6 +25,11 @@ public class MainMenu : MonoBehaviour
         global_restart_animator = global_restart_animator_p;
     }
 
+    private void Start()
+    {
+        AudioManager.Play_SFX(SFX.SS_BackgroundMusic);
+    }
+
     public static void Start_MainMenu()
     {
        // animator.SetTrigger("active");
@@ -48,15 +53,18 @@ public class MainMenu : MonoBehaviour
 
         Time.timeScale = 1;
 
+        AudioManager.Play_SFX(SFX.SS_StartButton);
+
         animator.SetTrigger("clicked");
 
         pause_animator.SetBool("Idle", true);
         global_restart_animator.SetBool("Restart", false);
 
-
-
         if (paused) return;
 
+        AudioManager.Play_SFX(SFX.SS_TransitionUP);
+
+        AudioManager.Play_SFX(SFX.SS_BackgroundMusic, false);
         started = true;
 
         //print("main menu 2");

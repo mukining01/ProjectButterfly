@@ -42,11 +42,15 @@ public class MinigameThreeManager : MinigameManager
         creature_ai.Setting_Static();
 
         CameraManager.Switch_Camera(Camera_Types.SmallMap);
+        AudioManager.Play_SFX(SFX.M2_BackgroundMusic);
+
     }
 
     public override void End_MiniGame()
     {
         print("end minigame");
+
+        AudioManager.Play_SFX(SFX.ES_ContinueButton);
 
         EvolutionManager.Set_Evolution(2, evolution_Type);
 
@@ -63,6 +67,8 @@ public class MinigameThreeManager : MinigameManager
         continueButton.gameObject.SetActive(false);
 
         base.End_MiniGame();
+
+        AudioManager.Play_SFX(SFX.M2_BackgroundMusic, false);
     }
 
 }

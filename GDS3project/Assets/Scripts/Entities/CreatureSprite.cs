@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -54,7 +55,7 @@ public class CreatureSprite : MonoBehaviour
         if(current_evolution_stage == 1)
         {
             Final_Evolution();
-
+            StartCoroutine(roar_delay());
             return;
         }
 
@@ -62,6 +63,17 @@ public class CreatureSprite : MonoBehaviour
         current_evolution_stage++;
 
         Set_Creature_Sprite();
+
+        StartCoroutine(roar_delay());
+    }
+
+    IEnumerator roar_delay()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (Get_Is_Carnivore())
+            AudioManager.Play_SFX(SFX.M1_Carnivore);
+        else AudioManager.Play_SFX(SFX.M1_Herbivore);
     }
 
     public void Final_Evolution()
@@ -121,6 +133,8 @@ public class CreatureSprite : MonoBehaviour
     public void Post_Evolution_Animation()
     {
         EvolutionManager.Post_Creature_Evolution();
+
+
     }
 
     public void Proto_Creature_Eat()
