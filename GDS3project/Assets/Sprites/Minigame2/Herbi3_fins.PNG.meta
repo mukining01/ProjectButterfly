@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: fdb40c6afdc64a14abdc2c06c261165f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4307041258332641065
+    second: Herbi3_fins_0
+  - first:
+      213: -5623990456248348004
+    second: Herbi3_fins_1
+  - first:
+      213: 5714190345358095023
+    second: Herbi3_fins_2
+  - first:
+      213: 1661954488415261519
+    second: Herbi3_fins_3
+  - first:
+      213: 2070308866789037429
+    second: Herbi3_fins_4
+  - first:
+      213: -2791604939043996824
+    second: Herbi3_fins_5
+  - first:
+      213: -2865465820367006351
+    second: Herbi3_fins_6
+  - first:
+      213: 4932867903520254795
+    second: Herbi3_fins_7
+  - first:
+      213: 6895670846437783279
+    second: Herbi3_fins_8
+  - first:
+      213: -3499564208113074489
+    second: Herbi3_fins_9
+  - first:
+      213: 5128111813309210208
+    second: Herbi3_fins_10
+  - first:
+      213: -6180993074358890210
+    second: Herbi3_fins_11
+  - first:
+      213: -6426945786531084769
+    second: Herbi3_fins_12
+  - first:
+      213: -2565394664264046791
+    second: Herbi3_fins_13
+  - first:
+      213: -2829552499545529209
+    second: Herbi3_fins_14
+  - first:
+      213: 9222155689694941380
+    second: Herbi3_fins_15
+  - first:
+      213: 261278440982160453
+    second: Herbi3_fins_16
+  - first:
+      213: -2483358068455613616
+    second: Herbi3_fins_17
+  - first:
+      213: 5083890424931500180
+    second: Herbi3_fins_18
+  - first:
+      213: -3095141433606072065
+    second: Herbi3_fins_19
+  - first:
+      213: -3905685555715313419
+    second: Herbi3_fins_20
+  - first:
+      213: -3672852698001315000
+    second: Herbi3_fins_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Herbi3_fins_0
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1281
+        width: 9
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9275edb643fa5cb30800000000000000
+      internalID: 4307041258332641065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_1
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1248
+        width: 26
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c92512b2a7293f1b0800000000000000
+      internalID: -5623990456248348004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_2
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1229
+        width: 26
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2390218d1ec4f40800000000000000
+      internalID: 5714190345358095023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_3
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1202
+        width: 26
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f439bd24dc2701710800000000000000
+      internalID: 1661954488415261519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_4
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 1181
+        width: 26
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5755d4402f63bbc10800000000000000
+      internalID: 2070308866789037429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_5
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1157
+        width: 75
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b7e07391a3249d0800000000000000
+      internalID: -2791604939043996824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_6
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 994
+        width: 722
+        height: 636
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 175500da402db38d0800000000000000
+      internalID: -2865465820367006351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_7
+      rect:
+        serializedVersion: 2
+        x: 2129
+        y: 1215
+        width: 484
+        height: 674
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b20490931157440800000000000000
+      internalID: 4932867903520254795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_8
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 1226
+        width: 9
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe6f0f9991852bf50800000000000000
+      internalID: 6895670846437783279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_9
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1255
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cebfbae4ec0f6fc0800000000000000
+      internalID: -3499564208113074489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_10
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1215
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e97c83686ba2740800000000000000
+      internalID: 5128111813309210208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_11
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1187
+        width: 9
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1150b31c83b83aa0800000000000000
+      internalID: -6180993074358890210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_12
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1143
+        width: 19
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f160f1bcbd6eec6a0800000000000000
+      internalID: -6426945786531084769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_13
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1153
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937ebd71523e56cd0800000000000000
+      internalID: -2565394664264046791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_14
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1139
+        width: 8
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78425474ef86bb8d0800000000000000
+      internalID: -2829552499545529209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_15
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1124
+        width: 20
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c05d9b1dbdabff70800000000000000
+      internalID: 9222155689694941380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_16
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1006
+        width: 39
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544a5369b5f30a300800000000000000
+      internalID: 261278440982160453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_17
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1138
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b5a9f7ef6598dd0800000000000000
+      internalID: -2483358068455613616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_18
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1121
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4904d07e76b9d8640800000000000000
+      internalID: 5083890424931500180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_19
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1118
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff81150d349db05d0800000000000000
+      internalID: -3095141433606072065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_20
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 977
+        width: 36
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0f6372ea73cc9c0800000000000000
+      internalID: -3905685555715313419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbi3_fins_21
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 999
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84beb474ee7670dc0800000000000000
+      internalID: -3672852698001315000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Herbi3_fins_0: 4307041258332641065
+      Herbi3_fins_1: -5623990456248348004
+      Herbi3_fins_10: 5128111813309210208
+      Herbi3_fins_11: -6180993074358890210
+      Herbi3_fins_12: -6426945786531084769
+      Herbi3_fins_13: -2565394664264046791
+      Herbi3_fins_14: -2829552499545529209
+      Herbi3_fins_15: 9222155689694941380
+      Herbi3_fins_16: 261278440982160453
+      Herbi3_fins_17: -2483358068455613616
+      Herbi3_fins_18: 5083890424931500180
+      Herbi3_fins_19: -3095141433606072065
+      Herbi3_fins_2: 5714190345358095023
+      Herbi3_fins_20: -3905685555715313419
+      Herbi3_fins_21: -3672852698001315000
+      Herbi3_fins_3: 1661954488415261519
+      Herbi3_fins_4: 2070308866789037429
+      Herbi3_fins_5: -2791604939043996824
+      Herbi3_fins_6: -2865465820367006351
+      Herbi3_fins_7: 4932867903520254795
+      Herbi3_fins_8: 6895670846437783279
+      Herbi3_fins_9: -3499564208113074489
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
