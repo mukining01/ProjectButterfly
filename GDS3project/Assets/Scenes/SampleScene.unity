@@ -237,7 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 12717523}
   - component: {fileID: 12717524}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,23 +827,13 @@ MonoBehaviour:
   Continue_Button_p: {fileID: 929261207}
   Extinction_Text_Info_p: []
   extinction_text_p:
-  - {fileID: 202333936}
-  - {fileID: 778616782}
-  example_extinction_text_p:
-  - {fileID: 466173044}
+  - {fileID: 1007314809}
   - {fileID: 645034482}
-  example_text_p: 'Example Text (to be implemented)
-
-
-    85% of your species survived
-    the [Extinction Event]!
-
-    Being A carnivore helped you scavange for small
-    mammals surviving in this artic waste. And your large size helped you retain
-    body heat.
-
-
-    But, your fins weren''t very useful in this forested environment. '
+  extinction_text_start_p:
+  - {fileID: 1850919035}
+  - {fileID: 241265834}
+  extinction_textt_p: {fileID: 1437444581}
+  boxCollider2D_p: {fileID: 2017303708}
 --- !u!1 &42009567
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 42009568}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CreatureSprite_Transform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &52331248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1111,7 +1101,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 754415001}
         m_TargetAssemblyTypeName: RestartManager, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: Force_Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1336,7 +1326,7 @@ GameObject:
   - component: {fileID: 78317019}
   - component: {fileID: 78317021}
   - component: {fileID: 78317020}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Path_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2256,7 +2246,7 @@ GameObject:
   - component: {fileID: 105023741}
   - component: {fileID: 105023740}
   - component: {fileID: 105023742}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Branch_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2462,7 +2452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 127053160}
   - component: {fileID: 127053161}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Carnivore_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2646,7 +2636,7 @@ GameObject:
   - component: {fileID: 133338823}
   - component: {fileID: 133338822}
   - component: {fileID: 133338821}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: ContinueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3216,7 +3206,7 @@ GameObject:
   - component: {fileID: 162987820}
   - component: {fileID: 162987819}
   - component: {fileID: 162987821}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Branch_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3582,7 +3572,7 @@ GameObject:
   - component: {fileID: 181529014}
   - component: {fileID: 181529016}
   - component: {fileID: 181529017}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: CurrentTraits (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3696,7 +3686,7 @@ GameObject:
   - component: {fileID: 184214990}
   - component: {fileID: 184214989}
   - component: {fileID: 184214991}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Branch_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4066,7 +4056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197784713}
   - component: {fileID: 197784714}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Carnivore_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4147,143 +4137,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &202333934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 202333935}
-  - component: {fileID: 202333937}
-  - component: {fileID: 202333936}
-  m_Layer: 5
-  m_Name: FinalVerdictText (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &202333935
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202333934}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 444124171}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.8, y: 40.1}
-  m_SizeDelta: {x: 20, y: 5}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &202333936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202333934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: In 500 million years a great Ice Age will come. Will your species survive?
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
-  m_sharedMaterial: {fileID: 844716210759336683, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 17
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: -41.74214, y: 0, z: -66.82093, w: -21.547764}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &202333937
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202333934}
-  m_CullTransparentMesh: 1
 --- !u!1 &207662235
 GameObject:
   m_ObjectHideFlags: 0
@@ -4733,7 +4586,7 @@ GameObject:
   - component: {fileID: 219176315}
   - component: {fileID: 219176314}
   - component: {fileID: 219176316}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Branch_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4913,6 +4766,143 @@ MonoBehaviour:
   sprite_adapations: {fileID: 0}
   choice: 0
   choiceContinueButton: {fileID: 0}
+--- !u!1 &241265833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 241265836}
+  - component: {fileID: 241265835}
+  - component: {fileID: 241265834}
+  m_Layer: 5
+  m_Name: ExampleText (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &241265834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241265833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: A great drought is coming, will your species survive?
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
+  m_sharedMaterial: {fileID: 844716210759336683, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 6.55
+  m_fontSizeBase: 6
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
+  m_fontSizeMax: 72
+  m_fontStyle: 17
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -41.74214, y: 55.04843, z: -66.82093, w: -66.646}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &241265835
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241265833}
+  m_CullTransparentMesh: 1
+--- !u!224 &241265836
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241265833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 444124171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -10.999999, y: 95.130066}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &243625275
 GameObject:
   m_ObjectHideFlags: 0
@@ -5088,7 +5078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 254279390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CreatureSprite_Flip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5124,7 +5114,7 @@ GameObject:
   - component: {fileID: 261256922}
   - component: {fileID: 261256924}
   - component: {fileID: 261256925}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: CurrentTraits (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5921,7 +5911,7 @@ GameObject:
   - component: {fileID: 347804851}
   - component: {fileID: 347804852}
   - component: {fileID: 347804853}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: EvolutionUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5996,7 +5986,7 @@ GameObject:
   - component: {fileID: 350093761}
   - component: {fileID: 350093763}
   - component: {fileID: 350093762}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Path_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7466,12 +7456,13 @@ RectTransform:
   m_LocalScale: {x: 0.120000005, y: 0.120000005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 466173043}
+  - {fileID: 1850919037}
+  - {fileID: 241265836}
+  - {fileID: 1007314808}
   - {fileID: 645034481}
-  - {fileID: 202333935}
-  - {fileID: 778616781}
   - {fileID: 929261208}
   - {fileID: 1508695072}
+  - {fileID: 2017303707}
   m_Father: {fileID: 40440044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7538,7 +7529,7 @@ GameObject:
   - component: {fileID: 451300107}
   - component: {fileID: 451300108}
   - component: {fileID: 451300109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CreatureSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7719,154 +7710,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5968242473876357344, guid: 6e22eb3b5554d524caaa94aff2d89e8d, type: 3}
   m_PrefabInstance: {fileID: 454130874}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &466173042
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 466173043}
-  - component: {fileID: 466173045}
-  - component: {fileID: 466173044}
-  m_Layer: 5
-  m_Name: ExampleText (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &466173043
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466173042}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 444124171}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.3, y: 116.14}
-  m_SizeDelta: {x: 20, y: 5}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &466173044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466173042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'Example Text (to be implemented)
-
-
-    85% of your species survived the
-    [Extinction Event]!
-
-    Being A carnivore helped you scavange for small mammals
-    surviving in this artic waste. And your large size helped you retain body heat.
-
-
-    But,
-    your fins weren''t very useful in this forested environment.'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
-  m_sharedMaterial: {fileID: 844716210759336683, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4280293376
-  m_fontColor: {r: 0, g: 0.09411766, b: 0.1254902, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 17
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: -41.74214, y: 0, z: -66.82093, w: -21.547764}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &466173045
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466173042}
-  m_CullTransparentMesh: 1
 --- !u!1 &466202690
 GameObject:
   m_ObjectHideFlags: 0
@@ -8844,7 +8687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 510255014}
   - component: {fileID: 510255015}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10036,7 +9879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636400893}
   - component: {fileID: 636400894}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FurHerbivore_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10226,7 +10069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.8, y: 116.5}
+  m_AnchoredPosition: {x: -6.8, y: 117.43002}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645034482
@@ -10249,18 +10092,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Example Text (to be implemented)
-
-
-    85% of your species survived the
-    [Extinction Event]!
-
-    Being A carnivore helped you scavange for small mammals
-    surviving in this artic waste. And your large size helped you retain body heat.
-
-
-    But,
-    your fins weren''t very useful in this forested environment.'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
   m_sharedMaterial: {fileID: 844716210759336683, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
@@ -10290,8 +10122,8 @@ MonoBehaviour:
   m_fontSize: 6
   m_fontSizeBase: 6
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
   m_fontSizeMax: 72
   m_fontStyle: 17
   m_HorizontalAlignment: 2
@@ -10326,7 +10158,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -41.74214, y: 0, z: -66.82093, w: -21.547764}
+  m_margin: {x: -41.74214, y: 0, z: -66.82093, w: -66.646}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10971,13 +10803,13 @@ GameObject:
   m_Component:
   - component: {fileID: 698725414}
   - component: {fileID: 698725415}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Evolution (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &698725414
 Transform:
   m_ObjectHideFlags: 0
@@ -11194,7 +11026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 704414873}
   - component: {fileID: 704414874}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Herbivore_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11209,13 +11041,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704414872}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.013563487, w: 0.99990803}
+  m_LocalPosition: {x: 1.03, y: 1.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1250369866}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.554}
 --- !u!212 &704414874
 SpriteRenderer:
   serializedVersion: 2
@@ -11265,15 +11097,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2d348ea73944d414594313b5aa74d76d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 27.324455, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!1 &714161389
 GameObject:
@@ -11468,7 +11300,7 @@ GameObject:
   - component: {fileID: 716353048}
   - component: {fileID: 716353050}
   - component: {fileID: 716353049}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Path_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12745,143 +12577,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &778616780
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 778616781}
-  - component: {fileID: 778616783}
-  - component: {fileID: 778616782}
-  m_Layer: 5
-  m_Name: FinalVerdictText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &778616781
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778616780}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 444124171}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.5, y: 39.8}
-  m_SizeDelta: {x: 20, y: 5}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &778616782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778616780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: In 500 million years a great Ice Age will come. Will your species survive?
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
-  m_sharedMaterial: {fileID: 844716210759336683, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 17
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: -41.74214, y: 0, z: -66.82093, w: -21.547764}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &778616783
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778616780}
-  m_CullTransparentMesh: 1
 --- !u!1 &779080178
 GameObject:
   m_ObjectHideFlags: 0
@@ -14257,7 +13952,7 @@ GameObject:
   - component: {fileID: 823751170}
   - component: {fileID: 823751172}
   - component: {fileID: 823751173}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: CurrentTraits (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14500,7 +14195,7 @@ GameObject:
   - component: {fileID: 838483232}
   - component: {fileID: 838483231}
   - component: {fileID: 838483233}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: PathwayProgress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14838,7 +14533,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 849308308}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Pathway_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15252,7 +14947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 902133720}
   - component: {fileID: 902133721}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15323,7 +15018,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5205859900036912089, guid: f3afb54fd16424044bc1a30b00eef8e3, type: 3}
+  m_Sprite: {fileID: -6028033000752245347, guid: 23471ac5f33512d499d5223e8d715383, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15605,7 +15300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 923126964}
   - component: {fileID: 923126965}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FurCarnivore_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15798,7 +15493,7 @@ GameObject:
   - component: {fileID: 931932326}
   - component: {fileID: 931932328}
   - component: {fileID: 931932329}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: CurrentTraits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16184,7 +15879,7 @@ GameObject:
   - component: {fileID: 995545423}
   - component: {fileID: 995545425}
   - component: {fileID: 995545424}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Path_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16259,7 +15954,7 @@ GameObject:
   - component: {fileID: 995896249}
   - component: {fileID: 995896251}
   - component: {fileID: 995896250}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: EvolutionScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16391,6 +16086,143 @@ Transform:
   - {fileID: 193338550}
   m_Father: {fileID: 554524629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1007314807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007314808}
+  - component: {fileID: 1007314810}
+  - component: {fileID: 1007314809}
+  m_Layer: 5
+  m_Name: ExampleText (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1007314808
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007314807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 444124171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -6.21, y: 117}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1007314809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007314807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
+  m_sharedMaterial: {fileID: 844716210759336683, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4280030976
+  m_fontColor: {r: 0, g: 0.09019608, b: 0.10980393, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 6
+  m_fontSizeBase: 6
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
+  m_fontSizeMax: 72
+  m_fontStyle: 17
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -41.74214, y: 0, z: -66.82093, w: -66.646}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1007314810
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007314807}
+  m_CullTransparentMesh: 1
 --- !u!1 &1010365856
 GameObject:
   m_ObjectHideFlags: 0
@@ -17075,6 +16907,7 @@ GameObject:
   - component: {fileID: 1030711830}
   - component: {fileID: 1030711829}
   - component: {fileID: 1030711828}
+  - component: {fileID: 1030711831}
   m_Layer: 5
   m_Name: VolumeButton
   m_TagString: Untagged
@@ -17145,7 +16978,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1030711829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1104854391}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Set_Muter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1030711829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17153,7 +16998,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030711826}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -17184,6 +17029,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030711826}
   m_CullTransparentMesh: 1
+--- !u!95 &1030711831
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030711826}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 921609491d2f8be4bb73b4e08dd0effc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1031512346
 GameObject:
   m_ObjectHideFlags: 0
@@ -17730,7 +17597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1047475123}
   - component: {fileID: 1047475124}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CreatureSpriteMouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18150,13 +18017,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1087330163}
   - component: {fileID: 1087330164}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Evolution (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1087330163
 Transform:
   m_ObjectHideFlags: 0
@@ -18382,7 +18249,6 @@ GameObject:
   - component: {fileID: 1102972007}
   - component: {fileID: 1102972010}
   - component: {fileID: 1102972009}
-  - component: {fileID: 1102972008}
   - component: {fileID: 1102972011}
   m_Layer: 5
   m_Name: RestartButton
@@ -18410,62 +18276,6 @@ RectTransform:
   m_AnchoredPosition: {x: 294, y: 86}
   m_SizeDelta: {x: 1826, y: 1770}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1102972008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102972006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1102972009}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1102972011}
-        m_TargetAssemblyTypeName: RestartManager, Assembly-CSharp
-        m_MethodName: Restart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1102972009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18661,6 +18471,8 @@ MonoBehaviour:
   - source: {fileID: 2130502501}
     pitch_min: 0.95
     pitch_max: 1.05
+  audio_listner_p: {fileID: 689436524}
+  muter_p: {fileID: 1030711831}
 --- !u!1 &1105805635
 GameObject:
   m_ObjectHideFlags: 0
@@ -18928,7 +18740,7 @@ GameObject:
   - component: {fileID: 1117879625}
   - component: {fileID: 1117879626}
   - component: {fileID: 1117879627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19491,7 +19303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1147578805}
   - component: {fileID: 1147578806}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Evolution (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19540,7 +19352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157316212}
   - component: {fileID: 1157316213}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FurCarnivore_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19904,7 +19716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1176628646}
   - component: {fileID: 1176628647}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Evolution
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20173,7 +19985,7 @@ GameObject:
   - component: {fileID: 1190569262}
   - component: {fileID: 1190569264}
   - component: {fileID: 1190569263}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Traits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20254,7 +20066,7 @@ GameObject:
   - component: {fileID: 1190784721}
   - component: {fileID: 1190784720}
   - component: {fileID: 1190784722}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Path_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20800,7 +20612,7 @@ GameObject:
   - component: {fileID: 1214646646}
   - component: {fileID: 1214646648}
   - component: {fileID: 1214646647}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: PathwayProgress_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21542,7 +21354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1250369866}
   - component: {fileID: 1250369867}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wings/Hump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22571,7 +22383,7 @@ GameObject:
   - component: {fileID: 1300223272}
   - component: {fileID: 1300223274}
   - component: {fileID: 1300223273}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: PathwayProgress_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23057,7 +22869,7 @@ GameObject:
   - component: {fileID: 1309043329}
   - component: {fileID: 1309043331}
   - component: {fileID: 1309043330}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Path_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23351,7 +23163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1324401089}
   - component: {fileID: 1324401090}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CreatureSpriteAddons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23767,7 +23579,7 @@ GameObject:
   - component: {fileID: 1344345501}
   - component: {fileID: 1344345503}
   - component: {fileID: 1344345502}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24603,7 +24415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1385991162}
   - component: {fileID: 1385991163}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Herbivore_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24619,8 +24431,8 @@ Transform:
   m_GameObject: {fileID: 1385991161}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.95, y: 2.17, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1496889459}
@@ -24674,15 +24486,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 11
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fdb40c6afdc64a14abdc2c06c261165f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 27.324455, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!1 &1395669287
 GameObject:
@@ -25058,7 +24870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1415223001}
   - component: {fileID: 1415223002}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Herbivore_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25074,8 +24886,8 @@ Transform:
   m_GameObject: {fileID: 1415223000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.95, y: 2, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1995392794}
@@ -25129,15 +24941,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 178a3a239b4824846a15e1ffb02c89dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 27.324455, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!1 &1415479831
 GameObject:
@@ -25150,7 +24962,7 @@ GameObject:
   - component: {fileID: 1415479832}
   - component: {fileID: 1415479834}
   - component: {fileID: 1415479833}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: PathwayProgress_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25594,6 +25406,863 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1437444580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437444582}
+  - component: {fileID: 1437444581}
+  m_Layer: 0
+  m_Name: ExtinctionText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1437444581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437444580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99bd788ae8e0f94b98a4f1ef1bd9d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalExtinctionText
+  EvolutionText:
+  - Evolutions: 010000000c0000000f0000001100000015000000
+    GoodText: Being a large carnivore with fur protected you from the wind and your
+      paws allowed you to climb up the rocky cliffs. Out here food scarely grows,
+      but small prey are big pickings for a carnivore like you and your species thrived.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000c0000000f0000001100000016000000
+    GoodText: 
+    BadText: 'Your fur kept you nice and warm, and without wings in a desert during
+      a drought meant you couldn''t cool down. Your large size made your internal
+      temperature hotter still. '
+    percentage: 0
+  - Evolutions: 010000000c0000000f0000001100000017000000
+    GoodText: Being a carnivore with paws allowed you to walk through the dense forest
+      and your fur allowed you to blend in with the trees to catch prey.
+    BadText: your large size made it easy for other predators to spot you and difficult
+      to cool down.
+    percentage: 6
+  - Evolutions: 010000000c0000000f0000001100000018000000
+    GoodText: Being a large carnivore in the sea made you a formidable threat to
+      other fish and your paws helped you catch prey.
+    BadText: 'your but your and paws made you a slow swimmer and your large size
+      made it difficult to cool down during the drought. '
+    percentage: 5
+  - Evolutions: 010000000c0000000f0000001100000019000000
+    GoodText: Being a large carnivore with fur helped you survive the cold environment
+      and the paws made you an efficient hunter on the snow. Out here food scarely
+      grows, but small prey are big pickings for a carnivore like you and your species
+      thrived.
+    BadText: 
+    percentage: 100
+  - Evolutions: 010000000c0000000f0000001200000015000000
+    GoodText: Being a small carnivore with fur helped you survive the cold wind and
+      the paws allowed you to climb the rocky surfaces, hunting prey hiding between
+      rocks. Out here food scarely grows, but prey are big pickings for a carnivore
+      like you and your species thrived.
+    BadText: 
+    percentage: 100
+  - Evolutions: 010000000c0000000f0000001200000016000000
+    GoodText: Your small size made your decreased your internal temperature.
+    BadText: 'Your fur kept you nice and warm, and without wings in a desert during
+      a drought meant you couldn''t cool down. '
+    percentage: 100
+  - Evolutions: 010000000c0000000f0000001200000017000000
+    GoodText: Being a small carnivore with paws allowed you to walk through the dense
+      forest and your fur help you blend in with the trees. Your small size decreased
+      your internal temperature during the drought.
+    BadText: 
+    percentage: 100
+  - Evolutions: 010000000c0000000f0000001200000018000000
+    GoodText: 
+    BadText: Being a small carnivore with paws and fur in the sea made it hard to
+      swim and the warm waters made it tough to not get exhausted under all your
+      fur.
+    percentage: 0
+  - Evolutions: 010000000c0000000f0000001200000019000000
+    GoodText: Your fur kept you warm in the cold and your paws allowed you to walk
+      on the freezing snow. Out here food scarely grows, but prey are big pickings
+      for a carnivore like you and your species.
+    BadText: your small size made it difficult to stay warm for too long.
+    percentage: 8
+  - Evolutions: 010000000c000000100000001100000015000000
+    GoodText: Being a large carnivore with fur protected you from the wind.
+    BadText: your fins were useless on the rocky surface, and your species found
+      it hard to scale the rocks and cliffsides. Your fur and size made you too hot
+      in the ongoing drought.
+    percentage: 2
+  - Evolutions: 010000000c000000100000001100000016000000
+    GoodText: 
+    BadText: Being a large carnivore with fur and fins in the desert made it difficult
+      for your species to hunt prey and move. Your fins were useless in the sand
+      and your large size and fur kept your body heat high.
+    percentage: 0
+  - Evolutions: 010000000c000000100000001100000017000000
+    GoodText: Being a carnivore with fur allowed you to blend in with the trees and
+      hunt unsuspecting prey.
+    BadText: your large size and fins made it easy for prey to spot you, difficult
+      to move and quick to exhaust in the droughts heat.
+    percentage: 4
+  - Evolutions: 010000000c000000100000001100000018000000
+    GoodText: Being a large carnivore with fins allowed you to hunt large prey in
+      the sea.
+    BadText: your fur slowed you down in the water and your large size in a drought
+      made you retain body heat and quick to exhaust.
+    percentage: 5
+  - Evolutions: 010000000c000000100000001100000019000000
+    GoodText: Being a large carnivore with fur allowed you to stay warm in the vanishing
+      snow and hunt prey.
+    BadText: your fins were useless on the freezing snow, and it became difficult
+      to move amidst the melting ice.
+    percentage: 5
+  - Evolutions: 010000000c000000100000001200000015000000
+    GoodText: Being a small carnivore with fur allowed you to withstand the winds
+      of the mountains and find prey hiding between rocks. Your small size lowered
+      your internal temperature amidst the drought.
+    BadText: your fins were useless on the rocky surface.
+    percentage: 6
+  - Evolutions: 010000000c000000100000001200000016000000
+    GoodText: Your small size kept your internal temperature low.
+    BadText: 'Being a carnivore with fur and without wings in a desert during a drought
+      meant you couldn''t cool down, and you were quick to exhaust as you hunted
+      prey. Your fins were useless in the desert sand. '
+    percentage: 1
+  - Evolutions: 010000000c000000100000001200000017000000
+    GoodText: Being a small carnivore with fur allowed you to sneak up on prey amidst
+      the forest foliage. Your small size kept your internal temperature low amidst
+      the drought.
+    BadText: your fins were useless in the dense forest, making it tough to move
+      around.
+    percentage: 6
+  - Evolutions: 010000000c000000100000001200000018000000
+    GoodText: Being a carnivore with fins allowed you to swim and hunt fish. Your
+      small size and cool water shieled you mostly from the droughts heat.
+    BadText: your small size and fur made you an easy target for larger fish.
+    percentage: 8
+  - Evolutions: 010000000c000000100000001200000019000000
+    GoodText: 'Having fur allowed you to keep warm in the vanishing snow. As the
+      drought turned the ice to water, your fins became of much use.  '
+    BadText: Fish were scarce in the new oceans.
+    percentage: 8
+  - Evolutions: 010000000d0000000f0000001100000015000000
+    GoodText: Being a carnivore with paws allowed you to climb the rocky cliffs,
+      using your wings to beat off the droughts hot wind.
+    BadText: Your large size made it difficult to fly. Your large size made your
+      internal temperature high.
+    percentage: 5
+  - Evolutions: 010000000d0000000f0000001100000016000000
+    GoodText: Being a carnivore with paws allowed you to run across the hot sand
+      and your wings kept you cool during the drought
+    BadText: you couldn't fly or chase fast prey due to your large size.
+    percentage: 7
+  - Evolutions: 010000000d0000000f0000001100000017000000
+    GoodText: Being a carnivore with paws allowed you to walk through the dense forest
+    BadText: you couldn't fly or sneak up on prey due to your large size, which further
+      kept your internal temperature high amidst the drought.
+    percentage: 4
+  - Evolutions: 010000000d0000000f0000001100000018000000
+    GoodText: Being a large carnivore with wings allowed you to catch up to slower
+      fish
+    BadText: your paws and lack of gills meant your couldn't stay underwater for
+      too long and it was difficult to fly with your large size, which further kept
+      your internal temperature high amidst the drought.
+    percentage: 4
+  - Evolutions: 010000000d0000000f0000001100000019000000
+    GoodText: Being a large carnivore with paws allowed you to walk on the freezing
+      snow.
+    BadText: it was difficult to fly due to your large size.
+    percentage: 10
+  - Evolutions: 010000000d0000000f0000001200000015000000
+    GoodText: Being a small carnivore with wings allowed you to fly across the mountains
+      to search of prey hiding between rocks and your paws helped you to stand on
+      hard rocks. Your small size kept your internal temperature low during the drought.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000d0000000f0000001200000016000000
+    GoodText: Being a small carnivore with wings allowed you to fly through the desert
+      in seach of prey, keep cool during the hot drought and your paws helped you
+      to run across the hot sand. Your small size kept your internal temperature
+      low during the drought.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000d0000000f0000001200000017000000
+    GoodText: Being a small carnivore with wings allowed you to swoop down from trees
+      to catch prey and your paws to walk through the dense forest. Your small size
+      kept your internal temperature low amidst the drought.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000d0000000f0000001200000018000000
+    GoodText: Being a small carnivore with wings allowed you to catch small fish
+      in the sea. Further, your small size kept your internal temperature low amidst
+      the drought.
+    BadText: your small size made you a target for larger fish and your paws kept
+      you slow in the water.
+    percentage: 7
+  - Evolutions: 010000000d0000000f0000001200000019000000
+    GoodText: 'Being a carnivore with paws allowed you to walk across the ice. Your
+      wings helped you fly across the warming terrain in search of prey. '
+    BadText: your small size meant you couldn't stay warm for too long in the cold.
+    percentage: 6
+  - Evolutions: 010000000d000000100000001100000015000000
+    GoodText: 
+    BadText: Being a large carnivore with fins meant you couldn't climb the rocky
+      cliffs or fly with your wings. Further, your large size kept your internal
+      temperature high, amking you quick to exhaust during a hunt.
+    percentage: 0
+  - Evolutions: 010000000d000000100000001100000016000000
+    GoodText: Being a your wings allowed you to keep cool during the hot drought.
+    BadText: You couldn't fly due to your fins and large size, which further still
+      kept your internal temperature hot, especially in the desert and drought.
+    percentage: 3
+  - Evolutions: 010000000d000000100000001100000017000000
+    GoodText: 
+    BadText: Being a large carnivore with fins and wings ment you couldn't fly and
+      hunt prey in the forest. Your large size made your internal temperature high
+      especially during the drought.
+    percentage: 0
+  - Evolutions: 010000000d000000100000001100000018000000
+    GoodText: Being a large carnivore with wings and fins allowed you to chase prey
+      and breath underwater while being a threat to large fish.
+    BadText: Your large size kept your internal temperature hot in the water warmed
+      by the drought.
+    percentage: 8
+  - Evolutions: 010000000d000000100000001100000019000000
+    GoodText: Being a large carnivore allowed you to keep warm in the cold and hunt
+      smaller prey.
+    BadText: you couldn't fly due to your large size and your fins were useless on
+      the snow.
+    percentage: 5
+  - Evolutions: 010000000d000000100000001200000015000000
+    GoodText: Being a small carnivore with wings allowed you to fly across the mountains,
+      hunting prey hiding between rocks. Your small size kept your internal temperature
+      low in the drought conditions.
+    BadText: your fins were useless on the rocky surface.
+    percentage: 6
+  - Evolutions: 010000000d000000100000001200000016000000
+    GoodText: Being a small carnivore with wings allowed you to search for prey in
+      the desert and keep cool during the hot drought. Your small size kept your
+      internal temperature low in the drought conditions.
+    BadText: your fins were useless on the dry sand.
+    percentage: 6
+  - Evolutions: 010000000d000000100000001200000017000000
+    GoodText: Being a small carnivore with wings allowed you to swoop down from trees
+      to catch prey. Your small size kept your internal temperature low in the drought
+      conditions.
+    BadText: your fins were useless in the dense forest.
+    percentage: 6
+  - Evolutions: 010000000d000000100000001200000018000000
+    GoodText: Being a carnivore with wings allowed you to swim quickly and your fins
+      to breath underwater. Your small size kept your internal temperature low in
+      the drought conditions.
+    BadText: your small size made you a target for larger fish.
+    percentage: 8
+  - Evolutions: 010000000d000000100000001200000019000000
+    GoodText: 
+    BadText: Being a small carnivore with wings and fins made it difficult to move
+      and hunt prey. Your small size made it hard to brunt the cold wind.
+    percentage: 0
+  EvolutionText_Drought_Herb:
+  - Evolutions: 020000000b0000000e0000001100000015000000
+    GoodText: Being a herbivore with hooves allowed you to traverse the rocky surfaces
+    BadText: your large size made it hard to hide between rocks from predators.
+    percentage: 7
+  - Evolutions: 020000000b0000000e0000001100000016000000
+    GoodText: Being a herbivore with hooves allowed you to traverse the rocky surfaces
+    BadText: your large size made it hard to hide between rocks from predators.
+    percentage: 10
+  - Evolutions: 020000000b0000000e0000001100000017000000
+    GoodText: Being a large herbivore made you too big for predators in the forest
+      and your hooves allowed you to walk in the dense forest.
+    BadText: 
+    percentage: 10
+  - Evolutions: 020000000b0000000e0000001100000018000000
+    GoodText: Being a herbivore with a hump kept you warm in the sea while looking
+      for food
+    BadText: your hooves and large size made you too slow to escape from predators
+      in the water.
+    percentage: 4
+  - Evolutions: 020000000b0000000e0000001100000019000000
+    GoodText: Being a large herbivore with a hump kept you warm in the cold
+    BadText: your hooves were not suited for walking on the freezing snow.
+    percentage: 5
+  - Evolutions: 020000000b0000000e0000001200000015000000
+    GoodText: Being a large herbivore with a hump kept you warm in the cold
+    BadText: 
+    percentage: 12.3
+  - Evolutions: 020000000b0000000e0000001200000016000000
+    GoodText: Being a large herbivore with a hump kept you warm in the cold
+    BadText: your hooves were not suited for walking on the freezing snow.
+    percentage: 12.3
+  - Evolutions: 020000000b0000000e0000001200000017000000
+    GoodText: Being a herbivore with hooves allowed you to walk in the dense forest
+    BadText: your small size made you a target for predators.
+    percentage: 7
+  - Evolutions: 020000000b0000000e0000001200000018000000
+    GoodText: 
+    BadText: Being a small herbivore with a hump and hooves resulted in your entire
+      species drowning.
+    percentage: 0
+  - Evolutions: 020000000b0000000e0000001200000019000000
+    GoodText: 
+    BadText: Being a small herbivore with a hump and hooves made you too cold for
+      the freezing snow.
+    percentage: 0
+  - Evolutions: 020000000c0000000e0000001100000015000000
+    GoodText: Being a herbivore with fur allowed you to withstand the wind and your
+      hooves to traverse the rocky surfaces
+    BadText: your large size made you too big to hide between rocks from predators.
+    percentage: 6
+  - Evolutions: 020000000c0000000e0000001100000016000000
+    GoodText: 
+    BadText: Being a herbivore without a hump during a drought in a desert ment you
+      couldnt go long periods without food or water.
+    percentage: 0
+  - Evolutions: 020000000c0000000e0000001100000017000000
+    GoodText: Being a large herbivore with hooves allowed you walk through the dense
+      forest and your fur helped you blend in with the trees.
+    BadText: 
+    percentage: 12.3
+  - Evolutions: 020000000c0000000e0000001100000018000000
+    GoodText: 
+    BadText: Being a large herbivore with fur and hooves meant you couldn't swim
+      or breath underwater.
+    percentage: 0
+  - Evolutions: 020000000c0000000e0000001100000019000000
+    GoodText: Being a large herbivore with fur allowed you to stay warm in the cold
+    BadText: your hooves were not suited for walking on the freezing snow.
+    percentage: 5
+  - Evolutions: 020000000c0000000e0000001200000015000000
+    GoodText: Being a small herbivore with fur allowed you to withstand the wind,
+      hide between rocks from predators and your hooves to walk on the rocky surfaces.
+    BadText: 
+    percentage: 12.3
+  - Evolutions: 020000000c0000000e0000001200000016000000
+    GoodText: 
+    BadText: Being a herbivore without a hump during a drought in a desert ment you
+      couldnt go long periods without food or water.
+    percentage: 0
+  - Evolutions: 020000000c0000000e0000001200000017000000
+    GoodText: Being a herbivore with fur allowed you to blend in with the trees and
+      your hooves to walk through the dense forest
+    BadText: your small size made you a target for predators.
+    percentage: 8
+  - Evolutions: 020000000c0000000e0000001200000018000000
+    GoodText: Being a small herbivore allowed you to swim quickly on the sea
+    BadText: your fur and hooves ment you couldn't go underwater.
+    percentage: 5
+  - Evolutions: 020000000c0000000e0000001200000019000000
+    GoodText: Being a herbivore with fur allowed you to keep warm in the cold
+    BadText: your small size ment you couldn't stay warm for too long and you hooves
+      weren't suited for the freezing snow.
+    percentage: 4
+  - Evolutions: 020000000c000000100000001100000015000000
+    GoodText: Being a herbivore with fur allowed you to withstand the wind
+    BadText: your fins and large size ment you couldn't hide between rocks from predators.
+    percentage: 4
+  - Evolutions: 020000000c000000100000001100000016000000
+    GoodText: 
+    BadText: Being a herbivore without a hump during a drought in a desert ment you
+      couldnt go long periods without food or water.
+    percentage: 0
+  - Evolutions: 020000000c000000100000001100000017000000
+    GoodText: Being a herbivore without a hump during a drought in a desert ment
+      you couldnt go long periods without food or water.
+    BadText: your fins were useless in the dense forest.
+    percentage: 8
+  - Evolutions: 020000000c000000100000001100000018000000
+    GoodText: Being a herbivore with fins allowed you to swim and breath underwater
+    BadText: your fur and large size made you a slow swimmer, allowing predators
+      to catch you easily.
+    percentage: 5
+  - Evolutions: 020000000c000000100000001100000019000000
+    GoodText: Being a large herbivore with fur kept you warm in the cold
+    BadText: your fins were useless on the freezing snow.
+    percentage: 6
+  - Evolutions: 020000000c000000100000001200000015000000
+    GoodText: Being a small herbivore with fur allowed you to withstand the wind
+      and hide between rocks from predators.
+    BadText: your fins sometimes got in the way when hiding or climbing.
+    percentage: 7
+  - Evolutions: 020000000c000000100000001200000016000000
+    GoodText: 
+    BadText: Being a herbivore without a hump during a drought in a desert ment you
+      couldnt go long periods without food or water.
+    percentage: 0
+  - Evolutions: 020000000c000000100000001200000017000000
+    GoodText: Being a herbivore with fur allowed you to blend in with the trees
+    BadText: your small size made you a target for predators and your fins were useless
+      in the dense forest.
+    percentage: 5
+  - Evolutions: 020000000c000000100000001200000018000000
+    GoodText: Being a small herbivore with fins allowed you swim and breath underwater
+    BadText: your fur slowed you down, making you a target for predators.
+    percentage: 6
+  - Evolutions: 020000000c000000100000001200000019000000
+    GoodText: Being a herbivore with fur kept you warm in the cold
+    BadText: your small size ment you couldn't keep warm for long and your fins were
+      useless on the freezing snow.
+    percentage: 4
+  - Evolutions: 020000000b000000100000001100000015000000
+    GoodText: 
+    BadText: Being a large herbivore with a hump and fins ment you couldn't climb
+      the cliffs or hide between rocks from predators.
+    percentage: 0
+  - Evolutions: 020000000b000000100000001100000016000000
+    GoodText: Being a large herbivore with a hump allowed you to store fat to survive
+      for long periods without food in the desert and drought
+    BadText: your fins were useless on the dry sand.
+    percentage: 6
+  - Evolutions: 020000000b000000100000001100000017000000
+    GoodText: Being a large herbivore made you too big for predators to hunt you
+    BadText: your fins were useless in the dense forest.
+    percentage: 6
+  - Evolutions: 020000000b000000100000001100000018000000
+    GoodText: Being a hervivore with a hump kept you warm in the water and your fins
+      allowed you to swim and breath underwater
+    BadText: your large size made you a slow target for predators in the sea.
+    percentage: 7
+  - Evolutions: 020000000b000000100000001100000019000000
+    GoodText: Being a large herbivor with a hump allowed you to keep warm in the
+      cold
+    BadText: your fins were useless on the freezing snow.
+    percentage: 6
+  - Evolutions: 020000000b000000100000001200000015000000
+    GoodText: 
+    BadText: Being a small herbivore with a hump and fins ment you couldn't climb
+      up or the mountains or withstand the wind.
+    percentage: 0
+  - Evolutions: 020000000b000000100000001200000016000000
+    GoodText: Being a herbivore with a hump allowed you to survive long periods without
+      food in the desert and drought
+    BadText: your fins were useless on the hot sand.
+    percentage: 4
+  - Evolutions: 020000000b000000100000001200000017000000
+    GoodText: 
+    BadText: Being a small herbivore with a hump and fins made you a target for many
+      predators in the forest.
+    percentage: 0
+  - Evolutions: 020000000b000000100000001200000018000000
+    GoodText: Being a herbivore with fins allowed you to swim and breath underwater
+    BadText: your small size made you a target for predators in the sea.
+    percentage: 7
+  - Evolutions: 020000000b000000100000001200000019000000
+    GoodText: 
+    BadText: Being a small herbivore with a hump and fins ment you couldn't climb
+      up or the mountains or withstand the wind.
+    percentage: 0
+  EvolutionText_IceAge_Carnivore:
+  - Evolutions: 010000000c0000000f0000001100000015000000
+    GoodText: Being a large carnivore with fur protected you from the wind and your
+      paws allowed you to climb up the rocky cliffs.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000c0000000f0000001100000016000000
+    GoodText: Being a carnivore with paws allowed you to walk across the hot sand
+    BadText: your large size made you too slow to catch fast prey.
+    percentage: 5
+  - Evolutions: 010000000c0000000f0000001100000017000000
+    GoodText: Being a carnivore with paws allowed you to walk through the dense forest
+      and your fur allowed you to blend in with the trees to catch prey
+    BadText: your large size made it easy for prey to spot you.
+    percentage: 6
+  - Evolutions: 010000000c0000000f0000001100000018000000
+    GoodText: Being a large carnivore in the sea made you a threat to other fish
+    BadText: your fur and paws made you a slow swimmer.
+    percentage: 5
+  - Evolutions: 010000000c0000000f0000001100000019000000
+    GoodText: Being a large carnivore with fur helped you survive the cold environment
+      and the paws made you an efficient hunter on the snow.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000c0000000f0000001200000015000000
+    GoodText: Being a large carnivore with fur helped you survive the cold environment
+      and the paws made you an efficient hunter on the snow.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000c0000000f0000001200000016000000
+    GoodText: Being a small carnivore with paws allowed you to run across the hot
+      sand and catch fast prey.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000c0000000f0000001200000017000000
+    GoodText: Being a small carnivore with paws allowed you to walk through the dense
+      forest and your fur help you blend in with the trees.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000c0000000f0000001200000018000000
+    GoodText: 
+    BadText: Being a small carnivore with paws and fur in the sea made it hard to
+      swim, resulting in your entire species drowning.
+    percentage: 0
+  - Evolutions: 010000000c0000000f0000001200000019000000
+    GoodText: Being a carnivore with fur kept you warm in the cold and your paws
+      allowed you to walk on the freezing snow
+    BadText: your small size ment you couldn't stay warm for too long.
+    percentage: 6
+  - Evolutions: 010000000c000000100000001100000015000000
+    GoodText: Being a large carnivore with fur protected you from the wind
+    BadText: your fins were useless on the rocky surface.
+    percentage: 5
+  - Evolutions: 010000000c000000100000001200000015000000
+    GoodText: Being a small carnivore with fur allowed you to withstand the winds
+      of the mountains and find prey hiding between rocks
+    BadText: your fins were useless on the rocky surface.
+    percentage: 7
+  - Evolutions: 010000000c000000100000001100000016000000
+    GoodText: 
+    BadText: Being a large carnivore with fur and fins in the desert resulted in
+      your entire species drying up.
+    percentage: 0
+  - Evolutions: 010000000c000000100000001100000017000000
+    GoodText: Being a carnivore with fur allowed you to blend in with the trees
+    BadText: your large size and fins made it easy for prey to spot you.
+    percentage: 6
+  - Evolutions: 010000000c000000100000001100000018000000
+    GoodText: Being a large carnivore with fins allowed you to hunt large prey in
+      the sea
+    BadText: your fur slowed you down in the water.
+    percentage: 7
+  - Evolutions: 010000000c000000100000001100000019000000
+    GoodText: Being a large carnivore with fur allowed you to stay warm in the cold
+      snow
+    BadText: your fins were useless on the freezing snow.
+    percentage: 4
+  - Evolutions: 010000000c000000100000001200000016000000
+    GoodText: Being a small carnivore allowed you to chase fast prey
+    BadText: your fins were useless on the hot sand.
+    percentage: 5
+  - Evolutions: 010000000c000000100000001200000017000000
+    GoodText: Being a small carnivore with fur allowed you to sneak up on prey
+    BadText: your fins were useless in the dense forest.
+    percentage: 5
+  - Evolutions: 010000000c000000100000001200000018000000
+    GoodText: Being a carnivore with fins allowed you to swim and breath underwater
+    BadText: your small size and fur made you an easy target for larger fish.
+    percentage: 6
+  - Evolutions: 010000000c000000100000001200000019000000
+    GoodText: Being a carnivore with fur allowed you to keep warm in the snow
+    BadText: your fins were useless on the freezing snow and your small size made
+      it hard to withstand the cold for too long.
+    percentage: 3
+  - Evolutions: 010000000d0000000f0000001100000015000000
+    GoodText: Being a carnivore with paws allowed you to climb the rocky cliffs
+    BadText: you couldn't fly due to your large size.
+    percentage: 6
+  - Evolutions: 010000000d0000000f0000001100000016000000
+    GoodText: Being a carnivore with paws allowed you to run across the hot sand
+    BadText: you couldn't fly or chase fast prey due to your large size.
+    percentage: 5
+  - Evolutions: 010000000d0000000f0000001100000017000000
+    GoodText: Being a carnivore with paws allowed you to walk through the dense forest
+    BadText: you couldn't fly or sneak up on prey due to your large size.
+    percentage: 5
+  - Evolutions: 010000000d0000000f0000001100000018000000
+    GoodText: Being a large carnivore with wings allowed you to catch up to slower
+      fish
+    BadText: your paws and lack of gills ment your couldn't stay underwater for too
+      long.
+    percentage: 5
+  - Evolutions: 010000000d0000000f0000001100000019000000
+    GoodText: 
+    BadText: Being a carnivore without fur in a cold biome during an ice age ment
+      you couldn't withstand the freezing cold.
+    percentage: 0
+  - Evolutions: 010000000d0000000f0000001200000015000000
+    GoodText: Being a small carnivore with wings allowed you to fly across the mountains
+      to search of prey hiding between rocks and your paws to stand on hard rocks.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000d0000000f0000001200000016000000
+    GoodText: Being a small carnivore with wings allowed you to fly through the desert
+      in seach of prey and your paws to run across the hot sand.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000d0000000f0000001200000017000000
+    GoodText: Being a small carnivore with wings allowed you to swoop down from trees
+      to catch prey and your paws to walk through the dense forest.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000d0000000f0000001200000018000000
+    GoodText: Being a small carnivore with wings allowed you to catch small fish
+      in the sea
+    BadText: your paws and small size made you a target for larger fish.
+    percentage: 6
+  - Evolutions: 010000000d0000000f0000001200000019000000
+    GoodText: 
+    BadText: Being a carnivore without fur in a cold biome during an ice age ment
+      you couldn't withstand the freezing cold.
+    percentage: 0
+  - Evolutions: 010000000d000000100000001100000015000000
+    GoodText: 
+    BadText: Being a large carnivore with fins ment you couldn't climb the rocky
+      cliffs or fly with your wings.
+    percentage: 0
+  - Evolutions: 010000000d000000100000001100000016000000
+    GoodText: 
+    BadText: Being a large carnivore ment you couldn't fly and your fins were useless
+      on the hot sand.
+    percentage: 0
+  - Evolutions: 010000000d000000100000001100000017000000
+    GoodText: 
+    BadText: Being a large carnivore with fins and wings ment you couldn't fly and
+      hunt prey in the forest.
+    percentage: 0
+  - Evolutions: 010000000d000000100000001100000018000000
+    GoodText: Being a large carnivore with fins and wings ment you couldn't fly and
+      hunt prey in the forest.
+    BadText: 
+    percentage: 10
+  - Evolutions: 010000000d000000100000001100000019000000
+    GoodText: 
+    BadText: Being a carnivore without fur in a cold biome during an ice age ment
+      you couldn't withstand the freezing cold.
+    percentage: 0
+  - Evolutions: 010000000d000000100000001200000015000000
+    GoodText: Being a small carnivore with wings allowed you to fly across the mountains,
+      hunting prey hiding between rocks.
+    BadText: your fins were useless on the rocky surface.
+    percentage: 7
+  - Evolutions: 010000000d000000100000001200000016000000
+    GoodText: Being a small carnivore with wings allowed you to search for prey across
+      the desert
+    BadText: your fins were useless on the rocky surface.
+    percentage: 6
+  - Evolutions: 010000000d000000100000001200000017000000
+    GoodText: Being a small carnivore with wings allowed you to swoop down from trees
+      to catch prey
+    BadText: your fins were useless in the dense forest.
+    percentage: 6
+  - Evolutions: 010000000d000000100000001200000018000000
+    GoodText: Being a carnivore with wings allowed you to swim quickly and your fins
+      to breath underwater
+    BadText: your small size made you a target for larger fish.
+    percentage: 7
+  - Evolutions: 010000000d000000100000001200000019000000
+    GoodText: 
+    BadText: Being a small carnivour with wings and fins made your body unable to
+      withstand the freezing cold.
+    percentage: 0
+  EvolutionText_IceAge_Herbivore:
+  - Evolutions: 020000000b0000000e0000001100000015000000
+    GoodText: Being a herbivore with hooves allowed you to traverse the rocky surfaces
+    BadText: your large size and hump made it hard to hide between rocks from predators
+      or climb up cliffs.
+    percentage: 4
+  - Evolutions: 020000000b0000000e0000001100000016000000
+    GoodText: Being a large herbivore with a hump and hooves allowed you to store
+      fat to survive for long periods without food and traverse the desert.
+    BadText: 
+    percentage: 10
+  - Evolutions: 020000000b0000000e0000001100000017000000
+    GoodText: Being a large herbivore made you too big for predators in the forest
+      and your hooves allowed you to walk in the dense forest.
+    BadText: your hump added unneeded weight which slowed you down.
+    percentage: 6
+  - Evolutions: 020000000b0000000e0000001100000018000000
+    GoodText: Being a herbivore with a hump kept you warm in the sea while looking
+      for food
+    BadText: your hooves and large size made you too slow to escape from predators
+      in the water.
+    percentage: 5
+  - Evolutions: 020000000b0000000e0000001100000019000000
+    GoodText: 
+    BadText: Being a herbivore without fur in a cold biome during an ice age ment
+      you could't withstand the freezing cold.
+    percentage: 0
+  - Evolutions: 020000000b0000000e0000001200000015000000
+    GoodText: Being a small herbivore with hooves allowed you to traverse the rocky
+      surfaces and hide between rocks from predators.
+    BadText: your hump made you too heavy to climb up cliffs.
+    percentage: 8
+  - Evolutions: 020000000b0000000e0000001200000016000000
+    GoodText: Being a small herbivore with hooves allowed you to traverse the hot
+      sand
+    BadText: your hump was too heavy for your small size, slowing you down.
+    percentage: 5
+  - Evolutions: 020000000b0000000e0000001200000017000000
+    GoodText: Being a herbivore with hooves allowed you to walk in the dense forest
+    BadText: your small size and hump made you a slow target for predators.
+    percentage: 6
+  - Evolutions: 020000000b0000000e0000001200000018000000
+    GoodText: 
+    BadText: Being a small herbivore with a hump and hooves resulted in your entire
+      species drowning.
+    percentage: 0
+  - Evolutions: 020000000b0000000e0000001200000019000000
+    GoodText: 
+    BadText: Being a herbivore without fur in a cold biome during an ice age ment
+      you could't withstand the freezing cold.
+    percentage: 0
+  - Evolutions: 020000000b000000100000001200000015000000
+    GoodText: 
+    BadText: Being a small herbivore with a hump and fins ment you couldn't climb
+      up or the mountains or withstand the wind.
+    percentage: 0
+  - Evolutions: 020000000b000000100000001200000016000000
+    GoodText: 
+    BadText: Being a small herbivore made the hump too heavy for your tiny body and
+      the fins were useless on the hot sand.
+    percentage: 0
+  - Evolutions: 020000000b000000100000001200000017000000
+    GoodText: 
+    BadText: Being a small herbivore with a hump and fins made you a target for many
+      predators in the forest.
+    percentage: 0
+  - Evolutions: 020000000b000000100000001200000018000000
+    GoodText: Being a herbivore with fins allowed you to swim and breath underwater
+    BadText: your small size and heavy hump made you a target for predators in the
+      sea.
+    percentage: 4
+  - Evolutions: 020000000b000000100000001200000019000000
+    GoodText: Being a herbivore with fins allowed you to swim and breath underwater
+    BadText: your small size and heavy hump made you a target for predators in the
+      sea.
+    percentage: 5
+  - Evolutions: 020000000b000000100000001100000015000000
+    GoodText: 
+    BadText: Being a large herbivore with a hump and fins ment you couldn't climb
+      the cliffs or hide between rocks from predators.
+    percentage: 0
+  - Evolutions: 020000000b000000100000001100000016000000
+    GoodText: Being a large herbivore with a hump allowed you to store fat to survive
+      for long periods without food in the desert.
+    BadText: your fins were useless on the dry sand.
+    percentage: 6
+  - Evolutions: 020000000b000000100000001100000017000000
+    GoodText: Being a large herbivore made you too big for predators to hunt you
+    BadText: your fins were useless in the dense forest and the hump was unneeded
+      weight.
+    percentage: 4
+  - Evolutions: 020000000b000000100000001100000018000000
+    GoodText: Being a hervivore with a hump kept you warm in the water and your fins
+      allowed you to swim and breath underwater
+    BadText: your large size made you a slow target for predators in the sea.
+    percentage: 6
+  - Evolutions: 020000000b000000100000001100000019000000
+    GoodText: 
+    BadText: Being a herbivore without fur in a cold biome during an ice age ment
+      you could't withstand the freezing cold.
+    percentage: 0
+  - Evolutions: 020000000c0000000e0000001100000015000000
+    GoodText: Being a herbivore with fur allowed you to withstand the wind and your
+      hooves to traverse the rocky surfaces
+    BadText: 
+    percentage: 10
+  - Evolutions: 020000000c0000000e0000001100000016000000
+    GoodText: Being a large herbivore with hooves allowed you to walk across the
+      desert sand.
+    BadText: 
+    percentage: 10
+  - Evolutions: 020000000c0000000e0000001100000017000000
+    GoodText: Being a large herbivore with hooves allowed you walk through the dense
+      forest and your fur helped you blend in with the trees.
+    BadText: 
+    percentage: 10
+  - Evolutions: 020000000c0000000e0000001100000018000000
+    GoodText: 
+    BadText: Being a large herbivore with fur and hooves ment you couldn't swim or
+      breath underwater.
+    percentage: 0
+  - Evolutions: 020000000c0000000e0000001100000019000000
+    GoodText: Being a large herbivore with fur allowed you to stay warm in the cold
+    BadText: your hooves were not suited for walking on the freezing snow.
+    percentage: 5
+  - Evolutions: 020000000c0000000e0000001200000015000000
+    GoodText: Being a small herbivore with fur allowed you to withstand the wind,
+      hide between rocks from predators and your hooves to walk on the rocky surfaces.
+    BadText: 
+    percentage: 10
+  - Evolutions: 020000000c0000000e0000001200000016000000
+    GoodText: Being a small herbivore with hooves allowed you to run across the desert
+      sand.
+    BadText: 
+    percentage: 10
+  - Evolutions: 020000000c0000000e0000001200000017000000
+    GoodText: Being a herbivore with fur allowed you to blend in with the trees and
+      your hooves to walk through the dense forest
+    BadText: your small size made you a target for predators.
+    percentage: 7
+  - Evolutions: 020000000c0000000e0000001200000018000000
+    GoodText: Being a small herbivore allowed you to swim quickly on the sea
+    BadText: your hooves ment you couldn't go underwater.
+    percentage: 5
+  - Evolutions: 020000000c0000000e0000001200000019000000
+    GoodText: Being a herbivore with fur allowed you to keep warm in the cold
+    BadText: your small size ment you couldn't stay warm for too long and you hooves
+      weren't suited for the freezing snow.
+    percentage: 4
+  - Evolutions: 020000000c000000100000001100000015000000
+    GoodText: Being a herbivore with fur allowed you to withstand the wind
+    BadText: your fins and large size ment you couldn't hide between rocks from predators.
+    percentage: 4
+  - Evolutions: 020000000c000000100000001100000016000000
+    GoodText: Being a large herbivore allowed you too keep a lot of energy while
+      travelling the desert
+    BadText: your fins were useless on the dry sand.
+    percentage: 6
+  - Evolutions: 020000000c000000100000001100000017000000
+    GoodText: Being a large herbivore with fur allowed you to blend in with the trees
+      and be too big for predators
+    BadText: your fins were useless in the dense forest.
+    percentage: 6
+  - Evolutions: 020000000c000000100000001100000018000000
+    GoodText: Being a herbivore with fins allowed you to swim and breath underwater
+    BadText: your large size made you a slow swimmer, allowing predators to catch
+      you easily.
+    percentage: 7
+  - Evolutions: 020000000c000000100000001100000019000000
+    GoodText: Being a large herbivore with fur kept you warm in the cold
+    BadText: your fins were useless on the freezing snow.
+    percentage: 5
+  - Evolutions: 020000000c000000100000001200000015000000
+    GoodText: Being a small herbivore with fur allowed you to withstand the wind
+      and hide between rocks from predators.
+    BadText: your fins sometimes got in the way when hiding or climbing.
+    percentage: 6
+  - Evolutions: 020000000c000000100000001200000016000000
+    GoodText: Being a small herbivore allowed you to run across the desert
+    BadText: your fins were useless on the desert sand.
+    percentage: 6
+  - Evolutions: 020000000c000000100000001200000017000000
+    GoodText: Being a herbivore with fur allowed you to blend in with the trees
+    BadText: your small size made you a target for predators and your fins were useless
+      in the dense forest.
+    percentage: 6
+  - Evolutions: 020000000c000000100000001200000018000000
+    GoodText: Being a large herbivore with fur kept you warm in the cold
+    BadText: your fins were useless on the freezing snow.
+    percentage: 5
+  - Evolutions: 020000000c000000100000001200000019000000
+    GoodText: Being a large herbivore with fur kept you warm in the cold
+    BadText: your fins were useless on the freezing snow.
+    percentage: 5
+--- !u!4 &1437444582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437444580}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.53016, y: 0.70922, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1439875674
 GameObject:
   m_ObjectHideFlags: 0
@@ -27027,7 +27696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1496889459}
   - component: {fileID: 1496889460}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27556,7 +28225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1532704510}
   - component: {fileID: 1532704511}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27961,7 +28630,7 @@ GameObject:
   - component: {fileID: 1634309145}
   - component: {fileID: 1634309147}
   - component: {fileID: 1634309146}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Path_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28035,7 +28704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1640460793}
   - component: {fileID: 1640460794}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FurHerbivore_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28051,7 +28720,7 @@ Transform:
   m_GameObject: {fileID: 1640460792}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.01, y: 1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28106,15 +28775,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 87535ea640f23f84c9aa810eabff4b6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 27.324455, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!1 &1650290519
 GameObject:
@@ -28333,7 +29002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1656302164}
   - component: {fileID: 1656302165}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Herbivore_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28458,7 +29127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1667427853}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Pathway_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28761,13 +29430,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1708491855}
   - component: {fileID: 1708491856}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Evolution (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1708491855
 Transform:
   m_ObjectHideFlags: 0
@@ -28976,7 +29645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1727881816}
   - component: {fileID: 1727881817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Herbivore_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29068,7 +29737,7 @@ GameObject:
   - component: {fileID: 1730976874}
   - component: {fileID: 1730976876}
   - component: {fileID: 1730976875}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29636,7 +30305,7 @@ GameObject:
   - component: {fileID: 1763824116}
   - component: {fileID: 1763824118}
   - component: {fileID: 1763824117}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Path_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29817,7 +30486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1765767995}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target_Transform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30218,7 +30887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1784950098}
   - component: {fileID: 1784950099}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Carnivore_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30365,9 +31034,9 @@ GameObject:
   - component: {fileID: 1795225876}
   - component: {fileID: 1795225878}
   - component: {fileID: 1795225877}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Creature
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31062,7 +31731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812363598}
   - component: {fileID: 1812363599}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Herbivore_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31437,6 +32106,143 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6141863, y: 9.588125}
   m_EdgeRadius: 0
+--- !u!1 &1850919034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850919037}
+  - component: {fileID: 1850919036}
+  - component: {fileID: 1850919035}
+  m_Layer: 5
+  m_Name: ExampleText (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1850919035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850919034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: A great drought is coming, will your species survive?
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
+  m_sharedMaterial: {fileID: 844716210759336683, guid: 8b72c9fbd24127b4ba689bcb06661e5b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4280031234
+  m_fontColor: {r: 0.007843138, g: 0.09411766, b: 0.10980393, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 6.55
+  m_fontSizeBase: 6
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
+  m_fontSizeMax: 72
+  m_fontStyle: 17
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -41.74214, y: 55.04843, z: -66.82093, w: -66.646}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1850919036
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850919034}
+  m_CullTransparentMesh: 1
+--- !u!224 &1850919037
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850919034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 444124171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -10.2, y: 94.4}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1860383571
 GameObject:
   m_ObjectHideFlags: 0
@@ -32113,7 +32919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1875715378}
   - component: {fileID: 1875715379}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Carnivore_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32615,7 +33421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924519375}
   - component: {fileID: 1924519376}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32686,7 +33492,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 880161931253009452, guid: 9051e2ac2250b954ba0e5fac071ef8db, type: 3}
+  m_Sprite: {fileID: 722960357719652466, guid: c59e7d7876a9ec947afa43a4998ed262, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -33048,7 +33854,7 @@ GameObject:
   - component: {fileID: 1950990832}
   - component: {fileID: 1950990831}
   - component: {fileID: 1950990834}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: EvolutionUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33654,7 +34460,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1249
+  m_SortingOrder: 3694
   m_TargetDisplay: 0
 --- !u!222 &1969735548
 CanvasRenderer:
@@ -33856,7 +34662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1988358984}
   - component: {fileID: 1988358985}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Carnivore_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34129,7 +34935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1995392794}
   - component: {fileID: 1995392795}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Paws/Hooves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34434,7 +35240,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: f438a88aac522fd429097489318d3bc4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -34518,6 +35324,88 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2017303706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2017303707}
+  - component: {fileID: 2017303708}
+  m_Layer: 5
+  m_Name: CreatureBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2017303707
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017303706}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 444124171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!61 &2017303708
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017303706}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.94065857, y: 36.890247}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 75.7941, y: 50.73713}
+  m_EdgeRadius: 0
 --- !u!1 &2029751911
 GameObject:
   m_ObjectHideFlags: 0
@@ -34867,7 +35755,7 @@ GameObject:
   - component: {fileID: 2059875045}
   - component: {fileID: 2059875044}
   - component: {fileID: 2059875046}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Path_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34957,7 +35845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066758893}
   - component: {fileID: 2066758894}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Carnivore_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37206,3 +38094,4 @@ SceneRoots:
   - {fileID: 1778478211879211829}
   - {fileID: 1333023492}
   - {fileID: 1104854390}
+  - {fileID: 1437444582}

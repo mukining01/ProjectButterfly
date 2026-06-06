@@ -15,6 +15,11 @@ public class MainMenu : MonoBehaviour
 
     static bool started = false;
 
+    public void OnEnable()
+    {
+        paused = false;
+    }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();

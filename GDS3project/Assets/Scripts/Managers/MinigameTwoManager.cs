@@ -72,6 +72,8 @@ public class MinigameTwoManager : MinigameManager
 
         EvolutionManager.Set_Evolution(3, evolution_Type);
 
+        ExtinctionManager.Set_Extinction_Environment(evolution_Type);
+
         Interactable_points.SetActive(false);
         base.End_MiniGame();
     }

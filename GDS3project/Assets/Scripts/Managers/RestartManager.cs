@@ -60,6 +60,8 @@ public class RestartManager : MonoBehaviour
 
     public static void Force_Restart()
     {
+        if (!MainMenu.Is_Paused()) return;
+
         Restart(true);
     }
 }

@@ -1,6 +1,8 @@
 
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -36,6 +38,8 @@ public class ExtinctionManager : MonoBehaviour
     static List<Extinction_Ending_Information> Extinction_Text_Info = new List<Extinction_Ending_Information>();
     public TMP_Text[] extinction_text_p;
     static TMP_Text[] extinction_text;
+    public TMP_Text[] extinction_text_start_p;
+    static TMP_Text[] extinction_text_start;
     static Extinction_Event extinction_event;
 
 
@@ -50,10 +54,15 @@ public class ExtinctionManager : MonoBehaviour
         Extinction_Text_Info = Extinction_Text_Info_p;
         extinction_text = extinction_text_p;
 
+        extinction_text_start = extinction_text_start_p;
+
         Continue_Button = Continue_Button_p;
 
-        example_text = example_text_p;
-        example_extinction_text = example_extinction_text_p;
+        //example_text = example_text_p;
+        //example_extinction_text = example_extinction_text_p;
+
+        extinction_textt = extinction_textt_p;
+        boxColldier2D = boxCollider2D_p;
     }
 
     private void Start()
@@ -189,6 +198,8 @@ public class ExtinctionManager : MonoBehaviour
     {
         print("DisplayInput");
 
+
+
         Generate_Text();
 
         CameraManager.Switch_Camera(Camera_Types.ExtinctionCamera);
@@ -208,14 +219,27 @@ public class ExtinctionManager : MonoBehaviour
 
         string _extinction_text = "In 500 million years, a great " + extinction_event.ToString() + " will come. Will your species survive?";
         _extinction_text = _extinction_text.Replace("_", " ");
-        for(var i = 0; i < extinction_text.Length; i++) extinction_text[i].text = _extinction_text;
-        for (var i = 0; i < example_extinction_text.Length; i++) example_extinction_text[i].text = string.Empty;
+        for(var i = 0; i < extinction_text_start.Length; i++) extinction_text_start[i].text = _extinction_text;
+       // for (var i = 0; i < example_extinction_text.Length; i++) example_extinction_text[i].text = string.Empty;
 
         anim_extinction_text.SetInteger("ExtinctionText", random_extinction);
         anim_extinction_image.SetInteger("Extinction", random_extinction);
 
         current_ExtinctionTime = ExtinctionMultiplier * GlobalMinigameManager.Get_Minigame_Amount();
         new_ExtinctionTime = current_ExtinctionTime;
+    }
+
+    static int environment;
+
+    public static void Set_Extinction_Environment(int _environment)
+    {
+        environment = _environment;
+        anim_extinction_image.SetInteger("Environment", environment);
+    }
+
+    public static int Get_Extinction_Environment()
+    {
+        return environment;
     }
 
     public static void Set_New_Extinction_Time()
@@ -247,122 +271,238 @@ public class ExtinctionManager : MonoBehaviour
         }
     }
 
+    public FinalExtinctionText extinction_textt_p;
+    static FinalExtinctionText extinction_textt;
+
+    public BoxCollider2D boxCollider2D_p;
+    static BoxCollider2D boxColldier2D;
+
+    //float percentage = 5;
+
     public static void Generate_Text()
     {
-        List<Evolution> _final_evolutions = EvolutionManager.Get_Evolutions();
+        string _current_text = string.Empty;
 
-        int _calulating_score = 0;
-        string _score_text = string.Empty;
-        string _good_text = string.Empty;
-        string _bad_text = string.Empty;
-        string _overall = string.Empty;
+        ExtinctionText[] _extinction_text;
 
-        for(var i = 0; i < Extinction_Text_Info.Count; i++)
+        CreatureAI cretureAi = FindAnyObjectByType<CreatureAI>().GetComponent<CreatureAI>();
+        CreatureSprite creatureSprite = cretureAi.creature_sprite;
+
+        if (random_extinction == 0)
         {
-            if (!_final_evolutions.Contains(Extinction_Text_Info[i].evolution_parameter)) continue;
+            if (!creatureSprite.Get_Is_Carnivore()) _extinction_text = extinction_textt.EvolutionText;
+            else _extinction_text = extinction_textt.EvolutionText_Drought_Herb;
 
-            Evolution_Individual_Information[] extinction_info = null;
+        }
+        else
+        {
+            if (!creatureSprite.Get_Is_Carnivore()) _extinction_text = extinction_textt.EvolutionText_IceAge_Carnivore;
+            else _extinction_text = extinction_textt.EvolutionText_IceAge_Herbivore;
+        }
 
-            if (random_extinction == 0) extinction_info = Extinction_Text_Info[i].GlobalWarmingParameters.individual_information;
-            else extinction_info = Extinction_Text_Info[i].GlobalWarmingParameters.individual_information;
 
-            Evolution_Individual_Information current_extinction_information = null;
+        int _found = -1;
 
-            if (extinction_info.Length <= 0) continue;
-            if (extinction_info.Length == 1) current_extinction_information = extinction_info[0];
+        Evolution[] Evolutions = new Evolution[] { new Evolution(), new Evolution(), new Evolution(), new Evolution(), new Evolution() };
+
+        if (!creatureSprite.Get_Is_Carnivore()) Evolutions[0] = Evolution.Carnivore;
+        else Evolutions[0] = Evolution.Herbivore;
+
+        CreatureSpriteAdaptions creature_sprite_adapations = FindObjectOfType<CreatureSpriteAdaptions>().GetComponent<CreatureSpriteAdaptions>();
+
+        Evolutions[1] = creature_sprite_adapations.Get_Adapations()[0];
+        Evolutions[2] = creature_sprite_adapations.Get_Adapations()[1];
+        Evolutions[3] = creature_sprite_adapations.Get_Adapations()[2];
+
+
+        Evolutions[4] = (Evolution)(Get_Extinction_Environment() + 20);
+
+        for(var i = 0;  i < Evolutions.Length; i++)
+        {
+            print("W Evolution " + i + ": " + Evolutions[i]);
+        }
+
+
+        for (var i = 0; i < _extinction_text.Length; i++)
+        {
+            bool _not = false;
+
+            for (var j = 0; j < Evolutions.Length; j++)
+            {
+               if (!_extinction_text[i].Evolutions.Contains(Evolutions[j]) )
+               {
+                  _not = true;
+                  break;
+               }
+            }
+
+            if (_not) continue;
             else
             {
-                int j = 0;
-
-                for(j = 0; j < extinction_info.Length - 1; j++)
-                {
-                    bool _contains = true;
-
-                    for (var k = 0; k < extinction_info[j].If_These_Parameters.Length; k++)
-                    {
-                        if (!_final_evolutions.Contains(extinction_info[j].If_These_Parameters[k])) _contains = false;
-                    }
-
-                    if (!_contains) continue;
-                    else break;
-                }
-
-                current_extinction_information = extinction_info[j];
-            }
-
-            int _score_change = current_extinction_information.score_change;
-            _calulating_score += _score_change;
-
-            if (_score_change > 0)
-            {
-                if (_good_text != string.Empty) _good_text += " ";
-                _good_text += current_extinction_information.EvolutionText;
-            } else
-            {
-                if (_bad_text != string.Empty) _bad_text += " ";
-                _bad_text += current_extinction_information.EvolutionText;
+               _found = i;
+                print("W Evolution Found");
+               break;
             }
         }
 
-
-        float _score_num = (10 + _calulating_score) / 20;
-        _score_num = Mathf.Clamp(_score_num, 0, 1);
-        int _final_score = Mathf.RoundToInt(_score_num * 100);
-
-        _score_text = _final_score + "% of your species survied the " + extinction_event.ToString() + "!";
-
-        bool _didnt = false;
-        string _overall_text = string.Empty;
-
-        if (_final_score <= (int)Overall_Your_Species_Faired.Didnt)
+        if (_found >= 0)
         {
-            _didnt = true;
-            _overall = "Overall, your species did not survive the " + extinction_event.ToString() + "...";
-        } else if (_final_score <= (int)Overall_Your_Species_Faired.Poorly) _overall_text = Overall_Your_Species_Faired.Poorly.ToString();
-        else if (_final_score <= (int)Overall_Your_Species_Faired.Decently) _overall_text = Overall_Your_Species_Faired.Decently.ToString();
-        else if (_final_score <= (int)Overall_Your_Species_Faired.Well) _overall_text = Overall_Your_Species_Faired.Well.ToString();
-        else if (_final_score <= (int)Overall_Your_Species_Faired.Great) _overall_text = Overall_Your_Species_Faired.Great.ToString();
-        else if (_final_score <= (int)Overall_Your_Species_Faired.Excellently) _overall_text = Overall_Your_Species_Faired.Excellently.ToString();
+            if (_extinction_text[_found].GoodText != string.Empty)
+            {
+                _current_text += _extinction_text[_found].GoodText;
+            }
 
-        if (!_didnt) _overall = "Overall, your species faired " + _overall + " in the " + extinction_event.ToString() + ".";
+            if (_extinction_text[_found].BadText != string.Empty)
+            {
+                if(_extinction_text[_found].GoodText != string.Empty) _current_text += "\n\n + But, ";
+                _current_text += _extinction_text[_found].BadText;
+            }
 
-        string _desc_text = string.Empty;
-        if(_good_text != string.Empty) _desc_text = _good_text;
-        if(_bad_text != string.Empty)
-        {
-            if (_desc_text != string.Empty) _desc_text += "\n" + "\n" + "But " + _bad_text;
-            else _desc_text = _bad_text;
+            string _percentage = "0%";
+            if(_extinction_text[_found].percentage == 0) _percentage = "%";
+
+            _current_text += "\n\n" + _extinction_text[_found].percentage.ToString() + _percentage + " of your species survived.";
         }
 
-        string _text = _score_text + "\n" + "\n" + _desc_text + "\n" + "\n" + _overall_text;
-        _text = _text.Replace("_", " ");
-        for (var i = 0; i < extinction_text.Length; i++)
+        int _percent = 5;
+        if(_found != -1) _percent = (int)_extinction_text[_found].percentage;
+
+        cretureAi.GetComponent<CreatureAI>().starting_movement_bounds = boxColldier2D;
+
+
+        extinction_text[0].text = _current_text;
+        extinction_text[1].text = _current_text;
+
+        for (var i = 0; i < extinction_text_start.Length; i++) extinction_text_start[i].text = string.Empty;
+
+        if (_percent <= 0) return;
+
+        for (int i = 0; i < 1; i++)
         {
-            extinction_text[i].text = _text;
-            extinction_text[i].fontSize = 6;
+            GameObject _creatureAi = Instantiate(cretureAi.gameObject, boxColldier2D.gameObject.transform.localPosition, Quaternion.identity, boxColldier2D.gameObject.transform);
+            _creatureAi.transform.localPosition = Vector3.zero;
+            _creatureAi.transform.localPosition = new Vector3(0, -14, 0);
+
+            float _scale = Random.Range(0.9f, 1.1f);
+            _creatureAi.transform.localScale = new Vector3(_scale, _scale, 1);
         }
 
-        // Just for milestone build
-
-        for (var i = 0; i < extinction_text.Length; i++)
-        {
-            extinction_text[i].text = string.Empty;
-        }
-
-        for (var i = 0; i < example_extinction_text.Length; i++)
-        {
-            example_extinction_text[i].text = example_text;
-            //extinction_text[i].fontSize = 6;
-        }
     }
+    //{
+    //    List<Evolution> _final_evolutions = EvolutionManager.Get_Evolutions();
 
-    [Header("Example Text")]
-    public TMP_Text[] example_extinction_text_p;
-    static TMP_Text[] example_extinction_text;
-    [TextArea(5, 5)]
-    public string example_text_p;
-    static string example_text;
+    //    int _calulating_score = 0;
+    //    string _score_text = string.Empty;
+    //    string _good_text = string.Empty;
+    //    string _bad_text = string.Empty;
+    //    string _overall = string.Empty;
+
+    //    for(var i = 0; i < Extinction_Text_Info.Count; i++)
+    //    {
+    //        if (!_final_evolutions.Contains(Extinction_Text_Info[i].evolution_parameter)) continue;
+
+    //        Evolution_Individual_Information[] extinction_info = null;
+
+    //        if (random_extinction == 0) extinction_info = Extinction_Text_Info[i].GlobalWarmingParameters.individual_information;
+    //        else extinction_info = Extinction_Text_Info[i].GlobalWarmingParameters.individual_information;
+
+    //        Evolution_Individual_Information current_extinction_information = null;
+
+    //        if (extinction_info.Length <= 0) continue;
+    //        if (extinction_info.Length == 1) current_extinction_information = extinction_info[0];
+    //        else
+    //        {
+    //            int j = 0;
+
+    //            for(j = 0; j < extinction_info.Length - 1; j++)
+    //            {
+    //                bool _contains = true;
+
+    //                for (var k = 0; k < extinction_info[j].If_These_Parameters.Length; k++)
+    //                {
+    //                    if (!_final_evolutions.Contains(extinction_info[j].If_These_Parameters[k])) _contains = false;
+    //                }
+
+    //                if (!_contains) continue;
+    //                else break;
+    //            }
+
+    //            current_extinction_information = extinction_info[j];
+    //        }
+
+    //        int _score_change = current_extinction_information.score_change;
+    //        _calulating_score += _score_change;
+
+    //        if (_score_change > 0)
+    //        {
+    //            if (_good_text != string.Empty) _good_text += " ";
+    //            _good_text += current_extinction_information.EvolutionText;
+    //        } else
+    //        {
+    //            if (_bad_text != string.Empty) _bad_text += " ";
+    //            _bad_text += current_extinction_information.EvolutionText;
+    //        }
+    //    }
+
+
+    //    float _score_num = (10 + _calulating_score) / 20;
+    //    _score_num = Mathf.Clamp(_score_num, 0, 1);
+    //    int _final_score = Mathf.RoundToInt(_score_num * 100);
+
+    //    _score_text = _final_score + "% of your species survied the " + extinction_event.ToString() + "!";
+
+    //    bool _didnt = false;
+    //    string _overall_text = string.Empty;
+
+    //    if (_final_score <= (int)Overall_Your_Species_Faired.Didnt)
+    //    {
+    //        _didnt = true;
+    //        _overall = "Overall, your species did not survive the " + extinction_event.ToString() + "...";
+    //    } else if (_final_score <= (int)Overall_Your_Species_Faired.Poorly) _overall_text = Overall_Your_Species_Faired.Poorly.ToString();
+    //    else if (_final_score <= (int)Overall_Your_Species_Faired.Decently) _overall_text = Overall_Your_Species_Faired.Decently.ToString();
+    //    else if (_final_score <= (int)Overall_Your_Species_Faired.Well) _overall_text = Overall_Your_Species_Faired.Well.ToString();
+    //    else if (_final_score <= (int)Overall_Your_Species_Faired.Great) _overall_text = Overall_Your_Species_Faired.Great.ToString();
+    //    else if (_final_score <= (int)Overall_Your_Species_Faired.Excellently) _overall_text = Overall_Your_Species_Faired.Excellently.ToString();
+
+    //    if (!_didnt) _overall = "Overall, your species faired " + _overall + " in the " + extinction_event.ToString() + ".";
+
+    //    string _desc_text = string.Empty;
+    //    if(_good_text != string.Empty) _desc_text = _good_text;
+    //    if(_bad_text != string.Empty)
+    //    {
+    //        if (_desc_text != string.Empty) _desc_text += "\n" + "\n" + "But " + _bad_text;
+    //        else _desc_text = _bad_text;
+    //    }
+
+    //    string _text = _score_text + "\n" + "\n" + _desc_text + "\n" + "\n" + _overall_text;
+    //    _text = _text.Replace("_", " ");
+    //    for (var i = 0; i < extinction_text.Length; i++)
+    //    {
+    //        extinction_text[i].text = _text;
+    //        extinction_text[i].fontSize = 6;
+    //    }
+
+    //    // Just for milestone build
+
+    //    for (var i = 0; i < extinction_text.Length; i++)
+    //    {
+    //        extinction_text[i].text = string.Empty;
+    //    }
+
+    //    for (var i = 0; i < example_extinction_text.Length; i++)
+    //    {
+    //        example_extinction_text[i].text = example_text;
+    //        //extinction_text[i].fontSize = 6;
+    //    }
 }
+
+    //[Header("Example Text")]
+    //public TMP_Text[] example_extinction_text_p;
+    //static TMP_Text[] example_extinction_text;
+    //[TextArea(5, 5)]
+    //public string example_text_p;
+    //static string example_text;
+//}
 
 public enum Extinction_Event
 {

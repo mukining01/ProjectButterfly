@@ -42,6 +42,11 @@ public class CreatureAI : MonoBehaviour
         Add_To_Player_Input(true);
     }
 
+    public void Start()
+    {
+       
+    }
+
     public void UpdatePath()
     {
         seeker.StartPath(rb.position, target.position, OnPathComplete);
@@ -96,7 +101,7 @@ public class CreatureAI : MonoBehaviour
             reachedEndOfPath = false;
         }
 
-        float distane_to_target = Vector2.Distance(rb.position, target.position);
+        float distane_to_target = Vector2.Distance(rb.position, target.localPosition);
 
         if (distane_to_target < distance_until_stop) return false; 
 
@@ -120,7 +125,7 @@ public class CreatureAI : MonoBehaviour
         // rb.AddForce(force);
         //transform.position = Vector3.Lerp(transform.position, path.vectorPath[currentWayPoint], (movement_speed / distane) * Time.deltaTime);
 
-        transform.position = new Vector3(transform.position.x + force.x, transform.position.y + force.y, 0);
+        transform.localPosition = new Vector3(transform.localPosition.x + force.x, transform.localPosition.y + force.y, 0);
 
         if (force.x > 0) creature_sprite_transform.localScale = new Vector3(-1f, 1f, 1f);
         else if (force.x < 0) creature_sprite_transform.localScale = new Vector3(1f, 1f, 1f);
@@ -251,7 +256,7 @@ public class CreatureAI : MonoBehaviour
 
     public IEnumerator Idle_Moving()
     {
-        Vector2 _starting_position = StartingMovementInBounds(starting_movement_bounds.bounds);
+        Vector2 _starting_position = StartingMovementInBounds(starting_movement_bounds.bounds, starting_movement_bounds.transform.localPosition);
         Set_Target_Position(_starting_position);
 
         float _random_time = Random.Range(4, 6);
@@ -261,11 +266,11 @@ public class CreatureAI : MonoBehaviour
         idle_moving = StartCoroutine(Idle_Moving());
     }
 
-    public static Vector2 StartingMovementInBounds(Bounds bounds)
+    public static Vector2 StartingMovementInBounds(Bounds bounds, Vector2 pos)
     {
         return new Vector2(
-            Random.Range(bounds.min.x, bounds.max.x),
-            Random.Range(bounds.min.y, bounds.max.y)
+            Random.Range(bounds.min.x, bounds.max.x) + pos.x,
+            Random.Range(bounds.min.y, bounds.max.y) + pos.y
         );
     }
 }

@@ -5,9 +5,26 @@ public class AudioManager : MonoBehaviour
     public AudioSouce_Var[] SFX_p;
     static AudioSouce_Var[] SFX;
 
+    public AudioListener audio_listner_p;
+    static AudioListener audio_listner;
+
+    public Animator muter_p;
+    static Animator muter;
+
     public void Awake()
     {
         SFX = SFX_p;
+        audio_listner = audio_listner_p;
+        muter = muter_p;
+    }
+
+    bool mute = false;
+    public void Set_Muter()
+    {
+        mute = !mute;
+
+        audio_listner.enabled = !mute;
+        muter.SetBool("Mute", mute);
     }
 
     public static void Play_SFX(SFX _sfx, bool _play = true)
